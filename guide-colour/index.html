@@ -33,9 +33,9 @@
 
 <body>
   <a href="#main" class="skip">Skip to content</a>
-  <main class="container" id="main">
+  <main id="main">
 
-    <p>
+    <p class="container">
       <a href="/fine-tune-2020-dev/">Home</a>
       <a href="/fine-tune-2020-dev/guide-typeface/">Typefaces</a>
       <a href="/fine-tune-2020-dev/guide-heading/">Headings</a>
@@ -43,61 +43,51 @@
       <a href="/fine-tune-2020-dev/guide-button/">Buttons</a>
     </p>
 
+    <section aria-label="Colour" class="gutter-xlarge">
+      <h1 class="container">Colour</h1>
 
-    <div class="row">
-      <div class="col-sm-5">
-        <h2 class="h3 type-heading">Anton</h2>
-      </div>
-      <div class="col">
-        <p class="type-heading h4">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>&copy;&reg;!?£$%&*@#+(){}[]&lt;&gt;<br>1234567890
-        </p>
-      </div>
-    </div>
+      <section class="pad-vert-xlarge bg-deep-blue">
+        <div class="container">
+          <h2>Light colours</h2>
+          <p>Light colours use the <code>bt-</code> (background tint) prefix in their classnames.</p>
 
-    <div class="row">
-      <div class="col-sm-5">
-        <h2 class="h3 type-etc-regular">ETC Trispace regular</h2>
-      </div>
-      <div class="col">
-        <p class="type-etc-regular lead">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>&copy;&reg;!?£$%&*@#+(){}[]&lt;&gt;<br>1234567890
-        </p>
-      </div>
-    </div>
+          <div class="row">
+            <div class="col">
+              <p class="bt-white cta-logos">bt-white</p>
+            </div>
+            <div class="col">
+              <p class="bt-muted-blue cta-logos">bt-muted-blue</p>
+            </div>
+            <div class="col">
+              <p class="bt-pink cta-logos">bt-pink</p>
+            </div>
+            <div class="col">
+              <p class="bt-mint cta-logos">bt-mint</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="row">
-      <div class="col-sm-5">
-        <h2 class="h3 type-etc-medium">ETC Trispace medium</h2>
-      </div>
-      <div class="col">
-        <p class="type-etc-medium lead">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>&copy;&reg;!?£$%&*@#+(){}[]&lt;&gt;<br>1234567890
-        </p>
-      </div>
-    </div>
+      <section class="pad-vert-xlarge">
+        <div class="container">
+          <h2>Dark colours</h2>
+          <p>Dark colours use the <code>bg-</code> (background) prefix in their classnames.</p>
 
-    <div class="row">
-      <div class="col-sm-5">
-        <h2 class="h3 type-etc-bold">ETC Trispace bold</h2>
-      </div>
-      <div class="col">
-        <p class="type-etc-bold lead">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>&copy;&reg;!?£$%&*@#+(){}[]&lt;&gt;<br>1234567890
-        </p>
-      </div>
-    </div>
+          <div class="row">
+            <div class="col">
+              <p class="bg-interactive-blue cta-logos">bg-interactive-blue</p>
+            </div>
+            <div class="col">
+              <p class="bg-deep-blue cta-logos">bg-deep-blue</p>
+            </div>
+            <div class="col">
+              <p class="bg-black cta-logos">bg-black</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div class="row">
-      <div class="col-sm-5">
-        <h2 class="h3 type-etc-wide">ETC Trispace wide regular</h2>
-      </div>
-      <div class="col">
-        <p class="type-etc-wide lead">
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>&copy;&reg;!?£$%&*@#+(){}[]&lt;&gt;<br>1234567890
-        </p>
-      </div>
-    </div>
+    </section>
 
   </main>
 <script type="text/javascript" src="../js/app.js"></script></body>

@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79.375 52.917">
+  <g stroke="#010111" stroke-width=".1">
+    <path d="M2.646 52.917V1.323"/>
+    <path d="M0 50.27h70.115"/>
+  </g>
+  <text xml:space="preserve" x="-252.793" y="1.058" transform="matrix(0 -1 1 0 0 -244.083)" fill="#010111">
+    <tspan x="-252.793" y="1.058" font-size="1.411" font-family="Trispace">Sales</tspan>
+  </text>
+  <path d="M5.292 0h74.083v48.948H5.292z" fill="#fff"/>
+  <path d="M74.083 48.948V0" stroke="#010111" stroke-dasharray="0.79374995,0.79374995" stroke-width=".1"/>
+  <path d="M9.26 44.98c31.75 0 41 0 70.115-3.97" stroke="#2e38ef" stroke-width=".3" fill="none"/>
+  <g fill="#fff" stroke="#010111" stroke-width=".1">
+    <circle cx="15.853" cy="44.963" r="1.28"/>
+    <circle r="1.28" cy="44.829" cx="31.517"/>
+    <circle cx="47.676" cy="44.357" r="1.28"/>
+    <circle r="1.28" cy="42.939" cx="62.511"/>
+  </g>
+  <text y="296.489" x="64.217" xml:space="preserve" fill="#010111">
+    <tspan y="52.406" x="64.217" font-size="1.411" font-family="Trispace">Time</tspan>
+  </text>
+</svg>

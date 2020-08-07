@@ -1,6 +1,6 @@
 {
-    "name": "Fine Tune",
-    "short_name": "Fine Tune",
+    "name": "Finetune",
+    "short_name": "Finetune",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
