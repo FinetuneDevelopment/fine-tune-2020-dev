@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Panels and call-to-action - Finetune Digital Design Guidelines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description" content="Finetune">
+  <meta property="fb:admins" content="1570989889829468">
+  <meta property="og:title" content="Panels and call-to-action - Finetune Digital Design Guidelines">
+  <meta property="og:description" content="Finetune">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/fine-tune-2020-dev/guide-panel/">
+  <meta property="og:site_name" content="Finetune">
+  <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-experts-guide.png">
+  <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-experts-guide.png">
+  <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-experts-guide.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/fine-tune-2020-dev/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#d7f2db">
+<link href="../css/app.css" rel="stylesheet"></head>
+
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <p class="container">
+    <a href="/fine-tune-2020-dev/">Home</a>
+    <a href="/fine-tune-2020-dev/guide-typeface/">Typefaces</a>
+    <a href="/fine-tune-2020-dev/guide-typography/">Typography</a>
+    <a href="/fine-tune-2020-dev/guide-heading/">Headings</a>
+    <a href="/fine-tune-2020-dev/guide-colour/">Colour</a>
+    <a href="/fine-tune-2020-dev/guide-button/">Buttons</a>
+    <a href="/fine-tune-2020-dev/guide-panel/">Panels and call-to-action</a>
+    <a href="/fine-tune-2020-dev/guide-icon/">Icons</a>
+  </p>
+
+  <main id="main">
+    <div class="container">
+      <h1>Icons</h1>
+
+      <section aria-label="CSS Shapes">
+        <h2>CSS Shapes</h2>
+        <p>CSS take on whatever the current text colour happens to be. They need to be used along with the <code>shape</code> class.</p>
+        <div class="row">
+          <section class="col" aria-label="Arrows">
+            <h3>Arrows</h3>
+            <p>
+              <span class="shape sh-arrow-up"></span>
+              <span class="shape sh-arrow-down"></span>
+              <span class="shape sh-arrow-left"></span>
+              <span class="shape sh-arrow-right"></span>
+            </p>
+          </section>
+          <section class="col" aria-label="Other">
+            <h3>Other</h3>
+            <p>
+              <span class="shape sh-close"></span>
+              <span class="shape sh-ellipsis"></span>
+              <span class="ic-arrow"></span>
+            </p>
+            <p><code>ic-arrow</code> is used in the marquee and has to be built differently as the marquee uses <code>text-shadow</code> to create the effect of multiple strings of text. CSS shapes do not duplicate using this technique.</p>
+          </section>
+        </div>
+      </section>
+
+      <section aria-label="Icon sizing">
+        <h2>Icon sizing</h2>
+
+        <h3>Large</h3>
+        <p>Large icons have a container of 63px. The icons themselves inside are 35px. The first use is on the about us page. They can be applied using a <code>icon-large</code> class.</p>
+        <p class="gutter-large">
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="#000" stroke-linejoin="round" aria-label="Think">
+              <path d="M8.5 18.5V11l6.4 3.2v7.5zM21.3 18.5V11l-6.4 3.2v7.5z"></path>
+              <path d="M21.3 11l-6.4-3.3L8.5 11M6.4 33.5v-9a13.3 13.3 0 019-23.2C26 1.3 28 10.6 32 20.6h-4.3V25c0 2.4-1.9 4.3-4.2 4.3h-2.1v4.3" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="currentColor" aria-label="Image">
+              <path d="M24.5 24.7l-4-11.4-4.8 8.5-3-4.2L9 24.7"></path>
+              <circle r="1.4" cy="13" cx="14"></circle>
+              <path d="M2 9.4C1 9.4.4 8.8.4 8V6.6c0-.8.6-1.4 1.4-1.4h2.9V2.3c0-.7.6-1.4 1.4-1.4h1.4C8.4 1 9 1.6 9 2.3v2.9h18.4c.8 0 1.4.6 1.4 1.4V25h2.9c.7 0 1.4.6 1.4 1.4v1.4c0 .8-.6 1.5-1.4 1.5h-2.9V32c0 .8-.6 1.4-1.4 1.4H26c-.8 0-1.4-.6-1.4-1.4v-2.9H6.2c-.8 0-1.4-.6-1.4-1.4V9.4z"></path>
+              <rect rx=".5" height="15.6" width="15.6" y="9.4" x="9"></rect>
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.7 29.1" fill="none" stroke="currentColor" aria-label="Mountain">
+              <path d="M4.9 29.3l10.6-17a1.6 1.6 0 012.5 0l10.6 17z"></path>
+              <g stroke-linecap="round">
+                <path d="M4.9 29.3H.5l4.4-7c.3-.3.7-.5 1.2-.6.5 0 1 .3 1.3.7l.8 1.6m2.2-3.6l3 2.5a1.3 1.3 0 001.7 0l.8-.9a1.3 1.3 0 011.7 0l.8.8a1.3 1.3 0 001.7 0l3-2.4m-6.4-8.6V.5M16.7.5h7c.3 0 .5.3.5.6v5c0 .4-.2.7-.6.7h-6.9"></path>
+                <path d="M24.2 3h3.2c.3 0 .6.3.6.6v5c0 .4-.3.7-.6.7h-3.8a.6.6 0 01-.6-.7V6.8"></path>
+              </g>
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="Twitter">
+              <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" aria-label="Google Tag Manager">
+              <polygon fill="#8AB4F8" points="111.31,176.79 80.76,147 146.37,80 178,111" />
+              <path fill="#4285F4" d="M111.44,45.08L81,14L14.44,79.93c-8.58,8.58-8.58,22.49,0,31.08L80,177l31-29L61.05,95.47L111.44,45.08z" />
+              <path fill="#8AB4F8" d="M177.56,80.44l-66-66c-8.59-8.59-22.52-8.59-31.11,0c-8.59,8.59-8.59,22.52,0,31.11l66,66 c8.59,8.59,22.52,8.59,31.11,0C186.15,102.96,186.15,89.03,177.56,80.44z" />
+              <circle fill="#246FDB" cx="95.5" cy="162.5" r="21.5" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <span class="shape sh-close"></span>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <span class="shape sh-arrow-left"></span>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <span class="shape sh-arrow-right"></span>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <span class="shape sh-arrow-up"></span>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <span class="shape sh-arrow-down"></span>
+          </span>
+          <span class="brd-all round icon-large icon-sq">
+            <img src="/fine-tune-2020-dev/img/content/img-dog-icon.png" alt="">
+          </span>
+        </p>
+
+        <h3>Small</h3>
+        <p>Small icons have a container of 38px. The icons themselves inside are 15px. The first use is on insights pages, on the right hand side, for social media icons. They can be applied using a <code>icon-small</code> class.</p>
+        <p class="gutter-large">
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="#000" stroke-linejoin="round" aria-label="Think">
+              <path d="M8.5 18.5V11l6.4 3.2v7.5zM21.3 18.5V11l-6.4 3.2v7.5z"></path>
+              <path d="M21.3 11l-6.4-3.3L8.5 11M6.4 33.5v-9a13.3 13.3 0 019-23.2C26 1.3 28 10.6 32 20.6h-4.3V25c0 2.4-1.9 4.3-4.2 4.3h-2.1v4.3" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="currentColor" aria-label="Image">
+              <path d="M24.5 24.7l-4-11.4-4.8 8.5-3-4.2L9 24.7"></path>
+              <circle r="1.4" cy="13" cx="14"></circle>
+              <path d="M2 9.4C1 9.4.4 8.8.4 8V6.6c0-.8.6-1.4 1.4-1.4h2.9V2.3c0-.7.6-1.4 1.4-1.4h1.4C8.4 1 9 1.6 9 2.3v2.9h18.4c.8 0 1.4.6 1.4 1.4V25h2.9c.7 0 1.4.6 1.4 1.4v1.4c0 .8-.6 1.5-1.4 1.5h-2.9V32c0 .8-.6 1.4-1.4 1.4H26c-.8 0-1.4-.6-1.4-1.4v-2.9H6.2c-.8 0-1.4-.6-1.4-1.4V9.4z"></path>
+              <rect rx=".5" height="15.6" width="15.6" y="9.4" x="9"></rect>
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.7 29.1" fill="none" stroke="currentColor" aria-label="Mountain">
+              <path d="M4.9 29.3l10.6-17a1.6 1.6 0 012.5 0l10.6 17z"></path>
+              <g stroke-linecap="round">
+                <path d="M4.9 29.3H.5l4.4-7c.3-.3.7-.5 1.2-.6.5 0 1 .3 1.3.7l.8 1.6m2.2-3.6l3 2.5a1.3 1.3 0 001.7 0l.8-.9a1.3 1.3 0 011.7 0l.8.8a1.3 1.3 0 001.7 0l3-2.4m-6.4-8.6V.5M16.7.5h7c.3 0 .5.3.5.6v5c0 .4-.2.7-.6.7h-6.9"></path>
+                <path d="M24.2 3h3.2c.3 0 .6.3.6.6v5c0 .4-.3.7-.6.7h-3.8a.6.6 0 01-.6-.7V6.8"></path>
+              </g>
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="Twitter">
+              <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" aria-label="Google Tag Manager">
+              <polygon fill="#8AB4F8" points="111.31,176.79 80.76,147 146.37,80 178,111" />
+              <path fill="#4285F4" d="M111.44,45.08L81,14L14.44,79.93c-8.58,8.58-8.58,22.49,0,31.08L80,177l31-29L61.05,95.47L111.44,45.08z" />
+              <path fill="#8AB4F8" d="M177.56,80.44l-66-66c-8.59-8.59-22.52-8.59-31.11,0c-8.59,8.59-8.59,22.52,0,31.11l66,66 c8.59,8.59,22.52,8.59,31.11,0C186.15,102.96,186.15,89.03,177.56,80.44z" />
+              <circle fill="#246FDB" cx="95.5" cy="162.5" r="21.5" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <span class="shape sh-close"></span>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <span class="shape sh-arrow-left"></span>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <span class="shape sh-arrow-right"></span>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <span class="shape sh-arrow-up"></span>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <span class="shape sh-arrow-down"></span>
+          </span>
+          <span class="brd-all round icon-small icon-sq">
+            <img src="/fine-tune-2020-dev/img/content/img-dog-icon.png" alt="">
+          </span>
+        </p>
+
+        <h3>Tiny</h3>
+        <p>Tiny icons have a container of 32px. The icons themselves inside are 12px. They are used in the bottom right hand corner of the footer, for social media icons. They can be applied using a <code>icon-tiny</code> class.</p>
+        <p class="gutter-large">
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="#000" stroke-linejoin="round" aria-label="Think">
+              <path d="M8.5 18.5V11l6.4 3.2v7.5zM21.3 18.5V11l-6.4 3.2v7.5z"></path>
+              <path d="M21.3 11l-6.4-3.3L8.5 11M6.4 33.5v-9a13.3 13.3 0 019-23.2C26 1.3 28 10.6 32 20.6h-4.3V25c0 2.4-1.9 4.3-4.2 4.3h-2.1v4.3" stroke-linecap="round"></path>
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none" stroke="currentColor" aria-label="Image">
+              <path d="M24.5 24.7l-4-11.4-4.8 8.5-3-4.2L9 24.7"></path>
+              <circle r="1.4" cy="13" cx="14"></circle>
+              <path d="M2 9.4C1 9.4.4 8.8.4 8V6.6c0-.8.6-1.4 1.4-1.4h2.9V2.3c0-.7.6-1.4 1.4-1.4h1.4C8.4 1 9 1.6 9 2.3v2.9h18.4c.8 0 1.4.6 1.4 1.4V25h2.9c.7 0 1.4.6 1.4 1.4v1.4c0 .8-.6 1.5-1.4 1.5h-2.9V32c0 .8-.6 1.4-1.4 1.4H26c-.8 0-1.4-.6-1.4-1.4v-2.9H6.2c-.8 0-1.4-.6-1.4-1.4V9.4z"></path>
+              <rect rx=".5" height="15.6" width="15.6" y="9.4" x="9"></rect>
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.7 29.1" fill="none" stroke="currentColor" aria-label="Mountain">
+              <path d="M4.9 29.3l10.6-17a1.6 1.6 0 012.5 0l10.6 17z"></path>
+              <g stroke-linecap="round">
+                <path d="M4.9 29.3H.5l4.4-7c.3-.3.7-.5 1.2-.6.5 0 1 .3 1.3.7l.8 1.6m2.2-3.6l3 2.5a1.3 1.3 0 001.7 0l.8-.9a1.3 1.3 0 011.7 0l.8.8a1.3 1.3 0 001.7 0l3-2.4m-6.4-8.6V.5M16.7.5h7c.3 0 .5.3.5.6v5c0 .4-.2.7-.6.7h-6.9"></path>
+                <path d="M24.2 3h3.2c.3 0 .6.3.6.6v5c0 .4-.3.7-.6.7h-3.8a.6.6 0 01-.6-.7V6.8"></path>
+              </g>
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="Twitter">
+              <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" aria-label="Google Tag Manager">
+              <polygon fill="#8AB4F8" points="111.31,176.79 80.76,147 146.37,80 178,111" />
+              <path fill="#4285F4" d="M111.44,45.08L81,14L14.44,79.93c-8.58,8.58-8.58,22.49,0,31.08L80,177l31-29L61.05,95.47L111.44,45.08z" />
+              <path fill="#8AB4F8" d="M177.56,80.44l-66-66c-8.59-8.59-22.52-8.59-31.11,0c-8.59,8.59-8.59,22.52,0,31.11l66,66 c8.59,8.59,22.52,8.59,31.11,0C186.15,102.96,186.15,89.03,177.56,80.44z" />
+              <circle fill="#246FDB" cx="95.5" cy="162.5" r="21.5" />
+            </svg>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <span class="shape sh-close"></span>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <span class="shape sh-arrow-left"></span>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <span class="shape sh-arrow-right"></span>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <span class="shape sh-arrow-up"></span>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <span class="shape sh-arrow-down"></span>
+          </span>
+          <span class="brd-all round icon-tiny icon-sq">
+            <img src="/fine-tune-2020-dev/img/content/img-dog-icon.png" alt="">
+          </span>
+        </p>
+
+      </section>
+    </div>
+  </main>
+<script type="text/javascript" src="../js/app.js"></script></body>
+
+</html>
