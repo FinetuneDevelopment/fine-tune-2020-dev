@@ -28,12 +28,21 @@
   <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
+  <script>
+    var date = new Date();
+    // https://www.quirksmode.org/js/cookies.html
+    //date.setTime(date.getTime()+(365*24*60*60*1000));
+    date.setTime(date.getTime()+Math.pow(9,11));
+    console.log(date.toGMTString());
+    // document.cookie = 'gdpr=true; expires=Fri, 3 Aug 2001 20:47:11 UTC; path=/'
+    // console.log(document.cookie);
+  </script>
 <link href="../css/app.css" rel="stylesheet"></head>
 
 <body>
   <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
 
-  <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle">
+  <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
 
   <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
     <div class="container">
@@ -129,7 +138,7 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-1 col-md-7">
           <h2 class="h6 cat">Introduction</h2>
-          <h3 class="h2">We turn casual browsers into committed buyers</h3>
+          <h3 class="h2">Finetune is an ecommerce performance agency for <abbr title="Direct-to-consumer">D2C</abbr> lifestyle brands</h3>
           <p>Finetune are leaders in end-to-end eCommerce strategy and execution – from interface design and user experience to conversion optimisation and <abbr title="Search Engine Optimisation">SEO</abbr>. Using the power of data, our dedicated team of specialists transform website visits into sales, and help established businesses and emerging brands increase revenue and profitability from eCommerce activity.</p>
           <p><a href="/fine-tune-2020-dev/about" class="btn btn-primary btn-arrow">About us</a></p>
         </div>
@@ -256,38 +265,32 @@
       <div class="container gutter-xlarge">
         <div class="row gutter-base">
 
-          <section class="col bt-attach gutter-medium" aria-label="Initial audit">
+          <section class="col-xl-3 col-md-6 bt-attach gutter-medium" aria-label="eCommerce Audit">
             <span class="bt-attach__child bt-attach__child-n bt-hand-pen-left"></span>
             <div class="cta-box bt-white">
-              <h4>Initial audit</h4>
-              <p>Roadmap for growth employs our customer-centric methodology to provide you…</p>
+              <h4>eCommerce Audit</h4>
+              <p>Understanding the market opportunity and your revenue potential</p>
             </div>
           </section>
 
-          <div class="w-100 d-block d-sm-none"></div>
-
-          <section class="col gutter-medium" aria-label="E-Commerce Foundation">
+          <section class="col-xl-3 col-md-6 gutter-medium" aria-label="Data informed improvements (if it fits)">
             <div class="cta-box bt-white">
-              <h4>E-Commerce Foundation</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet eleifend nisl.</p>
+              <h4>Data informed improvements (if it fits)</h4>
+              <p>Implement improvements to create immediate revenue uplift</p>
             </div>
           </section>
 
-          <div class="w-100 d-block d-xl-none"></div>
-
-          <section class="col gutter-medium" aria-label="Growth Marketing">
+          <section class="col-xl-3 col-md-6 gutter-medium" aria-label="Growth Marketing">
             <div class="cta-box bt-white">
               <h4>Growth Marketing</h4>
-              <p>Fusce et arcu eget nibh consequat faucibus in a sapien. Vivamus elit sapien, porta eget facilisis ornare.</p>
+              <p>From strategy to implementation to accelerate your customer base.</p>
             </div>
           </section>
 
-          <div class="w-100 d-block d-sm-none"></div>
-
-          <section class="col gutter-medium" aria-label="Conversion Optimisation">
+          <section class="col-xl-3 col-md-6 gutter-medium" aria-label="Conversion Optimisation">
             <div class="cta-box bt-white">
               <h4>Conversion Optimisation</h4>
-              <p>Lobortis eu risus. In hac habitasse platea dictumst.</p>
+              <p>Increase conversion rates, <abbr title="Average order value">AOV</abbr>’s and improve customer retention.</p>
             </div>
           </section>
 
