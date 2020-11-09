@@ -1,6 +1,4 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Calculator" viewBox="0 0 174.8 380">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-label="Calculator" viewBox="0 0 174.8 380" width="174" height="380">
   <defs>
     <path d="M95.3.4v131.2H.2V.4z" id="calc-a"/>
     <path d="M174.7 377.6l-69.9-189.2 13-33.3c1.6-5 .9-20-1.1-31.4-1.2-6.9-6.3-33.4-9.2-28.5s-7.9 43.7-11 50.3c-3.7 7.8-24.5 22-26.2 28.2" id="calc-c"/>
