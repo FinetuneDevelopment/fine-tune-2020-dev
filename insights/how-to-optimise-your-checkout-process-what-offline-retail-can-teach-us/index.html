@@ -23,15 +23,43 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/fine-tune-2020-dev/img/favicon/site.webmanifest">
+  <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
   <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
+  <script>
+    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
+    function addScript(src,config) {
+      var script = document.createElement('script');
+      script.src = src;
+      for (var prop in config) {
+        if (!config.hasOwnProperty(prop)) continue;
+        script.setAttribute(prop,config[prop]);
+      }
+      document.currentScript.parentElement.appendChild(script);
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    if (window.gdpr) {
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PQ3XP7N');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
   <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
 
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
 
   <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
@@ -422,7 +450,7 @@
       </div>
       <hr class="brd-white">
       <div class="row">
-        <p class="col-sm-8 small text-uppercase">&copy; 2020 Finetune Partners &bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+        <p class="col-sm-8 small text-uppercase">&copy; 2020 Finetune Partners &bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></p>
         <p class="col-sm-4 text-right text-center-sm d-print-none">
           <a href="https://twitter.com/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Follow us on Twitter">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="Twitter">
