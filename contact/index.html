@@ -55,6 +55,7 @@
     }
   </script>
   <!-- End Google Tag Manager -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <link href="../css/app.css" rel="stylesheet"></head>
 
 
@@ -160,7 +161,7 @@
       </div>
     </section>
 
-    <form class="bt-mint" method="get" action="#">
+    <form class="bt-mint" method="post" action="https://formspree.io/f/xknpzvyp">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10">
@@ -176,7 +177,7 @@
 
                   <p>
                     <label for="email">Email address</label>
-                    <input class="input" type="email" name="email" id="email" placeholder="name@company.com">
+                    <input class="input" type="email" name="email" id="email" placeholder="name@company.com" required>
                   </p>
 
                   <p>
@@ -186,13 +187,15 @@
 
                   <p>
                     <label for="message">Message</label>
-                    <textarea class="input" cols="53" rows="5" id="message" name="message" placeholder="Type something"></textarea>
+                    <textarea class="input" cols="53" rows="5" id="message" name="message" placeholder="Type something" required></textarea>
                   </p>
 
-                  <div class="media">
+                  <div class="g-recaptcha gutter-large" data-sitekey="6LeKpeMZAAAAAHe2v_jGLu2cO8wCqSmx28FqpQwZ"></div>
+
+                  <!--div class="media">
                     <p class="mr-3"><input type="checkbox" name="email-signup" id="email-signup"></p>
                     <p class="media-body"><label for="email-signup">Please subscribe me to your email newsletter</label></p>
-                  </div>
+                  </div-->
 
                   <p><button class="btn btn-primary btn-arrow">Submit</button></p>
 
