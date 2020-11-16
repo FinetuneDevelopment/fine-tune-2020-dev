@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Finetune Digital Design Guidelines</title>
+  <title>Finetune Partners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
@@ -13,7 +13,7 @@
   <meta name="HandheldFriendly" content="true">
   <meta name="description" content="Finetune">
   <meta property="fb:admins" content="1570989889829468">
-  <meta property="og:title" content="Finetune">
+  <meta property="og:title" content="Finetune Partners">
   <meta property="og:description" content="Finetune">
   <meta property="og:type" content="website">
   <meta property="og:url" content="/fine-tune-2020-dev/">
@@ -29,21 +29,25 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
   <script>
-    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
-    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
-    function addScript(src,config) {
-      var script = document.createElement('script');
-      script.src = src;
-      for (var prop in config) {
-        if (!config.hasOwnProperty(prop)) continue;
-        script.setAttribute(prop,config[prop]);
+    window.gdpr = {
+      "addTag": function(tag,attr,content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop,attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
       }
-      document.currentScript.parentElement.appendChild(script);
-    }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
   </script>
   <!-- Google Tag Manager -->
   <script>
-    if (window.gdpr) {
+    if (window.gdpr.choice) {
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -341,60 +345,54 @@
 
         <div class="row gutter-base">
 
-          <section class="col gutter-medium" aria-label="5 Reasons Why Your Site Is Failing To Convert More Visitors Into Customers And How To Fix It">
-            <a href="/fine-tune-2020-dev/5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it/" class="box-link">
-              <span class="box-link__child">
-                <p><img src="/fine-tune-2020-dev/img/blog/cta-5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it.jpg" class="img-fluid" alt=""></p>
-                <p class="type-etc-medium small text-uppercase text-grey"><abbr>CRO</abbr> Data-Informed Design eCommerce</p>
-                <h3 class="h5">5 Reasons Why Your Site Is Failing To Convert More Visitors Into Customers And How To Fix It</h3>
-                <p>Turning visitors into customers; this is one of the central aims of most Conversion Rate Optimisation programmes.</p>
-              </span>
+          <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Why There’s No Such Thing As Failure In Conversion Rate Optimisation">
+            <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us/" class="box-link">
+              <div class="box-link__child">
+                <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us.jpg" class="img-fluid" alt=""></p>
+                <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy <abbr title="Conversion Rate Optimisation">CRO</abbr></p>
+                <h3 class="h5">Why There’s No Such Thing As Failure In Conversion Rate Optimisation</h3>
+                <p>Conversion Rate Optimisation has the great benefit of being a highly measurable industry.</p>
+              </div>
             </a>
           </section>
 
-          <div class="w-100 d-block d-sm-none"></div>
-
-          <section class="col gutter-medium" aria-label="How To Improve Conversions From Mobiles On Your E-commerce Site ">
-            <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-site-for-mobile/" class="box-link">
-              <span class="box-link__child">
-                <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-site-for-mobile.jpg" class="img-fluid" alt=""></p>
-                <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy Data-Informed Design eCommerce</p>
-                <h3 class="h5">How To Improve Conversions From Mobiles On Your E-commerce Site</h3>
-                <p>Optimising the mobile experience has become an essential part of many digital businesses in today’s world.</p>
-              </span>
+          <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+            <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
+              <div class="box-link__child">
+                <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+                <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+                <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+                <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
+              </div>
             </a>
           </section>
 
-          <div class="w-100 d-block d-xl-none"></div>
-
-          <section class="col gutter-medium" aria-label="How To Optimise Your E-commerce Checkout">
-            <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-checkout/" class="box-link">
-              <span class="box-link__child">
-                <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-checkout.jpg" class="img-fluid" alt=""></p>
-                <p class="type-etc-medium small text-uppercase text-grey">CRO eCommerce</p>
-                <h3 class="h5">How To Optimise Your E-commerce Checkout</h3>
-                <p>Optimising online checkout processes is an essential tool in any optimiser’s armoury.</p>
-              </span>
+          <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model">
+            <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme2/" class="box-link">
+              <div class="box-link__child">
+                <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme2.jpg" class="img-fluid" alt=""></p>
+                <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+                <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model</h3>
+                <p>In the second part of our &quot;CRO: In Graphs&quot; series, we’re going to turn our attention to the Strategic Output Model.</p>
+              </div>
             </a>
           </section>
 
-          <div class="w-100 d-block d-sm-none"></div>
-
-          <section class="col gutter-medium" aria-label="How To Get Started With Conversion Rate Optimisation (CRO)">
-            <a href="/fine-tune-2020-dev/how-to-get-started-with-conversion-rate-optimisation-cro/" class="box-link">
-              <span class="box-link__child">
-                <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-get-started-with-conversion-rate-optimisation-cro.jpg" class="img-fluid" alt=""></p>
+          <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="How To Persuade More Of Your Site Visitors To Buy From You">
+            <a href="/fine-tune-2020-dev/insights/how-to-persuade-more-of-your-site-visitors-to-buy-from-you/" class="box-link">
+              <div class="box-link__child">
+                <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-persuade-more-of-your-site-visitors-to-buy-from-you.jpg" class="img-fluid" alt=""></p>
                 <p class="type-etc-medium small text-uppercase text-grey"><abbr title="Conversion Rate Optimisation">CRO</abbr></p>
-                <h3 class="h5">How To Get Started With Conversion Rate Optimisation (<abbr>CRO</abbr>)</h3>
-                <p>Getting started with Conversion Rate Optimisation is easier than that you might think.</p>
-              </span>
+                <h3 class="h5">How To Persuade More Of Your Site Visitors To Buy From You</h3>
+                <p>Success in Conversion Rate Optimisation (CRO) can be viewed as the art of persuasion.</p>
+              </div>
             </a>
           </section>
 
         </div><!-- .row -->
 
         <p class="text-center">
-          <a href="#" class="btn btn-primary btn-arrow">More insights</a>
+          <a href="/fine-tune-2020-dev/insights/" class="btn btn-primary btn-arrow">More insights</a>
         </p>
 
       </div>
@@ -532,7 +530,7 @@
         </div><!-- .row -->
 
         <h3 class="h2 text-center d-print-none">Make more money<br class="d-none d-sm-block"> from e-commerce</h3>
-        <p class="text-center d-print-none"><a href="#" class="btn btn-primary btn-arrow">Get in touch</a></p>
+        <p class="text-center d-print-none"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-arrow">Get in touch</a></p>
       </div><!-- .container-->
 
 
@@ -609,6 +607,7 @@
       </div>
     </div>
   </footer>
+
 <script type="text/javascript" src="js/app.js"></script></body>
 
 </html>

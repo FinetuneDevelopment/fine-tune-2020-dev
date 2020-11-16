@@ -28,17 +28,21 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
   <script>
-    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
-    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
-    function addScript(src,config) {
-      var script = document.createElement('script');
-      script.src = src;
-      for (var prop in config) {
-        if (!config.hasOwnProperty(prop)) continue;
-        script.setAttribute(prop,config[prop]);
+    window.gdpr = {
+      "addTag": function(tag,attr,content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop,attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
       }
-      document.currentScript.parentElement.appendChild(script);
-    }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
   </script>
   <!-- Google Tag Manager -->
   <script>

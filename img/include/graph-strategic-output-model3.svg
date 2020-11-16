@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" fill="none" stroke="#666" stroke-width=".1" role="img" aria-label="The Strategic Output Model with a line representing the risk / reward split">
+   <style>text{font-family:Courier New,Courier,monospace;font-size:.5px;fill:currentColor;stroke:none;}</style>
+   <rect ry="0" y="1" x="1" height="10" width="22"/>
+   <rect ry="0" y="6" x="1" height="5" width="11" fill="#fee2dc"/>
+   <rect y="1" x="12" height="8" width="11" fill="#daebf6"/>
+   <path d="M 1,6 H 23"/>
+   <path d="M 1,11 23,1" stroke="#2e38ef"/>
+   <text y="8" x="4">Risk-adverse</text>
+   <text x="16" y="8">Challenger</text>
+   <text transform="rotate(-27)" y="10" x="5">Positive correlation</text>
+</svg>

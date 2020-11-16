@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width=".1" role="img" aria-label="Finding the target growth area on the possibility space">
+  <style>text{font-size:.5px;fill:currentColor;stroke:none;}circle{stroke-width:.04;}</style>
+  <rect y="1" x="12" height="10" width="2" fill="#4b6" opacity=".5" stroke="none"/>
+  <path d="M 12,1 V 11"/>
+  <path d="M 1,6 H 23"/>
+  <rect width="22" height="10" x="1" y="1" ry="0"/>
+  <path d="M 6.5,11 V 6"/>
+  <path d="M 1,8.5 H 12"/>
+  <circle fill="#4b6" r="0.5" cy="7.5" cx="10"/>
+  <text y="7.6" x="9.8" class="type-etc-regular">a</text>
+  <circle fill="#D66" r="0.5" cy="8" cx="17"/>
+  <text y="8.1" x="16.8" class="type-etc-regular">b</text>
+  <circle fill="#4b6" r="0.5" cy="8" cx="4"/>
+  <text y="8.1" x="3.8" class="type-etc-regular">c</text>
+  <circle fill="#4b6" r="0.5" cy="6.5" cx="6.5"/>
+  <text y="6.6" x="6.3" class="type-etc-regular">d</text>
+  <circle fill="#fc0" r="0.5" cy="5" cx="13"/>
+  <text y="5.1" x="12.8" class="type-etc-regular">e</text>
+  <text y="12" x="0" class="type-etc-regular">0</text>
+  <text y="6.2" x="0" class="type-etc-regular">5</text>
+  <text y="1" x="0" class="type-etc-regular">10</text>
+  <text y="12" x="11.7" class="type-etc-regular">5</text>
+  <text y="12" x="22.5" class="type-etc-regular">10</text>
+  <text x="10" y="2" class="type-etc-regular">Target Growth Area</text>
+</svg>

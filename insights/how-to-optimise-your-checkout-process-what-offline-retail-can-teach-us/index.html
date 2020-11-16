@@ -28,17 +28,21 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
   <script>
-    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
-    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
-    function addScript(src,config) {
-      var script = document.createElement('script');
-      script.src = src;
-      for (var prop in config) {
-        if (!config.hasOwnProperty(prop)) continue;
-        script.setAttribute(prop,config[prop]);
+    window.gdpr = {
+      "addTag": function(tag,attr,content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop,attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
       }
-      document.currentScript.parentElement.appendChild(script);
-    }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
   </script>
   <!-- Google Tag Manager -->
   <script>
@@ -51,7 +55,7 @@
     }
   </script>
   <!-- End Google Tag Manager -->
-</head>
+<link href="../../css/app.css" rel="stylesheet"></head>
 
 <body>
   <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
@@ -343,7 +347,7 @@
       <div class="row gutter-base">
 
         <section class="col gutter-medium" aria-label="5 Reasons Why Your Site Is Failing To Convert More Visitors Into Customers And How To Fix It">
-          <a href="/fine-tune-2020-dev/5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it/" class="box-link">
+          <a href="/fine-tune-2020-dev/insights/5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey"><abbr>CRO</abbr> Data-Informed Design eCommerce</p>
@@ -356,7 +360,7 @@
         <div class="w-100 d-block d-sm-none"></div>
 
         <section class="col gutter-medium" aria-label="How To Improve Conversions From Mobiles On Your E-commerce Site ">
-          <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-site-for-mobile/" class="box-link">
+          <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-e-commerce-site-for-mobile/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-site-for-mobile.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy Data-Informed Design eCommerce</p>
@@ -369,7 +373,7 @@
         <div class="w-100 d-block d-xl-none"></div>
 
         <section class="col gutter-medium" aria-label="How To Optimise Your E-commerce Checkout">
-          <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-checkout/" class="box-link">
+          <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-e-commerce-checkout/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-checkout.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey">CRO eCommerce</p>
@@ -382,7 +386,7 @@
         <div class="w-100 d-block d-sm-none"></div>
 
         <section class="col gutter-medium" aria-label="How To Get Started With Conversion Rate Optimisation (CRO)">
-          <a href="/fine-tune-2020-dev/how-to-get-started-with-conversion-rate-optimisation-cro/" class="box-link">
+          <a href="/fine-tune-2020-dev/insights/how-to-get-started-with-conversion-rate-optimisation-cro/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-get-started-with-conversion-rate-optimisation-cro.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey"><abbr title="Conversion Rate Optimisation">CRO</abbr></p>
@@ -467,6 +471,6 @@
       </div>
     </div>
   </footer>
-</body>
+<script type="text/javascript" src="../../js/app.js"></script></body>
 
 </html>

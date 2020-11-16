@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" fill="none" stroke="#2e38ef" stroke-width=".1" role="img" aria-label="Bell curve pushed to the right, with marked central section">
+   <path d="M 1,11 C 19,11 17,1 20,1 c 2,0 0,10 3,10" stroke="currentColor"/>
+   <path d="M 19,3 V 0"/>
+   <path d="M 20,3 V 0" stroke-dasharray=".2"/>
+   <path d="M 21,3 V 0"/>
+</svg>

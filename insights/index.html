@@ -28,17 +28,21 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
   <script>
-    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
-    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
-    function addScript(src,config) {
-      var script = document.createElement('script');
-      script.src = src;
-      for (var prop in config) {
-        if (!config.hasOwnProperty(prop)) continue;
-        script.setAttribute(prop,config[prop]);
+    window.gdpr = {
+      "addTag": function(tag,attr,content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop,attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
       }
-      document.currentScript.parentElement.appendChild(script);
-    }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
   </script>
   <!-- Google Tag Manager -->
   <script>
@@ -159,14 +163,14 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <p class="gutter-medium">
-            <a href="/fine-tune-2020-dev/what-to-look-for-when-hiring-a-conversion-rate-optimisation-cro-expert/">
+            <a href="/fine-tune-2020-dev/insights/what-to-look-for-when-hiring-a-conversion-rate-optimisation-cro-expert/">
               <img src="/fine-tune-2020-dev/img/blog/head-what-to-look-for-when-hiring-a-conversion-rate-optimisation-cro-expert.jpg" alt="What To Look For When Hiring A Conversion Rate Optimisation (CRO) Expert" class="img-fluid">
             </a>
           </p>
           <p class="type-etc-medium small text-uppercase text-grey">CRO, Marketing, Mobile</p>
         </div>
       </div>
-      <a href="/fine-tune-2020-dev/what-to-look-for-when-hiring-a-conversion-rate-optimisation-cro-expert/" class="block-link row justify-content-center">
+      <a href="/fine-tune-2020-dev/insights/what-to-look-for-when-hiring-a-conversion-rate-optimisation-cro-expert/" class="block-link row justify-content-center">
         <div class="col-sm col-lg-4">
           <h2 class="h4">What To Look For When Hiring A Conversion Rate Optimisation (<abbr title="Conversion Rate Optimisation">CRO</abbr>) Expert</h2>
         </div>
@@ -189,12 +193,12 @@
       </div>
     </div>
 
-    <div class="container gutter-xlarge">
+    <div class="container">
 
       <div class="row gutter-base">
 
-        <section class="col gutter-medium" aria-label="5 Reasons Why Your Site Is Failing To Convert More Visitors Into Customers And How To Fix It">
-          <a href="/fine-tune-2020-dev/5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it/" class="box-link">
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="5 Reasons Why Your Site Is Failing To Convert More Visitors Into Customers And How To Fix It">
+          <a href="/fine-tune-2020-dev/insights/5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-5-reasons-why-your-site-is-failing-to-convert-more-visitors-into-customers-and-how-to-fix-it.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey"><abbr>CRO</abbr> Data-Informed Design eCommerce</p>
@@ -204,10 +208,8 @@
           </a>
         </section>
 
-        <div class="w-100 d-block d-sm-none"></div>
-
-        <section class="col gutter-medium" aria-label="How To Improve Conversions From Mobiles On Your E-commerce Site ">
-          <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-site-for-mobile/" class="box-link">
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="How To Improve Conversions From Mobiles On Your E-commerce Site ">
+          <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-e-commerce-site-for-mobile/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-site-for-mobile.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy Data-Informed Design eCommerce</p>
@@ -217,10 +219,8 @@
           </a>
         </section>
 
-        <div class="w-100 d-block d-xl-none"></div>
-
-        <section class="col gutter-medium" aria-label="How To Optimise Your E-commerce Checkout">
-          <a href="/fine-tune-2020-dev/how-to-optimise-your-e-commerce-checkout/" class="box-link">
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="How To Optimise Your E-commerce Checkout">
+          <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-e-commerce-checkout/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-e-commerce-checkout.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey">CRO eCommerce</p>
@@ -230,10 +230,8 @@
           </a>
         </section>
 
-        <div class="w-100 d-block d-sm-none"></div>
-
-        <section class="col gutter-medium" aria-label="How To Get Started With Conversion Rate Optimisation (CRO)">
-          <a href="/fine-tune-2020-dev/how-to-get-started-with-conversion-rate-optimisation-cro/" class="box-link">
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="How To Get Started With Conversion Rate Optimisation (CRO)">
+          <a href="/fine-tune-2020-dev/insights/how-to-get-started-with-conversion-rate-optimisation-cro/" class="box-link">
             <div class="box-link__child">
               <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-get-started-with-conversion-rate-optimisation-cro.jpg" class="img-fluid" alt=""></p>
               <p class="type-etc-medium small text-uppercase text-grey"><abbr title="Conversion Rate Optimisation">CRO</abbr></p>
@@ -245,22 +243,57 @@
 
       </div><!-- .row -->
 
-      <a href="/fine-tune-2020-dev/how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us/" class="box-link">
-        <div class="box-link__child">
-          <section class="row gutter-base" aria-label="Why There’s No Such Thing As Failure In Conversion Rate Optimisation">
-            <div class="col-md-4">
-              <div class="brd-top pad-t-base">
-                <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy <abbr title="Conversion Rate Optimisation">CRO</abbr></p>
-                <h3 class="h5">Why There's No Such Thing As Failure In Conversion Rate Optimisation</h3>
-                <p>Conversion Rate Optimisation has the great benefit of being a highly measurable industry.</p>
-              </div>
+    </div><!-- .container -->
+
+    <div class="container">
+
+      <div class="row gutter-base">
+
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Why There’s No Such Thing As Failure In Conversion Rate Optimisation">
+          <a href="/fine-tune-2020-dev/insights/how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us/" class="box-link">
+            <div class="box-link__child">
+              <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us.jpg" class="img-fluid" alt=""></p>
+              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy <abbr title="Conversion Rate Optimisation">CRO</abbr></p>
+              <h3 class="h5">Why There’s No Such Thing As Failure In Conversion Rate Optimisation</h3>
+              <p>Conversion Rate Optimisation has the great benefit of being a highly measurable industry.</p>
             </div>
-            <p class="col-md">
-              <img src="/fine-tune-2020-dev/img/blog/wide-how-to-optimise-your-checkout-process-what-offline-retail-can-teach-us.jpg" alt="Why There’s No Such Thing As Failure In Conversion Rate Optimisation" class="img-fluid">
-            </p>
-          </section>
-        </div>
-      </a>
+          </a>
+        </section>
+
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+          <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
+            <div class="box-link__child">
+              <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+              <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model">
+          <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme2/" class="box-link">
+            <div class="box-link__child">
+              <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme2.jpg" class="img-fluid" alt=""></p>
+              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model</h3>
+              <p>In the second part of our &quot;CRO: In Graphs&quot; series, we’re going to turn our attention to the Strategic Output Model.</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="col-sm-6 col-xl-3 gutter-medium" aria-label="How To Persuade More Of Your Site Visitors To Buy From You">
+          <a href="/fine-tune-2020-dev/insights/how-to-persuade-more-of-your-site-visitors-to-buy-from-you/" class="box-link">
+            <div class="box-link__child">
+              <p><img src="/fine-tune-2020-dev/img/blog/cta-how-to-persuade-more-of-your-site-visitors-to-buy-from-you.jpg" class="img-fluid" alt=""></p>
+              <p class="type-etc-medium small text-uppercase text-grey"><abbr title="Conversion Rate Optimisation">CRO</abbr></p>
+              <h3 class="h5">How To Persuade More Of Your Site Visitors To Buy From You</h3>
+              <p>Success in Conversion Rate Optimisation (CRO) can be viewed as the art of persuasion.</p>
+            </div>
+          </a>
+        </section>
+
+      </div><!-- .row -->
 
     </div><!-- .container -->
 

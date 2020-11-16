@@ -18,7 +18,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="/fine-tune-2020-dev/">
   <meta property="og:site_name" content="Finetune">
-  <!-- To do -->
   <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-experts-guide.png">
   <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-experts-guide.png">
   <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-experts-guide.png">
@@ -30,17 +29,21 @@
   <meta name="msapplication-TileColor" content="#ffc40d">
   <meta name="theme-color" content="#d7f2db">
   <script>
-    var gdpr = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
-    window.gdpr = gdpr ? gdpr[0].split('=')[1] : null;
-    function addScript(src,config) {
-      var script = document.createElement('script');
-      script.src = src;
-      for (var prop in config) {
-        if (!config.hasOwnProperty(prop)) continue;
-        script.setAttribute(prop,config[prop]);
+    window.gdpr = {
+      "addTag": function(tag,attr,content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop,attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
       }
-      document.currentScript.parentElement.appendChild(script);
-    }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
   </script>
   <!-- Google Tag Manager -->
   <script>
@@ -514,7 +517,7 @@
         </div><!-- .row -->
 
         <h3 class="h2 text-center">Make more money<br class="d-none d-sm-block"> from e-commerce</h3>
-        <p class="text-center"><a href="#" class="btn btn-primary btn-arrow">Get in touch</a></p>
+        <p class="text-center"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-arrow">Get in touch</a></p>
       </div><!-- .container-->
 
     </section>

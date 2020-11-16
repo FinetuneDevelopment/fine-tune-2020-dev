@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" fill="none" stroke="currentColor" stroke-width=".1" role="img" aria-label="Plotting tests on the risk matrix">
+  <style>text{font-size:.5px;fill:currentColor;stroke:none;}circle{stroke-width:.04;}</style>
+  <path d="M 12,1 V 11"/>
+  <path d="M 1,6 H 23"/>
+  <rect ry="0" y="1" x="1" height="10" width="22"/>
+  <path d="M 6.5,11 V 6"/>
+  <path d="M 1,8.5 H 12"/>
+  <circle cx="10" cy="7.5" r="0.5" fill="#6c7"/>
+  <text x="9.8" y="7.6" class="type-etc-regular">a</text>
+  <circle cx="17" cy="8" r="0.5" fill="#D66"/>
+  <text x="16.8" y="8.1" class="type-etc-regular">b</text>
+  <circle cx="4" cy="8" r="0.5" fill="#6c7"/>
+  <text x="3.8" y="8.1" class="type-etc-regular">c</text>
+  <circle cx="6.5" cy="6.5" r="0.5" fill="#6c7"/>
+  <text x="6.3" y="6.6" class="type-etc-regular">d</text>
+  <circle cx="13" cy="5" r="0.5" fill="#fc0"/>
+  <text x="12.8" y="5.1" class="type-etc-regular">e</text>
+  <text x="0" y="12" class="type-etc-regular">0</text>
+  <text x="0" y="6.2" class="type-etc-regular">5</text>
+  <text x="0" y="1" class="type-etc-regular">10</text>
+  <text x="11.7" y="12" class="type-etc-regular">5</text>
+  <text x="22.5" y="12" class="type-etc-regular">10</text>
+</svg>
