@@ -1,2 +1,2 @@
-<head><link href="css/app.css" rel="stylesheet"></head>User-agent: * Disallow:
-Sitemap: /sitemap.xml<script type="text/javascript" src="js/app.js"></script>
+User-agent: * Disallow:
+Sitemap: /sitemap.xml
