@@ -370,8 +370,25 @@ comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
             </div>
           </div>
-          <p class="gutter-xlarge"><iframe src="https://codepen.io/ross-angus/embed/GRqwzQX?height=600&amp;default-tab=result&amp;embed-version=2" scrolling="no" allowtransparency="true" loading="lazy" style="width: 100%;" height="600" frameborder="no">
-          </iframe></p>
+          <p class="gutter-xlarge">
+            <script>
+              if (window.gdpr.choice) {
+                window.gdpr.addTag('iframe',{
+                    'src': 'https://codepen.io/ross-angus/embed/GRqwzQX?height=600&amp;default-tab=result&amp;embed-version=2',
+                    'scrolling': 'no',
+                    'allowtransparency': 'true',
+                    'loading': 'lazy',
+                    'style': 'width: 100%;',
+                    'frameborder': 'no',
+                    'height': '600'
+                });
+              } else {
+                window.gdpr.addTag('p',{
+                  'class': 'bt-pink cta-box'
+                },'In an irony I\'m confident you\'ll find delicious, this iframed content has been blocked because of your cookie settings. You can <a href="https://codepen.io/ross-angus/pen/GRqwzQX" target="_blank">visit the CodePen directly</a> or <button type="button" class="btn" data-js="cookie-config">change your cookie settings</button> to allow elements like this to appear.');
+              }
+            </script>
+          </p>
         </div>
       </div>
 
