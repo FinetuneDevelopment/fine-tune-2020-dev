@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Managing user addresses in Shopify - Finetune</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description" content="Building the addresses.liquid template with full functionality">
+    <meta property="og:title" content="Managing user addresses in Shopify - Finetune">
+    <meta property="og:description" content="Building the addresses.liquid template with full functionality">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://finetunepartners.com/insights/managing-user-addresses-in-shopify/">
+    <link rel="canonical" href="https://finetunepartners.com/insights/managing-user-addresses-in-shopify/">
+    <meta property="og:site_name" content="Finetune">
+    <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-managing-user-addresses-in-shopify.jpg">
+    <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-managing-user-addresses-in-shopify.jpg">
+    <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-managing-user-addresses-in-shopify.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
+    <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#d7f2db">
+    <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
+    <script>
+        window.gdpr = {
+            "addTag": function (tag, attr, content) {
+                var newTag = document.createElement(tag);
+                for (var prop in attr) {
+                    if (!attr.hasOwnProperty(prop)) continue;
+                    newTag.setAttribute(prop, attr[prop]);
+                }
+                if (content) newTag.innerHTML = content;
+                var scripts = document.getElementsByTagName("script");
+                var here = scripts[scripts.length - 1];
+                here.parentElement.insertBefore(newTag, here.nextSibling);
+            }
+        };
+        var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+        window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        if (window.gdpr) {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+<link href="../../css/app.css" rel="stylesheet"></head>
+
+<body>
+    <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
+
+    <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
+        <div class="container">
+            <div class="row">
+                <p class="col-8 flush">
+                    <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+                            <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+                            <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+                            <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                            <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                        </svg>
+                    </a>
+                </p>
+                <p class="col-4 flush text-right">
+                    <label for="nav-toggle" class="pad-vert-tiny text-interactive-blue" title="Expand navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="shape sh-ellipsis"></span>
+                    </label>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Main" class="bt-white brd-bottom pad-vert-tiny main-nav toggle-container">
+        <a href="/fine-tune-2020-dev/contact/" class="main-nav__marquee marquee d-block d-print-none d-md-none bg-interactive-blue semi-small text-uppercase mb-4" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+            <p class="marquee__child mb-2">
+                Get in touch to find out more <span class="ic-arrow"></span>
+                &nbsp; &nbsp;
+                We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+            </p>
+        </a>
+        <div class="container">
+            <div class="row">
+                <p class="col-8 col-md-3 col-lg-2 flush">
+                    <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+                            <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+                            <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+                            <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                            <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                        </svg>
+                    </a>
+                </p>
+                <p class="col-4 d-md-none text-right mb-5">
+                    <label for="nav-toggle" class="brd-all round icon-tiny icon-sq" title="Hide navigation" aria-label="Hide navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img" aria-label="Close">
+                            <line x1="23" y1="1" x2="1" y2="23"></line>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </label>
+                </p>
+                <div class="col-12 col-md d-print-none">
+                    <h2 class="d-md-none h6 type-etc-bold text-reset mb-4 text-center mt-5">Navigation</h2>
+                    <a href="/fine-tune-2020-dev/about/" class="btn btn-nav">About</a>
+                    <a href="/fine-tune-2020-dev/services/" class="btn btn-nav">Services</a>
+                    <!--a href="/fine-tune-2020-dev/work/" class="btn btn-nav">Work</a-->
+                    <em><a href="/fine-tune-2020-dev/insights/" class="btn btn-nav">Insights</a></em>
+                    <a href="/fine-tune-2020-dev/contact/" class="btn btn-nav d-block d-md-none mb-5">Contact</a>
+                </div>
+                <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
+            </div>
+            <div class="text-center d-block d-md-none">
+                <p class="small text-uppercase">&copy; 2020 Finetune Partners &bull;
+                    <br>
+                    <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+                <p>
+                    <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+                            <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <article>
+
+            <header aria-label="Managing user addresses in Shopify" class="bt-mint pad-vert-large">
+                <div class="container">
+                    <aside class="row justify-content-center">
+                        <p class="col-lg-10"><a href="/fine-tune-2020-dev/insights/" class="btn text-uppercase text-interactive-blue"><span class="shape sh-arrow-left"></span> Back to insights</a></p>
+                    </aside>
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-9">
+                            <h1 class="h2">Managing user addresses in Shopify</h1>
+                        </div>
+                        <aside class="col">
+                            <p class="overscore">7 minute read</p>
+                            <p class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+                            <p class="d-print-none">Share</p>
+                            <p data-js="share-links" class="d-print-none">
+                                <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Twitter">
+                                        <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Facebook">
+                                        <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="LinkedIn">
+                                        <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                                    </svg>
+                                </a>
+                            </p>
+                        </aside>
+                    </div><!-- .row -->
+                </div>
+            </header>
+
+            <div class="split-mint-1-5">
+                <div class="container">
+                    <div class="row">
+                        <p class="offset-lg-1 col-lg-9"><img src="/fine-tune-2020-dev/img/blog/full-managing-user-addresses-in-shopify.jpg" alt="" class="img-fluid"></p>
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+                            <p class="lead text-uppercase"><strong>In Shopify, you can allow your customers to create logins and see stuff like past purchases and edit their details. There's a handful of templates expressly for this purpose inside the <code>/templates/customers</code> directory. But it's likely that these files are blank by default.</strong></p>
+
+                            <p>Shopify have <a href="https://shopify.dev/docs/themes/theme-templates/customers-addresses-liquid" target="_blank">some documentation on what's supposed to be in the <code>addresses.liquid</code> file</a>, but it's ... lacking in detail. So let's fill that in, shall we?</p>
+
+                            <h2 class="h3">Minimum viable product</h2>
+
+                            <p>Here's what I'd want to be able to do, as a customer:</p>
+
+                            <ul>
+                                <li>View a list of my addresses</li>
+                                <li>Edit old addresses</li>
+                                <li>Add a new address</li>
+                                <li>Delete even older addresses</li>
+                            </ul>
+
+                            <h3 class="h4">View a list of my addresses</h3>
+
+                            <p>Here's how you generate a list of all the addresses the customer currently has in their account:</p>
+                        </div>
+                    </div>
+                    <pre><code class="language-liquid">{% for address in customer.addresses %}
+&lt;p&gt;
+    {{ address.first_name }} {{ address.last_name }}
+    {% if address.first_name != blank or address.last_name != blank %}&lt;br&gt;{% endif %}
+    {% if address.company != blank %}
+        {{ address.company }}&lt;br&gt;
+    {% endif %}
+    {% if address.address1 != blank %}
+        {{ address.address1 }}&lt;br&gt;
+    {% endif %}
+    {% if address.address2 != blank %}
+        {{ address.address2 }}&lt;br&gt;
+    {% endif %}
+    {% if address.city != blank %}
+        {{ address.city }}&lt;br&gt;
+    {% endif %}
+    {% if address.country != blank %}
+        {{ address.country }}&lt;br&gt;
+    {% endif %}
+    {% if address.province != blank %}
+        {{ address.province }}&lt;br&gt;
+    {% endif %}
+    {% if address.zip != blank %}
+        {{ address.zip }}&lt;br&gt;
+    {% endif %}
+    {{ address.phone }}
+&lt;/p&gt;
+{% endfor %}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <h3 class="h4">Edit old addresses</h3>
+
+                            <p>When it comes to editing current addresses, Shopify even have this nice table for you to refer to:</p>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Input</th>
+                                        <th>Type</th>
+                                        <th>Required name attribute</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>First name</td>
+                                        <td>text</td>
+                                        <td><code>address[first_name]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last name</td>
+                                        <td>text</td>
+                                        <td><code>address[last_name]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Company</td>
+                                        <td>text</td>
+                                        <td><code>address[company]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address 1</td>
+                                        <td>text</td>
+                                        <td><code>address[address1]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Address 2</td>
+                                        <td>text</td>
+                                        <td><code>address[address2]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>City</td>
+                                        <td>text</td>
+                                        <td><code>address[city]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Country</td>
+                                        <td>select</td>
+                                        <td><code>address[country]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Province</td>
+                                        <td>select</td>
+                                        <td><code>address[province]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>ZIP/Postal Code</td>
+                                        <td>text</td>
+                                        <td><code>address[zip]</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phone Number</td>
+                                        <td>tel</td>
+                                        <td><code>address[phone]</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <p>Using this, we can use the following Liquid markup to generate all of the forms required for users to edit their addresses:</p>
+
+                            <p>Here's the liquid code which will generate the forms so the user can edit their existing addresses:</p>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-liquid">{% for address in customer.addresses %}
+    {% form 'customer_address', address %}
+        &lt;p&gt;
+            &lt;input type="text" name="address[first_name]" id="forname{{ forloop.index }}" value="{{ address.first_name }}"&gt;
+            &lt;label for="forname{{ forloop.index }}"&gt;First name&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[last_name]" id="surname{{ forloop.index }}" value="{{ address.last_name }}"&gt;
+            &lt;label for="surname{{ forloop.index }}"&gt;Last name&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[company]" id="company{{ forloop.index }}" value="{{ address.company }}"&gt;
+            &lt;label for="company{{ forloop.index }}"&gt;Company&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[address1]" id="address1-{{ forloop.index }}" value="{{ address.address1 }}"&gt;
+            &lt;label for="address1-{{ forloop.index }}"&gt;Address 1&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[address2]" id="address1-{{ forloop.index }}" value="{{ address.address2 }}"&gt;
+            &lt;label for="address2-{{ forloop.index }}"&gt;Address 2&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[city]" id="city{{ forloop.index }}" value="{{ address.city }}"&gt;
+            &lt;label for="city{{ forloop.index }}"&gt;City&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;select name="address[country]" id="country{{ forloop.index }}" data-provinceid="province{{ forloop.index }}"&gt;
+                {{ country_option_tags }}
+            &lt;/select&gt;
+            &lt;label for="country{{ forloop.index }}"&gt;Country&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;select name="address[province]" id="provinceid{{ forloop.index }}" disabled&gt;
+                &lt;option value=""&gt;Please select a country first&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;label for="province{{ forloop.index }}"&gt;Province&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="text" name="address[zip]" id="postcode{{ forloop.index }}" value="{{ address.zip }}"&gt;
+            &lt;label for="postcode{{ forloop.index }}"&gt;ZIP/Postal Code&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="tel" name="address[phone]" id="phone{{ forloop.index }}" value="{{ address.phone }}"&gt;
+            &lt;label for="phone{{ forloop.index }}"&gt;Phone Number&lt;/label&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;input type="submit" value="Update address"&gt;
+        &lt;/p&gt;
+    {% endform %}
+{% endfor %}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <p>This all seems pretty straightforward, until you get to Country and Province. How do you populate them with the right values?</p>
+
+                            <p>The country select box uses <code>{{ country_option_tags }}</code> to generate a generic list of countries. This list does <em>not</em> automagically select the correct country for the current address. What about province? Surely that's tied to the country, right? What if the user updates their country and the province needs to reflect this?</p>
+
+                            <p>Shopify suggests installing <a href="https://github.com/Shopify/theme-scripts/tree/master/packages/theme-addresses" target="_blank">a whole JavaScript library</a> to handle this, which seems to do a whole lot more than just populating a select box. Hmm.</p>
+
+                            <p>There is, however, an easier way.</p>
+
+                            <h4 class="h5">I couldn't be bothered reading the documentation, so I re-wrote the code from scratch</h4>
+
+                            <p>Inspect the output of those <code>{{ country_option_tags }}</code> and you'll see it comes with a whole heap of extras. Each <code>option</code> tag has a <code>data-provinces</code> attribute, which <em>mostly</em> holds an empty object (<code>[]</code>), but <em>sometimes</em> holds a lot more.</p>
+
+                            <p>We need the JavaScript to do the following:</p>
+
+                            <ol>
+                                <li>Loop through each of the user's addresses, then build an array of values for <q>Country</q> and <q>Province</q>
+                                </li>
+                                <li>Loop through each <code>option</code> tag within each country select box and add a <code>selected="selected</code> to the option which matches the current address (or remove the attribute, if it doesn't)</li>
+                                <li>Check each country select box, to see if it has any province data hidden on the currently selected <code>option</code>
+                                </li>
+                                <li>Update the corresponding province select box with this data</li>
+                                <li>Loop through each province select box and ensure that the correct province is selected by default (or <code>disable</code> the select box, if there are no provinces)</li>
+                            </ol>
+
+                            <h4 class="h5">Building relationships</h4>
+
+                            <p>Shopify have already established that the countries select box must have a <code>name</code> attribute of <code>address[country]</code> and the provinces select box should have a <code>name</code> attribute of <code>address[province]</code>. But there might be potentially multiple addresses on the page. How do we establish a relationship between these two select boxes?</p>
+
+                            <p>Notice that the country select box has a <code>data-provinceid="province{{ forloop.index }}"</code> attribute. This will generate a string which matches the <code>id</code> of the following <code>select</code> box, establishing a means for the JavaScript to jump from one select box to the other (also, this imposes no other markup dependencies).</p>
+
+                            <p>Here's the JavaScript setup function:</p>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-js">function selectorSetup() {
+    // Adds an event listener to the document, rather than the select box
+    document.addEventListener('change', function(e) {
+        var countrySelect = e.target;
+        if (countrySelect.getAttribute('data-provinceid')) {
+            updateProvince(countrySelect);
+        }
+    }, false);
+
+    var countrySelecters = document.querySelectorAll('[name="address[country]"]');
+    {% comment %} Builds up an Array of the values for country and province {% endcomment %}
+    var selectedCountry = [{% for address in customer.addresses %}'{{ address.country }}'{% if forloop.last != true %},{% endif %}{% endfor %}];
+    var selectedProvince = [{% for address in customer.addresses %}'{{ address.province }}'{% if forloop.last != true %},{% endif %}{% endfor %}];
+    // Loops through every address on screen (there can be up to 100!)
+    for (var i = 0; i &lt; countrySelecters.length; i++) {
+        // Finds the elements we need to tinker with
+        var countrySelect = countrySelecters[i];
+        var provinceSelect = document.getElementById(countrySelect.getAttribute('data-provinceid'));
+        if (provinceSelect) {
+            // Makes sure that the current selected value matches the data for the current address
+            preSelect(countrySelect,selectedCountry[i]);
+            // Ensures that the province select box is right for the current country
+            updateProvince(countrySelect);
+            preSelect(provinceSelect,selectedProvince[i]);
+        }
+    }
+}
+selectorSetup();</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <p>Note that a Liquid <code>for</code> loop is used here, to generate two Arrays containing the current values of <q>Country</q> and <q>Province</q> for each address in our list. The index of these values will match the <code>for</code> loop which takes up most of the bottom of the function.</p>
+
+                            <p>Because of this Liquid dependency (and that this JavaScript is only really any use within the <code>addresses.liquid</code> template), this JavaScript should be included in a <code>script</code> tag towards the bottom of <code>addresses.liquid</code>.</p>
+
+                            <p>Next, is the <code>updateProvince()</code> function:</p>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-js">// Updates the province select box, if required
+function updateProvince(countrySelect) {
+    var provinceObj = JSON.parse(countrySelect.options[countrySelect.selectedIndex].dataset.provinces);
+    var provinceSelect = document.getElementById(countrySelect.getAttribute('data-provinceid'));
+    // Does the chosen country have provinces?
+    if (provinceSelect && provinceObj.length &gt; 0) {
+        var options = '';
+        for (var i = 0; i &lt; provinceObj.length; i++) {
+            options = options + '&lt;option value="' + provinceObj[i][0] +'"&gt;' + provinceObj[i][1] + '&lt;/option&gt;\n';
+        }
+        provinceSelect.removeAttribute('disabled');
+        provinceSelect.innerHTML = options;
+    } else {
+        provinceSelect.setAttribute('disabled','disabled');
+        provinceSelect.innerHTML = '&lt;option value=""&gt;Please select a country first&lt;/option&gt;';
+    }
+}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <p>Shopify's province data takes the form of two nested Array-like structures. The inner of these only has two values, which match the <code>value</code> of the <code>option</code> tag and the string of text which appears between the opening and closing <code>option</code> tags.</p>
+
+                            <p>These two strings are <em>mostly</em> identical, but not <em>always</em>. The script pulls them out by their index position.</p>
+
+                            <p>Finally, we need a function which loops through the select boxes and ensures that the right data is selected by default (this is not done automatically by <code>{{ country_option_tags }}</code>):</p>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-js">// This is passed a select box and a value. It attempts to find the value within the select box, then change that option tag to "selected".
+function preSelect(obj,value) {
+    if (obj && value !== '') {
+        for (var i = 0; i &lt; obj.length; i++) {
+            var option = obj[i];
+            if (option.text === value) {
+                option.setAttribute('selected','selected');
+            } else {
+                option.removeAttribute('selected');
+            }
+        }
+    }
+}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+                            <p>Nothing particularly smart here. The function either strips out any <code>selected</code> attributes, or adds in one which matches a string which has been passed.</p>
+
+                            <h3 class="h4">Adding a new address</h3>
+
+                            <p>This one's pretty straightforward:</p>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-liquid">{% comment %}
+Note that you can add a class to this kind of tag like this:
+{% form 'customer_address', customer.new_address, class: 'myClass' %}
+{% endcomment %}
+{% form 'customer_address', customer.new_address %}
+    &lt;p&gt;
+        &lt;input type="text" name="address[first_name]" id="forname-new"&gt;
+        &lt;label for="forname-new"&gt;First name&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[last_name]" id="surname-new"&gt;
+        &lt;label for="surname-new"&gt;Last name&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[company]" id="company-new"&gt;
+        &lt;label for="company-new"&gt;Company&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[address1]" id="address1-new"&gt;
+        &lt;label for="address1-new"&gt;Address 1&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[address2]" id="address1-new"&gt;
+        &lt;label for="address2-new"&gt;Address 2&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[city]" id="city-new"&gt;
+        &lt;label for="city-new"&gt;City&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;select name="address[country]" id="country-new" data-province="province-new"&gt;
+            {{ country_option_tags }}
+        &lt;/select&gt;
+        &lt;label for="country-new"&gt;Country&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;select name="address[province]" id="province-new" disabled&gt;
+            &lt;option value=""&gt;Please select a country first&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;label for="province-new"&gt;Province&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="text" name="address[zip]" id="postcode-new"&gt;
+        &lt;label for="postcode-new"&gt;ZIP/Postal Code&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="tel" name="address[phone]" id="phone-new"&gt;
+        &lt;label for="phone-new"&gt;Phone Number&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input type="submit" value="Update details"&gt;
+    &lt;/p&gt;
+{% endform %}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <p>The same JavaScript which links together the country and province select boxes further up the page will work here.</p>
+
+                            <h3 class="h4">Delete an address</h3>
+
+                        </div>
+                    </div>
+                    <pre><code class="language-liquid">{% for address in customer.addresses %}
+    &lt;form method="post" action="/fine-tune-2020-dev/account/addresses/{{ address.id }}"&gt;
+        &lt;p&gt;
+            &lt;input type="hidden" name="_method" value="delete"&gt;
+            &lt;button&gt;Delete {{ address.address1 }} {{ address.address2 }} {{ address.city }} address&lt;/button&gt;
+        &lt;/p&gt;
+    &lt;/form&gt;
+{% endfor %}</code></pre>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+                            <p>Note that in <a href="https://shopify.dev/docs/themes/theme-templates/customers-addresses-liquid#delete-an-existing-address" target="_blank">Shopify's documentation of this</a> they add a JavaScript confirm box, before allowing the form to submit.</p>
+
+                            <p>There's nothing to stop you from including this markup within any of the other places in the liquid file where the same <code>for</code> loop takes place. As long as you don't nest your <code>form</code> tags within each other, it should be possible (for example) to have a <q>Delete</q> button appearing under the form which allows users to edit an address.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <aside class="container d-print-none gutter-xlarge" aria-label="Related">
+
+            <h2 class="text-center gutter-xlarge">Related</h2>
+
+            <div class="row gutter-base">
+
+                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Page specific images in Shopify">
+                    <a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img src="/fine-tune-2020-dev/img/blog/cta-page-specific-images-in-shopify.jpg" class="img-fluid" alt=""></p>
+                            <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
+                            <h3 class="h5">Page specific images in Shopify</h3>
+                            <p>How to add social sharing and hero images to pages in Shopify, without metafields or apps</p>
+                        </div>
+                    </a>
+                </section>
+
+                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+                    <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+                            <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+                            <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+                            <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
+                        </div>
+                    </a>
+                </section>
+
+                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
+                    <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+                            <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+                            <h3 class="h5">Metafields in Shopify without apps</h3>
+                            <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
+                        </div>
+                    </a>
+                </section>
+
+                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+                    <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
+                      <div class="box-link__child">
+                        <p><img src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+                        <p class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+                        <h3 class="h5"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+                        <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
+                      </div>
+                    </a>
+                  </section>
+
+            </div><!-- .row -->
+
+        </aside><!-- .container -->
+
+    </main>
+
+    <a href="/fine-tune-2020-dev/contact/" class="marquee d-block bg-interactive-blue semi-small text-uppercase d-print-none" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+        <p class="marquee__child mb-1">
+            Get in touch to find out more <span class="ic-arrow"></span>
+            &nbsp; &nbsp;
+            We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+        </p>
+    </a>
+
+    <footer class="bg-deep-blue text-center-sm">
+        <div class="container mt-5">
+            <div class="row d-print-none">
+                <div class="col-lg-4 col-md offset-md-0 col-sm-8 offset-sm-2">
+                    <div class="row">
+                        <p class="col-4 offset-4 offset-md-0 col-md-3">
+                            <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 159.1" aria-label="Finetune Partners">
+                                    <path fill="#2e38ef" d="M33 146l30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56 0 89l10 32z" />
+                                    <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                                    <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+
+                    <p class="h4">We turn casual browsers into committed buyers</p>
+                </div>
+                <nav class="col-12 col-md-3 col-xl-3 offset-md-1 offset-lg-0 offset-xl-1" aria-label="Footer">
+                    <h2 class="h6 type-etc-bold text-reset mb-4">Navigation</h2>
+                    <div class="text-uppercase semi-small mb-5">
+                        <p><a href="/fine-tune-2020-dev/about/" class="btn">About</a></p>
+                        <p><a href="/fine-tune-2020-dev/services/" class="btn">Services</a></p>
+                        <!--p><a href="/fine-tune-2020-dev/work/" class="btn">Work</a></p-->
+                        <p><a href="/fine-tune-2020-dev/insights/" class="btn">Insights</a></p>
+                        <p><a href="/fine-tune-2020-dev/contact/" class="btn">Contact</a></p>
+                    </div>
+                </nav>
+                <div class="col-md-5 col-lg-5 col-xl-4 mb-5">
+                    <h2 class="h6 type-etc-bold text-reset mb-4">Information</h2>
+                    <p>We're all working from home right now. Please email us at<br>
+                        <a href="mailto:hello@finetunepartners.com">hello@finetunepartners.com</a><br>
+                        We'd love to hear from you.</p>
+                </div>
+            </div>
+            <hr class="brd-white">
+            <div class="row">
+                <p class="col-sm-10 small text-uppercase">&copy; 2020 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+                <p class="col-sm-2 text-right text-center-sm d-print-none">
+                    <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+                            <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="../../js/app.js"></script></body>
+
+</html>

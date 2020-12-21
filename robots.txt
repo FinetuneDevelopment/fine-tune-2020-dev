@@ -1,2 +1,2 @@
 User-agent: * Disallow:
-Sitemap: /sitemap.xml
+Sitemap: https://finetunepartners.com/sitemap.xml
