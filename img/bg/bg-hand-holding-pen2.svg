@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg1063"
+   version="1.1"
+   aria-label="Hand holding pen"
+   role="img"
+   height="215"
+   width="309"
+   viewBox="0 0 309 215">
+  <metadata
+     id="metadata1069">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1067" />
+  <g
+     transform="translate(-2)"
+     fill="#ffffff"
+     stroke-width="0.8"
+     id="g1051"
+     style="stroke:#010111">
+    <path
+       d="m 290,60 c 8,3 -6,5 -14,6 a 515,515 0 0 1 -38,-2 l -40,2 c -22,1 -23,-38 7,-33 38,6 75,22 85,27 z"
+       id="path1047" />
+    <path
+       d="m 282,83 c 6,6 -7,3 -15,1 L 232,69 194,55 c -21,-7 -9,-42 18,-27 a 386,386 0 0 1 70,55 z"
+       id="path1049" />
+  </g>
+  <path
+     id="path1053"
+     d="m 108,22 c 55.8526,34.839963 156,97 156,97 l 31,11 4,-6 -23,-25 C 276,99 170.99677,33.674029 120,2 111.67949,3.5712656 106.42873,12.025642 108,22 Z"
+     style="stroke:#010111" />
+  <path
+     id="path1080"
+     d="m 194,48 c 3,0 47,40 62,48 8,5 22,9 12,-4 -7,-8 -53,-66 -61,-68 -15,-3 -40,2 -51,7 C 93,66 -1,91 -1,91 V 214 C 104,121 131,107 183,105 l 45,2 c 27,4 13,-14 -20,-26 -19,-6 -29,-15 -29,-15 0,0 6,-21 10,-21"
+     style="fill:#ffffff;fill-opacity:1;stroke:#010111" />
+  <path
+     id="path1055"
+     d="m 299,124 7,8 -11,-2 z"
+     style="fill:#ffffff;fill-opacity:1;stroke:#010111" />
+  <path
+     id="path1059"
+     fill="#010111"
+     d="m 172,105 c 0,0 -27,-1 -41,-6 0,0 16,12 19,11 l 22,-5" />
+  <path
+     style="fill:#ff75ff;fill-opacity:1;stroke:none"
+     d="m 194,48.000001 c 3,0 47,39.999999 62,47.999999 8,5 22,9 12,-4 -7,-8 -53,-65.999999 -61,-67.999999"
+     id="path1080-8" />
+  <path
+     style="fill:#ff59ff;fill-opacity:1;stroke:none"
+     d="m 183,105 45,2 c 27,4 13,-14 -20,-26 -19,-6 -29,-15 -29,-15"
+     id="path1080-3" />
+</svg>

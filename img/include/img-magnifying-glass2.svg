@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="img-magnifying-glass2.svg"
+   id="svg1401"
+   version="1.1"
+   aria-label="Hand holding magnifying glass."
+   role="img"
+   fill="#010111"
+   viewBox="0 0 1200 1200">
+  <metadata
+     id="metadata1407">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1405" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg1401"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="600"
+     inkscape:cx="600"
+     inkscape:zoom="0.70416667"
+     showgrid="false"
+     id="namedview1403"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     id="path1369"
+     stroke-width="8"
+     stroke="#01010b"
+     fill="#d7f5db"
+     d="M3 0h1200v1200H3z" />
+  <g
+     id="g1377"
+     stroke-width="2"
+     stroke="#010111"
+     fill="#fff">
+    <path
+       id="path1371"
+       d="M725 760a67 67 0 01-25-2c-14-4-74-32-85-34s-127 54-128 39c-1-64 100-99 107-100s35 5 51 19 72 60 80 78z" />
+    <path
+       id="path1373"
+       d="M763 715s-10 3-24-1-74-26-85-28-118 53-128 42 55-107 62-108c24-3 65 0 95 27 17 14 72 50 80 68z" />
+    <path
+       id="path1375"
+       d="M774 663s-2 7-24-2c-18-5-99-34-112-34s-113 98-127 87-13-140-5-143 145-2 168 11 104 66 100 81z" />
+  </g>
+  <path
+     id="path1379"
+     d="M498 651c120-114 153-81 137-73-49 26-121 153-131 184-5 16-20-97-6-111z" />
+  <path
+     id="path1381"
+     stroke-width="2"
+     stroke="#010111"
+     fill="#fff"
+     d="M-1 1204c68-98 330-419 335-425 10-15 131-193 146-205 6-5 117-62 143-53s150 48 146 64c0 0-2 4-26 1-19-2-110-12-123-7-17 7-63 49-83 81-4 6-16 47-5 51 25 8 42-3 55-13 31-24 117-80 126-69 3 4-19 28-59 111" />
+  <path
+     id="path1383"
+     d="M487 812l-24-21c-9-9-10-24-1-34l193-210c23-25 36-13 59-64 5-12 24-10 33-1l24 21c10 9 13 27 1 34-49 27-36 39-58 64L521 811c-9 10-24 10-34 1z" />
+  <g
+     id="g1393"
+     fill="#fff">
+    <path
+       id="path1385"
+       d="M805 539a169 169 0 01-72-38 186 186 0 11262-16c-36 40-114 73-190 54z" />
+    <g
+       id="g1391"
+       stroke-width="2"
+       stroke="#010111">
+      <path
+         id="path1387"
+         d="M835 166l122 31 95 134-45 157-238-59z" />
+      <path
+         id="path1389"
+         d="M851 307l192 48-26 106-193-49z" />
+    </g>
+  </g>
+  <path
+     id="path1395"
+     d="M898 195a172 172 0 0187 282c-34 38-109 66-177 49a156 156 0 01-66-35 172 172 0 01156-296m7-26a199 199 0 00-228 279 198 198 0 0047 63 182 182 0 0077 41 216 216 0 00204-58 199 199 0 00-100-325z" />
+  <path
+     id="path1397"
+     d="M919 383c2 3 2 6 1 10a17 17 0 01-4 8 14 14 0 01-8 4 29 29 0 01-11-1l-31-8 14-55 25 7a56 56 0 0110 3 17 17 0 017 6c2 3 2 6 1 10a14 14 0 01-3 5 11 11 0 01-4 4 12 12 0 01-5 1 16 16 0 018 6zm-36-16l18 4h9a8 8 0 004-5 7 7 0 000-6 9 9 0 00-4-3 27 27 0 00-6-3l-17-4zm23 30c3-1 4-3 5-7 1-3 1-6-1-7a17 17 0 00-8-5l-21-5-5 19 20 5h10zm52 21a19 19 0 01-8-10v-14l9-33 9 2-9 34a18 18 0 000 9 12 12 0 005 7 26 26 0 009 3c5 2 10 2 13 0s6-5 8-11l8-33 9 2-8 33c-2 6-4 10-7 13a19 19 0 01-11 5 46 46 0 01-27-7z" />
+  <path
+     id="path1399"
+     stroke-width="2"
+     stroke="#010111"
+     fill="#fff"
+     d="M537 660c-4 6-16 47-5 51 25 8 42-3 55-13 31-24 117-80 126-69 2 3-7 14-24 44-11 19-48 114-86 159-45 53-94 65-136 90-76 46-174 274-176 282H-1" />
+</svg>
