@@ -48,7 +48,7 @@
   </script>
   <!-- Google Tag Manager -->
   <script>
-    if (window.gdpr) {
+    if (window.gdpr.choice) {
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -138,7 +138,7 @@
         <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
       </div>
       <div class="text-center d-block d-md-none">
-        <p class="small text-uppercase">&copy; 2020 Finetune Partners &bull;
+        <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
           <br>
           <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
         <p>
@@ -153,7 +153,7 @@
   </nav>
 
   <main id="main">
-    <article>
+    <article itemscope itemtype="https://schema.org/NewsArticle">
 
       <header aria-label="Page specific images in Shopify" class="bt-mint pad-vert-large">
         <div class="container">
@@ -162,11 +162,11 @@
           </aside>
           <div class="row">
             <div class="offset-lg-1 col-lg-9">
-              <h1 class="h2">Page specific images in Shopify</h1>
+              <h1 class="h2" itemprop="headline">Page specific images in Shopify</h1>
             </div>
             <aside class="col">
               <p class="overscore">5 minute read</p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
               <p class="d-print-none">Share</p>
               <p data-js="share-links" class="d-print-none">
                 <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
@@ -190,15 +190,16 @@
         </div>
       </header>
 
-      <div class="split-mint-1-5">
+      <div class="split-mint-1-5" itemprop="articleBody">
         <div class="container">
           <div class="row">
-            <p class="offset-lg-1 col-lg-9"><img src="/fine-tune-2020-dev/img/blog/full-page-specific-images-in-shopify.jpg" alt="" class="img-fluid"></p>
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-page-specific-images-in-shopify.jpg" alt="" class="img-fluid"></p>
           </div>
           <div class="row">
             <div class="offset-lg-2 col-lg-6 pad-vert-large">
-
-            <p>Out of the box, Shopify lets you edit very little information about a normal page.</p>
+              <p class="lead text-uppercase"><strong itemprop="abstract">Adding a page-specific image to pages helps them to stand out when shared on social media and can enhance the first impression your customers get, if that image is reused in a hero panel.</strong></p>
+              <p>Out of the box, Shopify lets you edit very little information about a normal page.</p>
+            </div>
           </div>
         </div>
         <p><img src="/fine-tune-2020-dev/img/blog/img-new-shopify-page.png" alt="The form used to create a new page within Shotify"></p>
@@ -252,9 +253,9 @@
             <p>Note that <a href="https://shopify.github.io/liquid-code-examples/example/open-graph-tags" target="_blank">Shopify have their own recommendations on how to add Open Graph images</a>, but they come with the limitation that for normal pages on your site, there is one Open Graph image to rule them all. Your legal page and your contact page will look the same, when shared on social media.</p>
 
             <h2 class="h3">Open Graph images on pages</h2>
-
-            <p>Replicating this markup in liquid, you could use this (originally demonstrated, as far as I can work out, by <a href="https://community.shopify.com/c/Shopify-Design/Can-you-assign-Images-to-pages/td-p/166964" target="_blank">Ricky Dazla</a>):<br>
-            </p>
+            <p>Expaning upon an original example by <a href="https://community.shopify.com/c/Shopify-Design/Can-you-assign-Images-to-pages/td-p/166964" target="_blank">Ricky Dazla</a>, <a href="https://github.com/FinetuneDevelopment/mannequin" target="_blank">Finetune Partner's Mannequin repo on Github</a> allows you to add unique Open Graph images for pages, articles and products, without using Metafields. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" target="_blank">The code to do this appears in a snippet</a>, as some Shopify themes have more than one layout.</p>
+            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" target="_blank" class="btn btn-secondary">View Open Graph snippet on GitHub</a></p>
+            <p>The original solution used the page <code>handle</code> to generate a path to an image content authors could add to your Shop's files:</p>
           </div>
         </div>
       <pre><code class="language-liquid">{% if handle != blank %}
@@ -284,53 +285,19 @@
         <p><img src="/fine-tune-2020-dev/img/blog/img-shopify-new-blog-post.png" alt="The new blog post form within Shopify"></p>
         <div class="row">
           <div class="offset-lg-2 col-lg-6 pad-vert-large">
-          <p>Blog posts have an <code>article.image</code> object, where as products have a <code>product.featured_image</code> object. Here's a more comprehensive version of the above code, which checks for those kind of images first:<br>
-            </p>
-          </div>
-        </div>
-      <pre><code class="language-liquid">{% comment %} Products or blog posts {% endcomment %}
-{% if product.featured_image != blank or article.image != blank %}
-  {% if product.featured_image != blank %}
-    {% assign og-img = product.featured_image %}
-  {% else %}
-    {% assign og-img = article.image %}
-  {% endif %}
-  &lt;meta property="og:image" content="{{ og-img | img_url: '1200x630', crop: 'center' }}"&gt;
-  &lt;meta itemprop="image" content="{{ og-img | img_url: '1200x630', crop: 'center' }}"&gt;
-  &lt;link rel="image_src" href="{{ og-img | img_url: '1200x630', crop: 'center' }}"&gt;
-{% comment %} Pages {% endcomment %}
-{% else %}
-  {% if handle != blank %}
-    {% capture page-img %}{{ handle }}.jpg{% endcapture %}
-  {% else %}
-    {% capture page-img %}og-default.jpg{% endcapture %}
-  {% endif %}
-  &lt;meta property="og:image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
-  &lt;meta itemprop="image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
-  &lt;link rel="image_src" href="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
-{% endif %}</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-          <p>Blog and product images are stored in a different location from the <code>files</code> menu of Shopify, so we need to use a different parameter, in order to access them. Where as pages use <code>image_src</code>, product and blog images use <code>image_url</code>. This doubles-up on the tags (but only one set of tags are output into the final page).</p>
+            <p>Blog posts have an <code>article.image</code> object, where as products have a <code>product.featured_image</code> object. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" target="_blank">The Mannequin version of the Open Graph code</a> checks for those kind of images first.</p>
+            <p>Blog and product images are stored in a different location from the <code>files</code> menu of Shopify, so we need to use a different parameter, in order to access them. Where as pages use <code>image_src</code>, product and blog images use <code>image_url</code>. This doubles-up on the tags (but only one set of tags are output into the final page).</p>
 
-            <p>Of course, you can also reuse these techniques on your page liquid templates, to pull in images to hero panels. But because these templates are different for products, blog posts and pages, we don't need so much logic. For example, a page template would only require:<br>
-            </p>
-          </div>
-        </div>
-      <pre><code class="language-liquid">&lt;header&gt;
-  &lt;h1&gt;{{ page.title }}&lt;/h1&gt;
-  &lt;p&gt;
-    {% capture page-img %}{{ page.handle }}.jpg{% endcapture %}
-    &lt;img src="{{ page-img | file_img_url: '500x200', crop: 'center' }}" onerror="this.style.display = 'none';" alt=""&gt;
-  &lt;/p&gt;
-&lt;/header&gt;</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-          <p>Because liquid only allows us to determine if <code>page.handle</code> has a value or not, there's not a means for us to check if an image matching <code>page-img</code> exists. The <code>onerror</code> attribute is added, <a href="https://community.shopify.com/c/Shopify-Design/testing-if-a-file-exists/td-p/75892">in order to dynamically hide broken images</a>.</p>
+            <h2 class="h3">Reusing this technique for page images</h2>
+            <p>We can use this trick to pull in the same image into the page, for example in a hero panel. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid">The snippet <code>page-images.liquid</code> in Mannequin demonstrates this technique</a>. Note that as this snippet is designed to be included on  pages and not blog articles or product pages, it is closer to Ricky Dazla's original code.</p>
+
+            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank" class="btn btn-secondary">View page images snippet on GitHub</a></p>
+
+            <p>Because liquid only allows us to determine if <code>page.handle</code> has a value or not, there's not a means for us to check if an image matching <code>page-img</code> exists. The <code>onerror</code> attribute is added, <a href="https://community.shopify.com/c/Shopify-Design/testing-if-a-file-exists/td-p/75892">in order to dynamically hide broken images</a>.</p>
 
             <h2 class="h3">What if you want to add more than one image?</h2>
 
-            <p>Attaching additional data to individual pages, products, articles, collections or product variants is possible using metafields. This allows you to (for example) create a carousel of images which is different on different pages. But that's <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">another subject altogether</a>.</p>
+            <p>Attaching additional data to individual pages, products, articles, collections or product variants is possible using metafields. This allows you to (for example) create a carousel of images which is different on different pages. You might have noticed that <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank">page-images.liquid</a> checks for the metafield <code>page.metafields.global.image</code>, to see if it can add a second image. If you're interested in learing more about this technique, you might find <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">our article on metafields</a> useful.</p>
             </div>
           </div>
         </div>
@@ -344,49 +311,49 @@
 
       <div class="row gutter-base">
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
           <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
-              <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
               <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
-          <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+          <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
-              <h3 class="h5">Metafields in Shopify without apps</h3>
-              <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+              <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+              <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
           <a href="/fine-tune-2020-dev/insights/managing-user-addresses-in-shopify/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
-              <h3 class="h5">Managing user addresses in Shopify</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Managing user addresses in Shopify</h3>
               <p>Building the addresses.liquid template with full functionality</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
           <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
-              <h3 class="h5"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+              <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
               <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
             </div>
           </a>
-        </section>
+        </article>
 
       </div><!-- .row -->
 
@@ -438,7 +405,7 @@
       </div>
       <hr class="brd-white">
       <div class="row">
-        <p class="col-sm-10 small text-uppercase">&copy; 2020 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
         <p class="col-sm-2 text-right text-center-sm d-print-none">
           <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">

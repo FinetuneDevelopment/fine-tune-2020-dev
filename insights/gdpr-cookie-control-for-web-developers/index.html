@@ -48,7 +48,7 @@
   </script>
   <!-- Google Tag Manager -->
   <script>
-    if (window.gdpr) {
+    if (window.gdpr.choice) {
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -138,7 +138,7 @@
         <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
       </div>
       <div class="text-center d-block d-md-none">
-        <p class="small text-uppercase">&copy; 2020 Finetune Partners &bull;
+        <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
           <br>
           <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
         <p>
@@ -153,7 +153,7 @@
   </nav>
 
   <main id="main">
-    <article>
+    <article itemscope itemtype="https://schema.org/NewsArticle">
 
       <header aria-label="GDPR Cookie control for web developers" class="bt-mint pad-vert-large">
         <div class="container">
@@ -162,11 +162,11 @@
           </aside>
           <div class="row">
             <div class="offset-lg-1 col-lg-9">
-              <h1 class="h2"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h1>
+              <h1 class="h2" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h1>
             </div>
             <aside class="col">
               <p class="overscore">5 minute read</p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
               <p class="d-print-none">Share</p>
               <p data-js="share-links" class="d-print-none">
                 <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
@@ -190,16 +190,16 @@
         </div>
       </header>
 
-      <div class="split-mint-1-5">
+      <div class="split-mint-1-5" itemprop="articleBody">
         <div class="container">
           <div class="row">
-            <p class="offset-lg-1 col-lg-9"><img src="/fine-tune-2020-dev/img/blog/full-gdpr-cookie-control-for-web-developers.jpg" alt="" class="img-fluid"></p>
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-gdpr-cookie-control-for-web-developers.jpg" alt="" class="img-fluid"></p>
           </div>
           <div class="row">
             <div class="offset-lg-2 col-lg-6 pad-vert-large">
               <p><small><a href="#let-me-see-the-code">Don't bore us, get to the chorus</a></small></p>
 
-              <p class="lead text-uppercase"><strong>Dunno about you, but I don't feel safe wandering the streets of the Internet without <a href="https://www.mozilla.org/firefox/" target="_blank">Firefox</a>, <a href="https://privacybadger.org/" target="_blank">Privacy Badger</a> and <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a>. Browsing without these three in place (in a metaphor I'm confident will upset no-one) would be like walking down a street without a facemask.</strong></p>
+              <p class="lead text-uppercase"><strong itemprop="abstract">Dunno about you, but I don't feel safe wandering the streets of the Internet without <a href="https://www.mozilla.org/firefox/" target="_blank">Firefox</a>, <a href="https://privacybadger.org/" target="_blank">Privacy Badger</a> and <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a>. Browsing without these three in place (in a metaphor I'm confident will upset no-one) would be like walking down a street without a facemask.</strong></p>
 
               <p>One of the side effects of using these plugins is that they keep a running total of the stuff they've blocked, in a wee counter above the icon. This has given me a sort of gauge of just how compliant (or not) websites are of the <abbr title="General Data Protection Regulation">GDPR</abbr> rules.</p>
             </div>
@@ -366,9 +366,6 @@ comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
               <p>This does not have a nice front end. It's code, all the way down. This pushes the management of cookies directly onto the slumped shoulders of your web developer.</p>
 
-              <h3 class="h4">False positives</h3>
-              <p>Some of the more attractive amoung you might be thinking right now <q>well <em>I</em> use uBlock Origin, I've blocked cookies on this site and I <em>still</em> see a notifications that it's blocking stuff</q>. My best guess here is that uBlock Origin sees a string such as <code>https://www.googletagmanager.com/gtm.js?id=</code> inside a <code>script</code> block and thinks <q>sus</q> (as the young people say). I could alter the code so you could concatinate a bunch of strings to assemble <code>https://www.googletagmanager.com/gtm.js?id=</code>, in the hopes of evading such detection, but that seems a little <q>grey hat</q> to me. Frankly, I'd rather leave the false positive in place.</p>
-
               <h2 class="h3" id="let-me-see-the-code">Let me see the code</h2>
 
               <p>This looks as dull as possible for good reason: you have complete freedom to style it as you need. Note that for boring <code>iframe</code> reasons, you might get better results testing <a href="https://cdpn.io/ross-angus/debug/GRqwzQX/RBrOJRLvnVnM" target="_blank">the debug version</a> of that CodePen, rather than the fancy one below.</p>
@@ -405,49 +402,49 @@ comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
 
       <div class="row gutter-base">
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Page specific images in Shopify">
-          <a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="box-link">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+          <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-page-specific-images-in-shopify.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
-              <h3 class="h5">Page specific images in Shopify</h3>
-              <p>How to add social sharing and hero images to pages in Shopify, without metafields or apps</p>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+              <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+              <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
           <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
-              <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
               <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
           <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
-              <h3 class="h5">Metafields in Shopify without apps</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Metafields in Shopify without apps</h3>
               <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
           <a href="/fine-tune-2020-dev/insights/managing-user-addresses-in-shopify/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
-              <h3 class="h5">Managing user addresses in Shopify</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Managing user addresses in Shopify</h3>
               <p>Building the addresses.liquid template with full functionality</p>
             </div>
           </a>
-        </section>
+        </article>
 
       </div><!-- .row -->
 
@@ -499,7 +496,7 @@ comments powered by Disqus.&lt;/a&gt;&lt;/noscript&gt;
       </div>
       <hr class="brd-white">
       <div class="row">
-        <p class="col-sm-10 small text-uppercase">&copy; 2020 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
         <p class="col-sm-2 text-right text-center-sm d-print-none">
           <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">

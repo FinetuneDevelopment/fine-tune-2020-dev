@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Product filtering in Shopify without apps - Finetune</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description" content="How to add a product filter to your catalogue and collections pages in Shopify, without paying for an app">
+  <meta property="og:title" content="Product filtering in Shopify without apps - Finetune">
+  <meta property="og:description" content="How to add a product filter to your catalogue and collections pages in Shopify, without paying for an app">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://finetunepartners.com/insights/product-filtering-in-shopify-without-apps/">
+  <link rel="canonical" href="https://finetunepartners.com/insights/product-filtering-in-shopify-without-apps/">
+  <meta property="og:site_name" content="Finetune">
+  <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-product-filtering-in-shopify-without-apps.jpg">
+  <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-product-filtering-in-shopify-without-apps.jpg">
+  <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-product-filtering-in-shopify-without-apps.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
+  <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#d7f2db">
+  <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
+  <script>
+    window.gdpr = {
+      "addTag": function (tag, attr, content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop, attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
+      }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    if (window.gdpr.choice) {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+<link href="../../css/app.css" rel="stylesheet"></head>
+
+<body>
+  <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
+
+  <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
+    <div class="container">
+      <div class="row">
+        <p class="col-8 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 flush text-right">
+          <label for="nav-toggle" class="pad-vert-tiny text-interactive-blue" title="Expand navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="shape sh-ellipsis"></span>
+          </label>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main" class="bt-white brd-bottom pad-vert-tiny main-nav toggle-container">
+    <a href="/fine-tune-2020-dev/contact/" class="main-nav__marquee marquee d-block d-print-none d-md-none bg-interactive-blue semi-small text-uppercase mb-4" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+      <p class="marquee__child mb-2">
+        Get in touch to find out more <span class="ic-arrow"></span>
+        &nbsp; &nbsp;
+        We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+      </p>
+    </a>
+    <div class="container">
+      <div class="row">
+        <p class="col-8 col-md-3 col-lg-2 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 d-md-none text-right mb-5">
+          <label for="nav-toggle" class="brd-all round icon-tiny icon-sq" title="Hide navigation" aria-label="Hide navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img" aria-label="Close">
+              <line x1="23" y1="1" x2="1" y2="23"></line>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </label>
+        </p>
+        <div class="col-12 col-md d-print-none">
+          <h2 class="d-md-none h6 type-etc-bold text-reset mb-4 text-center mt-5">Navigation</h2>
+          <a href="/fine-tune-2020-dev/about/" class="btn btn-nav">About</a>
+          <a href="/fine-tune-2020-dev/services/" class="btn btn-nav">Services</a>
+          <!--a href="/fine-tune-2020-dev/work/" class="btn btn-nav">Work</a-->
+          <em><a href="/fine-tune-2020-dev/insights/" class="btn btn-nav">Insights</a></em>
+          <a href="/fine-tune-2020-dev/contact/" class="btn btn-nav d-block d-md-none mb-5">Contact</a>
+        </div>
+        <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
+      </div>
+      <div class="text-center d-block d-md-none">
+        <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
+          <br>
+          <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+        <p>
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <article itemscope itemtype="https://schema.org/NewsArticle">
+
+      <header aria-label="Product filtering in Shopify without apps" class="bt-mint pad-vert-large">
+        <div class="container">
+          <aside class="row justify-content-center">
+            <p class="col-lg-10"><a href="/fine-tune-2020-dev/insights/" class="btn text-uppercase text-interactive-blue"><span class="shape sh-arrow-left"></span> Back to insights</a></p>
+          </aside>
+          <div class="row">
+            <div class="offset-lg-1 col-lg-9">
+              <h1 class="h2" itemprop="headline">Product filtering in Shopify without apps</h1>
+            </div>
+            <aside class="col">
+              <p class="overscore">7 minute read</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Products, eCommerce</p>
+              <p class="d-print-none">Share</p>
+              <p data-js="share-links" class="d-print-none">
+                <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Twitter">
+                    <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Facebook">
+                    <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="LinkedIn">
+                    <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                  </svg>
+                </a>
+              </p>
+            </aside>
+          </div><!-- .row -->
+        </div>
+      </header>
+
+      <div class="split-mint-1-5" itemprop="articleBody">
+        <div class="container">
+          <div class="row">
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-product-filtering-in-shopify-without-apps.jpg" alt="" class="img-fluid"></p>
+          </div>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p><small>Cover image by <a href="https://www.instagram.com/leahkelleyphotography/">Leah Kelley</a></small></p>
+              <p class="lead text-uppercase"><strong itemprop="abstract">Shopify's great, but it lacks an out-of-the-box solution to filtering products. This leads many small businesses to buy or licence third-party apps. But what if we could build one from scratch without any third party code?</strong></p>
+              <p>If you log into your admin interface in Shopify, then navigate to your products page, you can access this neato filter for them, by clicking on the <q>More filters</q> button:</p>
+              <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-shopify-product-filter.png" alt="The product filter options on the products landing page in the Shopify interface."></p>
+              <p>This looks like the kind of thing which would be useful to your customers, right? I have bad news: There's nothing built into the front end of Shopify which allows your customers to do this. If you need this sort of functionality, up until now your only recourse was to pay for a third-party app and add it to your shop.</p>
+              <p>However, as the headline for this article has already revealed, I'm going to show you how to do this and all it will cost you is some of your time. This code is part of Finetune Partner's <a href="https://github.com/FinetuneDevelopment/mannequin" target="_blank">Mannequin</a> library on GitHub, which offers a number of enhancements to <a href="https://shopify.github.io/themekit/" target="_blank">Shopify's Theme Kit</a>. Here's a quick run-down of the product filter features.</p>
+              <p>Allows customers to filter by:</p>
+              <ul>
+                <li>Minimum price</li>
+                <li>Maximum price</li>
+                <li>Product type</li>
+                <li>Manufacturer</li>
+                <li>Product tag</li>
+                <li>Product in stock or not</li>
+                <li>Any number of arbitrary filters which can be added via metafields (instructions below)</li>
+              </ul>
+              <p>It also has some other features:</p>
+              <ul>
+                <li>Will switch to legacy paginated mode, if there are too many products to filter (the point where this happens can be configured)</li>
+                <li>Hides filters if there are one or less choices for the customer to make</li>
+                <li>Automatically adjusts the maximum and minimum price, to fit the selection of products displayed</li>
+                <li>Near instant results</li>
+              </ul>
+
+              <h2 class="h3">Your latest collection</h2>
+
+              <p>By default, your catalogue and your collections pages share the same page template, <code>collection.liquid</code>. The out-of-the-box solution allows you to choose how many of your products appear per page, but nothing else.</p>
+
+              <p>Mannequin's product filtering still includes this approach, within a <code>noscript</code> tag. It's also got some added <a href="https://schema.org/Product" target="_blank">Microdata</a>.</p>
+
+              <p><a href="https://github.com/FinetuneDevelopment/mannequin/edit/main/templates/collection.liquid" class="btn btn-primary">View collection.liquid on GitHub</a></p>
+
+              <p>This is a server-side solution which allows your customers to click through page after page of your products until they buy something, or get distracted by a notification on their phone and forget you exist.</p>
+
+              <p><a href="https://shopify.dev/docs/admin-api/rest/reference/products/product" target="_blank">What does <em>not</em> seem to be possible</a>, however, is to pass various criteria to the server and receive back a <abbr title="JavaScript Object Notation">JSON</abbr> snippet which just has those products in it.</p>
+
+              <p>So let's do the next best thing: get back <em>all</em> the product data and then manipulate that locally, to do the same job.</p>
+
+              <h2 class="h3">Get your product data</h2>
+
+              <p>Shopify's liquid tags and filters mean it's trivially easy to output all of your product data onto your page. You just do this:</p>
+
+              <pre><code class="language-liquid">&lt;script&gt;var allMyProductData = {{ products | json }};&lt;/script&gt;</code></pre>
+
+
+              <p>This will give you a big old <abbr>JSON</abbr> file, a single entry of which looks something like this:<br>
+              </p>
+
+            </div>
+          </div>
+        <pre><code class="language-js">[
+  "available": false,
+  "​​compare_at_price": "5300",
+  "​​compare_at_price_max": "5300",
+  "​​compare_at_price_min": "5300",
+  "​​compare_at_price_varies": false,
+  "​​content": "Perfect for your boss",
+  "​​created_at": "2020-11-27T04:39:43-05:00",
+  "​​description": "Perfect for your boss",
+  "​​featured_image": "//cdn.shopify.com/s/files/1/gift-basket7.png",
+  "​​handle": "gift-basket-7",
+  "​​id": 6012345678912,
+  "​​images": "Array [ '//cdn.shopify.com/s/files/1/gift-basket7.png' ]",
+  "​​media": "Array [ {…} ]",
+  "​​options": "Array [ 'Title' ]",
+  "​​price": 3300,
+  "​​price_max": 3300,
+  "​​price_min": 3300,
+  "​​price_varies": false,
+  "​​published_at": "2020-11-27T04:39:43-05:00",
+  "​​tags": "Array(8) [ 'Basket', 'Boss', 'Bundle', … ]",
+  "​​title": "Boss gift basket",
+  "​​type": "basket",
+  "​​variants": "Array [ {…} ]",
+  "​​vendor": "Blue Sun"
+]</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Please do <em>not</em> do this, for three reasons:</p>
+              <ol>
+                <li>Performance: let's send as little data to the browser as we can get away with</li>
+                <li>Security: your competitors might be sniffing about in your markup. Let's not hand them any information which we don't need.</li>
+                <li>Flexibility: we'll need to add more nodes to this (spoilers)</li>
+              </ol>
+
+              <h2 class="h3">Build your own <abbr>JSON</abbr></h2>
+
+              <p>At the bottom of <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" target="_blank">collection.liquid</a> is a <code>script</code> tag which, using Liquid markup, generates an Object which represents all of your products.</p>
+
+              <p>This code looks pretty managable, right? But what if you have 10,000 products in your shop? All of this JavaScript is going to be written directly into the markup of the page - there's no clever <code>fetch</code> stuff going on here, it's <em>all</em> the <abbr>JSON</abbr> or nothing.</p>
+
+              <p>In the past, I've written <a href="http://labs.realise.com/rossa/icon-search/">an icon search which looped through 1,400 <abbr>JSON</abbr> items in a static file</a>. The performance was fine. But the top of <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" target="_blank">collection.liquid</a> allows you to define exactly what the cut-off point is, for the number of products you're happy to search, client-side:<br>
+              </p>
+
+              <pre><code class="language-js">{% assign product_limit = 1500 %}
+{% if collection.products.size < product_limit %}
+{% assign load_products = true %}
+{% endif %}</code></pre>
+
+              <p>(I need the second variable because the value of <code>collection.products.size</code> changes, once it's inside a <code>paginate</code> tag).</p>
+
+              <h2 class="h3">Expanding the <abbr>JSON</abbr></h2>
+
+              <p>The custom <abbr>JSON</abbr> has a number of nodes not found in the original product data:</p>
+
+              <ul>
+                <li><code>SuitableFor</code></li>
+                <li><code>occasion</code></li>
+                <li><code>mp3</code></li>
+                <li><code>tog</code></li>
+                <li><code>material</code></li>
+              </ul>
+
+              <p>(None of these custom filters are required and if you don't find them useful, feel free to remove them)</p>
+
+              <p>These filters are all based on <a href="https://finetunepartners.com/insights/metafields-in-shopify-without-apps/">custom namespaces used in metafields</a>. Each of these are used to create custom filters, which dynamically appear against only the collections which need them. The process of adding a new filter is a <em>little</em> involved, so let's deal with that first.</p>
+
+              <h3 class="h4">1. Define your metafields</h3>
+
+              <p>Using your page based on the <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/page.metafields.liquid" target="_blank">page.metafields</a> template, create a new namespace for your filter. For example, the <code>material</code> namespace looks like this:</p>
+
+              <ul>
+                <li><strong>Attach metafield to:</strong> <code>product</code></li>
+                <li><strong>Namespace:</strong> <code>material</code></li>
+                <li>
+                  <strong>Metafield names:</strong>
+                  <ul>
+                    <li><code>wool</code></li>
+                    <li><code>wool-mix</code></li>
+                    <li><code>cotton</code></li>
+                    <li><code>cotton-mix</code></li>
+                    <li><code>cashmere</code></li>
+                    <li><code>cashmere-mix</code></li>
+                    <li><code>angora</code></li>
+                    <li><code>angora-mix</code></li>
+                    <li><code>man-made</code></li>
+                  </ul>
+                </li>
+                <li><strong>Data-type</strong>: <code>Boolean</code> (all of the above)</li>
+              </ul>
+
+              <h3 class="h4">2. Add in your content author links (optional)</h3>
+
+              <p>The metafield form above will generate a Shopify bulk editor link which allows logged-in Shopify content authors to change the metafield data of all of your shop's products.</p>
+
+              <p>This is a task which will need to be redone, as products are added and it would be laborious to configure the metafield form in exactly the correct way each time you added a product.</p>
+
+              <p>To save time, take a copy of the metafield bulk editor URL and add it to <code>collection.liquid</code> inside an <code>if</code> statement which ensures that only logged in content authors (and not your customers) will see it:</p>
+
+              <pre><code class="language-liquid">{% if admin == 'true' %}
+&lt;p&gt;&lt;a href="(long URL goes here)"&gt;Edit material metafields&lt;/a&gt;&lt;/p&gt;
+{% endif %}</code></pre>
+
+
+              <p>This functionality has a dependency on the <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/admin-check.liquid" target="_blank">admin-check snippet in Mannequin</a>.</p>
+
+              <h3 class="h4">3. Content load</h3>
+
+              <p>If you follow the Shopify bulk editor link above, you'll see something like this:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-bulk-editor.png" alt="The bulk editor in Shopify showing a list of products on the left and the metafields created above along the top"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>What's hopefully clear is that not all of these metafields are appropriate for all products - it's extremely unlikely that a cashmere MP3 player will be sold any time soon, for example. As the bulk editor in Shopify displays all products, your content authors should concern them with only adding the relevant data to the relevant product.</p>
+
+              <p>At this point, your content authors should mark the products which match your new metafields appropriately.</p>
+
+              <h4 class="h5">Side note: why boolean?</h4>
+
+              <p>It's possible to save metafield data as boolean, strings, numbers and currency values. Unfortunately, when this data is returned by Shopify as <abbr>JSON</abbr>, each metafield has only two data types:</p>
+
+              <ul>
+                <li>String</li>
+                <li>Integer</li>
+              </ul>
+
+              <p>Booleans are converted to integers, with <code>0</code> being false and <code>1</code> being true. This means there's no way to determine if one specific value is a boolean or just a particularly low value integer. The product filter doesn't work with strings, because they're kind of meaningless to compare with one another.</p>
+
+              <p>Most other product filters work on this principle too - the user selects from a fixed-list of manufacturers, for example, rather than typing one in.</p>
+
+              <h3 class="h4">4. Add the new metafield namespace to your <abbr>JSON</abbr></h3>
+
+              <p>In <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" target="_blank">collection.liquid</a>, add a new node onto the end of the JSON. For example:</p>
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if product.metafields.material.size &gt; 0 %}
+  "material": "{% for type in product.metafields.material %}{% if type.last == 1 %}{{ type.first }}|{% endif %}{% endfor %}",
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>You should replace <code>material</code> (all three of them) with whatever you called your new namespace in your custom metafields.</p>
+
+              <h3 class="h4">5. Add your new product filter</h3>
+
+              <p>At the top of <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" target="_blank">collection.liquid</a>, add your new product filter logic to the file. Here's what the <code>material</code> filter looks like:<br>
+              </p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% capture allMaterial %}{% for product in collection.products %}{% for type in product.metafields.material %}{{ type.first }}|{% endfor %}{% endfor %}{% endcapture %}
+{% assign uniqueMaterial = allMaterial | split: "|" | uniq %}
+{% comment %} Only show filters relevant to this collection {% endcomment %}
+{% if uniqueMaterial.size &gt; 1 %}
+  &lt;fieldset&gt;
+    &lt;legend&gt;Material used&lt;/legend&gt;
+      &lt;p&gt;
+        {% for type in uniqueMaterial %}
+        &lt;input type="radio" name="material" id="{{ type }}" data-js="metafield"&gt;
+        &lt;label for="{{ type }}"&gt;{{ type }}&lt;/label&gt;
+        {% endfor %}
+      &lt;/p&gt;
+  &lt;/fieldset&gt;
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Note that the variables <code>allMaterial</code> and <code>uniqueMaterial</code> are unique to this filter - if you were adding a different filter, these would need to be renamed accordingly.</p>
+
+              <p>The <code>name</code> attribute of the radio button inside the <code>for</code> loop inside the filter must match the namespace of your new metafield.</p>
+
+              <p>This markup's pretty flexible, apart from the following:</p>
+
+              <ul>
+                <li>The JavaScript makes assumptions about relationships between the <code>label</code> and <code>input</code> tags, so leave them intact, if you can</li>
+                <li>All the <code>data-js</code> attributes are used by the JavaScript to process the data in various ways</li>
+              </ul>
+
+              <p>Because of those <code>if</code> statements, your new filter should only appear within collections where it's relevant.</p>
+
+              <h2 class="h3">Customising the filter</h2>
+              <p>The markup for the filter is pretty flexible, but here are some elements to watch out for:</p>
+              <ul>
+                <li>The <code>ID</code>s <code>price-range-min</code> and <code>price-range-max</code> (for the range elements) are hard-coded into the JavaScript</li>
+                <li>The <code>inStock</code> ID is hard-coded into the JavaScript</li>
+              </ul>
+
+              <p>The product filter also has a particular way of working:</p>
+              <ul>
+                <li>The product types, vendors and any custom metafield data are radio buttons: only one value is considered during any one search and this search is exclusive</li>
+                <li>The tags are <em>inclusive</em> - if the user selects two tags which are unique to two different products, both products will be shown</li>
+              </ul>
+
+              <h2 class="h3">Dependencies</h2>
+
+              <p>Mannequin has no dependencies outside of the repo, but the product filter involves a number of different files, some of which might not be obvious:</p>
+
+              <ul>
+                <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" target="_blank">collection.liquid</a></li>
+                <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/assets/product-filter.js">product-filter.js</a></li>
+                <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/admin-check.liquid" target="_blank">admin-check.liquid</a></li>
+              </ul>
+
+              <p>Please see the post on <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">editing metafields without an app</a> for the dependencies involved in that process.</p>
+            </div>
+          </div>
+    </article>
+
+    <aside class="container d-print-none gutter-xlarge" aria-label="Related">
+
+      <h2 class="text-center gutter-xlarge">Related</h2>
+
+      <div class="row gutter-base">
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+          <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+              <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+              <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model">
+          <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme2/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme2.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model</h3>
+              <p>In the second part of our &quot;CRO: In Graphs&quot; series, we’re going to turn our attention to the Strategic Output Model.</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+          <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+              <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+              <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Advanced search in Shopify">
+          <a href="/fine-tune-2020-dev/insights/advanced-search-in-shopify/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-advanced-search-in-shopify.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, Liquid, search, Open Source</p>
+              <h3 class="h5" itemprop="headline">Advanced search in Shopify</h3>
+              <p>Giving your customers more control over their search results in Shopify</p>
+            </div>
+          </a>
+        </article>
+
+      </div><!-- .row -->
+
+    </aside><!-- .container -->
+
+  </main>
+
+  <a href="/fine-tune-2020-dev/contact/" class="marquee d-block bg-interactive-blue semi-small text-uppercase d-print-none" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+    <p class="marquee__child mb-1">
+      Get in touch to find out more <span class="ic-arrow"></span>
+      &nbsp; &nbsp;
+      We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+    </p>
+  </a>
+
+  <footer class="bg-deep-blue text-center-sm">
+    <div class="container mt-5">
+      <div class="row d-print-none">
+        <div class="col-lg-4 col-md offset-md-0 col-sm-8 offset-sm-2">
+          <div class="row">
+            <p class="col-4 offset-4 offset-md-0 col-md-3">
+              <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 159.1" aria-label="Finetune Partners">
+                  <path fill="#2e38ef" d="M33 146l30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56 0 89l10 32z" />
+                  <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                  <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                </svg>
+              </a>
+            </p>
+          </div>
+
+          <p class="h4">We turn casual browsers into committed buyers</p>
+        </div>
+        <nav class="col-12 col-md-3 col-xl-3 offset-md-1 offset-lg-0 offset-xl-1" aria-label="Footer">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Navigation</h2>
+          <div class="text-uppercase semi-small mb-5">
+            <p><a href="/fine-tune-2020-dev/about/" class="btn">About</a></p>
+            <p><a href="/fine-tune-2020-dev/services/" class="btn">Services</a></p>
+            <!--p><a href="/fine-tune-2020-dev/work/" class="btn">Work</a></p-->
+            <p><a href="/fine-tune-2020-dev/insights/" class="btn">Insights</a></p>
+            <p><a href="/fine-tune-2020-dev/contact/" class="btn">Contact</a></p>
+          </div>
+        </nav>
+        <div class="col-md-5 col-lg-5 col-xl-4 mb-5">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Information</h2>
+          <p>We're all working from home right now. Please email us at<br>
+            <a href="mailto:hello@finetunepartners.com">hello@finetunepartners.com</a><br>
+            We'd love to hear from you.</p>
+        </div>
+      </div>
+      <hr class="brd-white">
+      <div class="row">
+        <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-2 text-right text-center-sm d-print-none">
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+<script type="text/javascript" src="../../js/app.js"></script></body>
+
+</html>

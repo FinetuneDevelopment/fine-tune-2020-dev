@@ -48,7 +48,7 @@
     </script>
     <!-- Google Tag Manager -->
     <script>
-        if (window.gdpr) {
+        if (window.gdpr.choice) {
             (function (w, d, s, l, i) {
                 w[l] = w[l] || [];
                 w[l].push({
@@ -138,7 +138,7 @@
                 <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
             </div>
             <div class="text-center d-block d-md-none">
-                <p class="small text-uppercase">&copy; 2020 Finetune Partners &bull;
+                <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
                     <br>
                     <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
                 <p>
@@ -153,7 +153,7 @@
     </nav>
 
     <main id="main">
-        <article>
+        <article itemscope itemtype="https://schema.org/NewsArticle">
 
             <header aria-label="Managing user addresses in Shopify" class="bt-mint pad-vert-large">
                 <div class="container">
@@ -162,11 +162,11 @@
                     </aside>
                     <div class="row">
                         <div class="offset-lg-1 col-lg-9">
-                            <h1 class="h2">Managing user addresses in Shopify</h1>
+                            <h1 class="h2" itemprop="headline">Managing user addresses in Shopify</h1>
                         </div>
                         <aside class="col">
                             <p class="overscore">7 minute read</p>
-                            <p class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
                             <p class="d-print-none">Share</p>
                             <p data-js="share-links" class="d-print-none">
                                 <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
@@ -190,16 +190,16 @@
                 </div>
             </header>
 
-            <div class="split-mint-1-5">
+            <div class="split-mint-1-5" itemprop="articleBody">
                 <div class="container">
                     <div class="row">
-                        <p class="offset-lg-1 col-lg-9"><img src="/fine-tune-2020-dev/img/blog/full-managing-user-addresses-in-shopify.jpg" alt="" class="img-fluid"></p>
+                        <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-managing-user-addresses-in-shopify.jpg" alt="" class="img-fluid"></p>
                     </div>
                     <div class="row">
                         <div class="offset-lg-2 col-lg-6 pad-vert-large">
-                            <p class="lead text-uppercase"><strong>In Shopify, you can allow your customers to create logins and see stuff like past purchases and edit their details. There's a handful of templates expressly for this purpose inside the <code>/templates/customers</code> directory. But it's likely that these files are blank by default.</strong></p>
+                            <p class="lead text-uppercase"><strong itemprop="abstract">In Shopify, you can allow your customers to create logins and see stuff like past purchases and edit their details. There's a handful of templates expressly for this purpose inside the <code>/templates/customers</code> directory. But if you're using <a href="https://shopify.github.io/themekit/" target="_blank">Shopify Theme Kit</a> it's likely that these files are blank by default.</strong></p>
 
-                            <p>Shopify have <a href="https://shopify.dev/docs/themes/theme-templates/customers-addresses-liquid" target="_blank">some documentation on what's supposed to be in the <code>addresses.liquid</code> file</a>, but it's ... lacking in detail. So let's fill that in, shall we?</p>
+                            <p>Shopify have <a href="https://shopify.dev/docs/themes/theme-templates/customers-addresses-liquid" target="_blank">some documentation on what's supposed to be in the <code>addresses.liquid</code> file</a>, but it's ... lacking in detail. There's also some undocumented tricks in <a href="https://github.com/Shopify/starter-theme/" target="_blank">Shopify's (abandoned?) <q>Starter Theme</q></a>, not all of which I could get to work. This article will explain what customer functionality I have got into a usable state.</p>
 
                             <h2 class="h3">Minimum viable product</h2>
 
@@ -207,49 +207,17 @@
 
                             <ul>
                                 <li>View a list of my addresses</li>
-                                <li>Edit old addresses</li>
+                                <li>Edit old addresses (including selecting one address as the default)</li>
                                 <li>Add a new address</li>
                                 <li>Delete even older addresses</li>
                             </ul>
 
                             <h3 class="h4">View a list of my addresses</h3>
-
-                            <p>Here's how you generate a list of all the addresses the customer currently has in their account:</p>
-                        </div>
-                    </div>
-                    <pre><code class="language-liquid">{% for address in customer.addresses %}
-&lt;p&gt;
-    {{ address.first_name }} {{ address.last_name }}
-    {% if address.first_name != blank or address.last_name != blank %}&lt;br&gt;{% endif %}
-    {% if address.company != blank %}
-        {{ address.company }}&lt;br&gt;
-    {% endif %}
-    {% if address.address1 != blank %}
-        {{ address.address1 }}&lt;br&gt;
-    {% endif %}
-    {% if address.address2 != blank %}
-        {{ address.address2 }}&lt;br&gt;
-    {% endif %}
-    {% if address.city != blank %}
-        {{ address.city }}&lt;br&gt;
-    {% endif %}
-    {% if address.country != blank %}
-        {{ address.country }}&lt;br&gt;
-    {% endif %}
-    {% if address.province != blank %}
-        {{ address.province }}&lt;br&gt;
-    {% endif %}
-    {% if address.zip != blank %}
-        {{ address.zip }}&lt;br&gt;
-    {% endif %}
-    {{ address.phone }}
-&lt;/p&gt;
-{% endfor %}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+                            <p>Generating a list of a customer's addresses is as straightforward as initiating a <code>for address in customer.addresses</code> loop. The <code>address</code> object allows us access to the rest of the data we need.</p>
+                            <p>All of this code is available to download at <a href="https://github.com/FinetuneDevelopment/mannequin/" target="_blank">Finetune Partners Mannequin repo, on Github</a>.</p>
+                            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/customers/addresses.liquid" target="_blank" class="btn btn-primary">View addresses.liquid on Github</a></p>
 
                             <h3 class="h4">Edit old addresses</h3>
-
                             <p>When it comes to editing current addresses, Shopify even have this nice table for you to refer to:</p>
 
                             <table>
@@ -314,65 +282,8 @@
                                 </tbody>
                             </table>
 
-                            <p>Using this, we can use the following Liquid markup to generate all of the forms required for users to edit their addresses:</p>
-
-                        </div>
-                    </div>
-                    <pre><code class="language-liquid">{% for address in customer.addresses %}
-    {% form 'customer_address', address %}
-        &lt;p&gt;
-            &lt;input type="text" name="address[first_name]" id="forname{{ forloop.index }}" value="{{ address.first_name }}"&gt;
-            &lt;label for="forname{{ forloop.index }}"&gt;First name&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[last_name]" id="surname{{ forloop.index }}" value="{{ address.last_name }}"&gt;
-            &lt;label for="surname{{ forloop.index }}"&gt;Last name&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[company]" id="company{{ forloop.index }}" value="{{ address.company }}"&gt;
-            &lt;label for="company{{ forloop.index }}"&gt;Company&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[address1]" id="address1-{{ forloop.index }}" value="{{ address.address1 }}"&gt;
-            &lt;label for="address1-{{ forloop.index }}"&gt;Address 1&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[address2]" id="address1-{{ forloop.index }}" value="{{ address.address2 }}"&gt;
-            &lt;label for="address2-{{ forloop.index }}"&gt;Address 2&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[city]" id="city{{ forloop.index }}" value="{{ address.city }}"&gt;
-            &lt;label for="city{{ forloop.index }}"&gt;City&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;select name="address[country]" id="country{{ forloop.index }}" data-provinceid="province{{ forloop.index }}"&gt;
-                {{ country_option_tags }}
-            &lt;/select&gt;
-            &lt;label for="country{{ forloop.index }}"&gt;Country&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;select name="address[province]" id="provinceid{{ forloop.index }}" disabled&gt;
-                &lt;option value=""&gt;Please select a country first&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;label for="province{{ forloop.index }}"&gt;Province&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="text" name="address[zip]" id="postcode{{ forloop.index }}" value="{{ address.zip }}"&gt;
-            &lt;label for="postcode{{ forloop.index }}"&gt;ZIP/Postal Code&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="tel" name="address[phone]" id="phone{{ forloop.index }}" value="{{ address.phone }}"&gt;
-            &lt;label for="phone{{ forloop.index }}"&gt;Phone Number&lt;/label&gt;
-        &lt;/p&gt;
-        &lt;p&gt;
-            &lt;input type="submit" value="Update address"&gt;
-        &lt;/p&gt;
-    {% endform %}
-{% endfor %}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-
-                            <p>This all seems pretty straightforward, until you get to Country and Province. How do you populate them with the right values?</p>
+                            <p>We can generate an edit address form within the for loop we started above.</p>
+                            <p>This all seems pretty straightforward, until you get to Country and Province select boxes. How do you populate them with the right values?</p>
 
                             <p>The country select box uses <code>{{ country_option_tags }}</code> to generate a generic list of countries. This list does <em>not</em> automagically select the correct country for the current address. What about province? Surely that's tied to the country, right? What if the user updates their country and the province needs to reflect this?</p>
 
@@ -384,11 +295,10 @@
 
                             <p>Inspect the output of those <code>{{ country_option_tags }}</code> and you'll see it comes with a whole heap of extras. Each <code>option</code> tag has a <code>data-provinces</code> attribute, which <em>mostly</em> holds an empty object (<code>[]</code>), but <em>sometimes</em> holds a lot more.</p>
 
-                            <p>We need the JavaScript to do the following:</p>
+                            <p>We need the following to happen:</p>
 
                             <ol>
-                                <li>Loop through each of the user's addresses, then build an array of values for <q>Country</q> and <q>Province</q>
-                                </li>
+                                <li>Loop through each of the user's addresses, then build an array of values for <q>Country</q> and <q>Province</q> (this is done by Liquid, before the page loads)</li>
                                 <li>Loop through each <code>option</code> tag within each country select box and add a <code>selected="selected</code> to the option which matches the current address (or remove the attribute, if it doesn't)</li>
                                 <li>Check each country select box, to see if it has any province data hidden on the currently selected <code>option</code>
                                 </li>
@@ -397,181 +307,34 @@
                             </ol>
 
                             <h4 class="h5">Building relationships</h4>
-
                             <p>Shopify have already established that the countries select box must have a <code>name</code> attribute of <code>address[country]</code> and the provinces select box should have a <code>name</code> attribute of <code>address[province]</code>. But there might be potentially multiple addresses on the page. How do we establish a relationship between these two select boxes?</p>
 
                             <p>Notice that the country select box has a <code>data-provinceid="province{{ forloop.index }}"</code> attribute. This will generate a string which matches the <code>id</code> of the following <code>select</code> box, establishing a means for the JavaScript to jump from one select box to the other (also, this imposes no other markup dependencies).</p>
 
-                            <p>Here's the JavaScript setup function:</p>
-
-                        </div>
-                    </div>
-                    <pre><code class="language-js">function selectorSetup() {
-    // Adds an event listener to the document, rather than the select box
-    document.addEventListener('change', function(e) {
-        var countrySelect = e.target;
-        if (countrySelect.getAttribute('data-provinceid')) {
-            updateProvince(countrySelect);
-        }
-    }, false);
-
-    var countrySelecters = document.querySelectorAll('[name="address[country]"]');
-    {% comment %} Builds up an Array of the values for country and province {% endcomment %}
-    var selectedCountry = [{% for address in customer.addresses %}'{{ address.country }}'{% if forloop.last != true %},{% endif %}{% endfor %}];
-    var selectedProvince = [{% for address in customer.addresses %}'{{ address.province }}'{% if forloop.last != true %},{% endif %}{% endfor %}];
-    // Loops through every address on screen (there can be up to 100!)
-    for (var i = 0; i &lt; countrySelecters.length; i++) {
-        // Finds the elements we need to tinker with
-        var countrySelect = countrySelecters[i];
-        var provinceSelect = document.getElementById(countrySelect.getAttribute('data-provinceid'));
-        if (provinceSelect) {
-            // Makes sure that the current selected value matches the data for the current address
-            preSelect(countrySelect,selectedCountry[i]);
-            // Ensures that the province select box is right for the current country
-            updateProvince(countrySelect);
-            preSelect(provinceSelect,selectedProvince[i]);
-        }
-    }
-}
-selectorSetup();</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-
-                            <p>Note that a Liquid <code>for</code> loop is used here, to generate two Arrays containing the current values of <q>Country</q> and <q>Province</q> for each address in our list. The index of these values will match the <code>for</code> loop which takes up most of the bottom of the function.</p>
-
-                            <p>Because of this Liquid dependency (and that this JavaScript is only really any use within the <code>addresses.liquid</code> template), this JavaScript should be included in a <code>script</code> tag towards the bottom of <code>addresses.liquid</code>.</p>
-
-                            <p>Next, is the <code>updateProvince()</code> function:</p>
-
-                        </div>
-                    </div>
-                    <pre><code class="language-js">// Updates the province select box, if required
-function updateProvince(countrySelect) {
-    var provinceObj = JSON.parse(countrySelect.options[countrySelect.selectedIndex].dataset.provinces);
-    var provinceSelect = document.getElementById(countrySelect.getAttribute('data-provinceid'));
-    // Does the chosen country have provinces?
-    if (provinceSelect && provinceObj.length &gt; 0) {
-        var options = '';
-        for (var i = 0; i &lt; provinceObj.length; i++) {
-            options = options + '&lt;option value="' + provinceObj[i][0] +'"&gt;' + provinceObj[i][1] + '&lt;/option&gt;\n';
-        }
-        provinceSelect.removeAttribute('disabled');
-        provinceSelect.innerHTML = options;
-    } else {
-        provinceSelect.setAttribute('disabled','disabled');
-        provinceSelect.innerHTML = '&lt;option value=""&gt;Please select a country first&lt;/option&gt;';
-    }
-}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-
+                            <h4 class="h5">Using Shopify's attributes</h4>
                             <p>Shopify's province data takes the form of two nested Array-like structures. The inner of these only has two values, which match the <code>value</code> of the <code>option</code> tag and the string of text which appears between the opening and closing <code>option</code> tags.</p>
 
                             <p>These two strings are <em>mostly</em> identical, but not <em>always</em>. The script pulls them out by their index position.</p>
 
-                            <p>Finally, we need a function which loops through the select boxes and ensures that the right data is selected by default (this is not done automatically by <code>{{ country_option_tags }}</code>):</p>
-
-                        </div>
-                    </div>
-                    <pre><code class="language-js">// This is passed a select box and a value. It attempts to find the value within the select box, then change that option tag to "selected".
-function preSelect(obj,value) {
-    if (obj && value !== '') {
-        for (var i = 0; i &lt; obj.length; i++) {
-            var option = obj[i];
-            if (option.text === value) {
-                option.setAttribute('selected','selected');
-            } else {
-                option.removeAttribute('selected');
-            }
-        }
-    }
-}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-                            <p>Nothing particularly smart here. The function either strips out any <code>selected</code> attributes, or adds in one which matches a string which has been passed.</p>
-
                             <h3 class="h4">Adding a new address</h3>
-
-                            <p>This one's pretty straightforward:</p>
-
-                        </div>
-                    </div>
-                    <pre><code class="language-liquid">{% comment %}
-Note that you can add a class to this kind of tag like this:
-{% form 'customer_address', customer.new_address, class: 'myClass' %}
-{% endcomment %}
-{% form 'customer_address', customer.new_address %}
-    &lt;p&gt;
-        &lt;input type="text" name="address[first_name]" id="forname-new"&gt;
-        &lt;label for="forname-new"&gt;First name&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[last_name]" id="surname-new"&gt;
-        &lt;label for="surname-new"&gt;Last name&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[company]" id="company-new"&gt;
-        &lt;label for="company-new"&gt;Company&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[address1]" id="address1-new"&gt;
-        &lt;label for="address1-new"&gt;Address 1&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[address2]" id="address1-new"&gt;
-        &lt;label for="address2-new"&gt;Address 2&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[city]" id="city-new"&gt;
-        &lt;label for="city-new"&gt;City&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;select name="address[country]" id="country-new" data-province="province-new"&gt;
-            {{ country_option_tags }}
-        &lt;/select&gt;
-        &lt;label for="country-new"&gt;Country&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;select name="address[province]" id="province-new" disabled&gt;
-            &lt;option value=""&gt;Please select a country first&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;label for="province-new"&gt;Province&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" name="address[zip]" id="postcode-new"&gt;
-        &lt;label for="postcode-new"&gt;ZIP/Postal Code&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="tel" name="address[phone]" id="phone-new"&gt;
-        &lt;label for="phone-new"&gt;Phone Number&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="submit" value="Update details"&gt;
-    &lt;/p&gt;
-{% endform %}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-
-                            <p>The same JavaScript which links together the country and province select boxes further up the page will work here.</p>
+                            <p>Before the JavaScript portion of <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/customers/addresses.liquid" target="_blank">addresses.liquid</a> is the form which allows your customers to add a new address. This markup could be moved elsewhere in the file if you prefer, or even to a different template. The only restriction is that it should not be nested inside another <code>form</code> tag.</p>
 
                             <h3 class="h4">Delete an address</h3>
+                            <p>Customers can delete addresses using a <code>form</code> with a hidden input:</p>
 
-                        </div>
-                    </div>
-                    <pre><code class="language-liquid">{% for address in customer.addresses %}
-    &lt;form method="post" action="/fine-tune-2020-dev/account/addresses/{{ address.id }}"&gt;
-        &lt;p&gt;
-            &lt;input type="hidden" name="_method" value="delete"&gt;
-            &lt;button&gt;Delete {{ address.address1 }} {{ address.address2 }} {{ address.city }} address&lt;/button&gt;
-        &lt;/p&gt;
-    &lt;/form&gt;
-{% endfor %}</code></pre>
-                    <div class="row">
-                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+                            <pre><code class="language-html">&lt;input type="hidden" name="_method" value="delete"&gt;</code></pre>
+
+                            <p>As this form element would need to be a sibling of an existing edit form, this might impact the layout slightly (but you could argue that the delete address button should be corralled off to the side, in case the user hits it accidentally).</p>
+                            <p>It <em>looks</em> like it should be possible to add:</p>
+
+                            <pre><code class="language-html">&lt;input type="submit" name="_method" value="delete"&gt;</code></pre>
+
+                            <p>... to the edit address form, but this does not delete the selected address. I suspect this is due to the <code>form_type</code> hidden input which is added automatically by Shopify, when you use a <code>{% form 'customer_address', address %}</code> liquid tag.</p>
+
 
                             <p>Note that in <a href="https://shopify.dev/docs/themes/theme-templates/customers-addresses-liquid#delete-an-existing-address" target="_blank">Shopify's documentation of this</a> they add a JavaScript confirm box, before allowing the form to submit.</p>
 
-                            <p>There's nothing to stop you from including this markup within any of the other places in the liquid file where the same <code>for</code> loop takes place. As long as you don't nest your <code>form</code> tags within each other, it should be possible (for example) to have a <q>Delete</q> button appearing under the form which allows users to edit an address.</p>
+                            <p>There's nothing to stop you from including this markup within any of the other places in the liquid file where the same <code>for</code> loop takes place.</p>
 
                         </div>
                     </div>
@@ -586,49 +349,49 @@ Note that you can add a class to this kind of tag like this:
 
             <div class="row gutter-base">
 
-                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Page specific images in Shopify">
-                    <a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="box-link">
-                        <div class="box-link__child">
-                            <p><img src="/fine-tune-2020-dev/img/blog/cta-page-specific-images-in-shopify.jpg" class="img-fluid" alt=""></p>
-                            <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
-                            <h3 class="h5">Page specific images in Shopify</h3>
-                            <p>How to add social sharing and hero images to pages in Shopify, without metafields or apps</p>
-                        </div>
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+                    <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
+                      <div class="box-link__child">
+                        <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+                        <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+                        <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+                        <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
+                      </div>
                     </a>
-                </section>
+                </article>
 
-                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
                     <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
                         <div class="box-link__child">
-                            <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
-                            <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
-                            <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+                            <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+                            <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
                             <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
                         </div>
                     </a>
-                </section>
+                </article>
 
-                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
                     <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
                         <div class="box-link__child">
-                            <p><img src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
-                            <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
-                            <h3 class="h5">Metafields in Shopify without apps</h3>
+                            <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+                            <h3 class="h5" itemprop="headline">Metafields in Shopify without apps</h3>
                             <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
                         </div>
                     </a>
-                </section>
+                </article>
 
-                <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
                     <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
                       <div class="box-link__child">
-                        <p><img src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
-                        <p class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
-                        <h3 class="h5"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+                        <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+                        <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+                        <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
                         <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
                       </div>
                     </a>
-                  </section>
+                </article>
 
             </div><!-- .row -->
 
@@ -681,7 +444,7 @@ Note that you can add a class to this kind of tag like this:
             </div>
             <hr class="brd-white">
             <div class="row">
-                <p class="col-sm-10 small text-uppercase">&copy; 2020 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+                <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
                 <p class="col-sm-2 text-right text-center-sm d-print-none">
                     <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">

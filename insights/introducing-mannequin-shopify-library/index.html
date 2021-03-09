@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Introducing Mannequin, Finetune Partner's Shopify library - Finetune</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="description" content="Mannequin is a library of templates which extends the functionality of Shopify without the use of apps">
+    <meta property="og:title" content="Introducing Mannequin, Finetune Partner's Shopify library - Finetune">
+    <meta property="og:description" content="Mannequin is a library of templates which extends the functionality of Shopify without the use of apps">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://finetunepartners.com/insights/introducing-mannequin-shopify-library/">
+    <link rel="canonical" href="https://finetunepartners.com/insights/introducing-mannequin-shopify-library/">
+    <meta property="og:site_name" content="Finetune">
+    <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-introducing-mannequin-shopify-library.jpg">
+    <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-introducing-mannequin-shopify-library.jpg">
+    <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-introducing-mannequin-shopify-library.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
+    <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#d7f2db">
+    <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
+    <script>
+        window.gdpr = {
+            "addTag": function (tag, attr, content) {
+                var newTag = document.createElement(tag);
+                for (var prop in attr) {
+                    if (!attr.hasOwnProperty(prop)) continue;
+                    newTag.setAttribute(prop, attr[prop]);
+                }
+                if (content) newTag.innerHTML = content;
+                var scripts = document.getElementsByTagName("script");
+                var here = scripts[scripts.length - 1];
+                here.parentElement.insertBefore(newTag, here.nextSibling);
+            }
+        };
+        var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+        window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        if (window.gdpr.choice) {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+        }
+    </script>
+    <!-- End Google Tag Manager -->
+<link href="../../css/app.css" rel="stylesheet"></head>
+
+<body>
+    <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
+
+    <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
+        <div class="container">
+            <div class="row">
+                <p class="col-8 flush">
+                    <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+                            <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+                            <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+                            <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                            <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                        </svg>
+                    </a>
+                </p>
+                <p class="col-4 flush text-right">
+                    <label for="nav-toggle" class="pad-vert-tiny text-interactive-blue" title="Expand navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="shape sh-ellipsis"></span>
+                    </label>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Main" class="bt-white brd-bottom pad-vert-tiny main-nav toggle-container">
+        <a href="/fine-tune-2020-dev/contact/" class="main-nav__marquee marquee d-block d-print-none d-md-none bg-interactive-blue semi-small text-uppercase mb-4" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+            <p class="marquee__child mb-2">
+                Get in touch to find out more <span class="ic-arrow"></span>
+                &nbsp; &nbsp;
+                We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+            </p>
+        </a>
+        <div class="container">
+            <div class="row">
+                <p class="col-8 col-md-3 col-lg-2 flush">
+                    <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+                            <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+                            <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+                            <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                            <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                        </svg>
+                    </a>
+                </p>
+                <p class="col-4 d-md-none text-right mb-5">
+                    <label for="nav-toggle" class="brd-all round icon-tiny icon-sq" title="Hide navigation" aria-label="Hide navigation">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img" aria-label="Close">
+                            <line x1="23" y1="1" x2="1" y2="23"></line>
+                            <line x1="1" y1="1" x2="23" y2="23"></line>
+                        </svg>
+                    </label>
+                </p>
+                <div class="col-12 col-md d-print-none">
+                    <h2 class="d-md-none h6 type-etc-bold text-reset mb-4 text-center mt-5">Navigation</h2>
+                    <a href="/fine-tune-2020-dev/about/" class="btn btn-nav">About</a>
+                    <a href="/fine-tune-2020-dev/services/" class="btn btn-nav">Services</a>
+                    <!--a href="/fine-tune-2020-dev/work/" class="btn btn-nav">Work</a-->
+                    <em><a href="/fine-tune-2020-dev/insights/" class="btn btn-nav">Insights</a></em>
+                    <a href="/fine-tune-2020-dev/contact/" class="btn btn-nav d-block d-md-none mb-5">Contact</a>
+                </div>
+                <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
+            </div>
+            <div class="text-center d-block d-md-none">
+                <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
+                    <br>
+                    <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+                <p>
+                    <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+                            <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <article itemscope itemtype="https://schema.org/NewsArticle">
+
+            <header aria-label="Introducing Mannequin, Finetune Partner's Shopify library" class="bt-mint pad-vert-large">
+                <div class="container">
+                    <aside class="row justify-content-center">
+                        <p class="col-lg-10"><a href="/fine-tune-2020-dev/insights/" class="btn text-uppercase text-interactive-blue"><span class="shape sh-arrow-left"></span> Back to insights</a></p>
+                    </aside>
+                    <div class="row">
+                        <div class="offset-lg-1 col-lg-9">
+                            <h1 class="h2" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h1>
+                        </div>
+                        <aside class="col">
+                            <p class="overscore">3 minute read</p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+                            <p class="d-print-none">Share</p>
+                            <p data-js="share-links" class="d-print-none">
+                                <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Twitter">
+                                        <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Facebook">
+                                        <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z" />
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on LinkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="LinkedIn">
+                                        <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                                    </svg>
+                                </a>
+                            </p>
+                        </aside>
+                    </div><!-- .row -->
+                </div>
+            </header>
+
+            <div class="split-mint-1-5" itemprop="articleBody">
+                <div class="container">
+                    <div class="row">
+                        <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-introducing-mannequin-shopify-library.jpg" alt="" class="img-fluid"></p>
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-6 pad-vert-large">
+                            <p class="small">Cover image by <a href="https://unsplash.com/@eluoec" target="_blank">eluoec</a></p>
+                            <p class="lead text-uppercase"><strong itemprop="abstract">Shopify's great, but at first glance, many of its advanced features seem to require bespoke or third party apps. We've been challenging that assumption here at Finetune Partners and have put together a toolkit on GitHub which should help developers access these features without paying a penny.</strong></p>
+
+                            <p>We've called this library <a href="https://github.com/FinetuneDevelopment/mannequin" target="_blank">Mannequin</a> because it's up to you how you want to dress it. It's even got a logo, so you <em>know</em> it's legit:</p>
+
+                            <p class="text-center"><svg xmlns="http://www.w3.org/2000/svg" aria-label="Mannequin" height="48" width="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width=".5">
+                                <path d="M21.9 21l3.4-.2c-1.3-.8-2.4-.9-3.4.2 1.6 1 2.1 1.1 3.4-.2m-.8-5.3c.8-1.3 2.2-1.8 3.5-.5-1 1-2.1 1.3-3.5.5zm-5.8 0c1.3-.8 1.6-.8 3 0-1.4 1.3-1.7 1.3-3 0zm0-1.5c2.7 0 2.7 0 4 1.3v4H24v-4c.7-1.3 1.3-1.9 4-1.9m-3.9-6.1c3.9 0 6.5 2.7 6.5 8 0 2.6-1.8 5-2.6 6.6l-.6 1.3c.6 1.3.8 2.6 1.9 4-1.3 2.6-8 2.6-9.3 0 .7-1.4 1.6-2.7 1.6-4a16 16 0 01-4.2-9.3c0-4 1.3-6.6 6.6-6.6z"/>
+                                <path d="M40.37 35.4q0-.25.24-.25h.19q.19 0 .26.15.1.2.16.54.31-.56.92-.72.19-.05.47-.05.29 0 .53.12.25.12.39.33.26.39.26 1.14v2.12q0 .1-.07.16-.06.07-.18.07h-.33q-.13 0-.2-.07-.06-.06-.06-.16v-2.12q0-.88-.64-.88-.37 0-.68.32-.34.33-.34.78v1.9q0 .1-.05.16-.06.07-.18.07h-.35q-.12 0-.19-.07-.06-.06-.06-.16v-2.1q0-.68-.04-.95l-.05-.33zm-1.92-.9q-.23 0-.4-.17-.16-.15-.16-.4 0-.23.17-.4.15-.15.4-.15.36 0 .5.34.05.1.05.22 0 .24-.16.4-.17.15-.4.15zm.4 3.57q0 .24.16.24.06 0 .13-.03.13-.06.18-.06.07 0 .11.1l.11.24q.03.06.03.11 0 .15-.26.27-.23.13-.47.13-.23 0-.37-.06-.14-.05-.24-.17-.2-.24-.2-.8v-2.66q0-.1.05-.16.06-.07.13-.07h.46q.08 0 .13.07.05.06.05.16zm-2.02.7q0 .24-.21.24h-.16q-.2 0-.27-.17-.07-.18-.15-.52-.14.36-.49.57-.34.2-.85.2-.67 0-1-.41-.3-.42-.3-1.24v-2.06q0-.1.05-.16.06-.07.17-.07H34q.22 0 .22.23v2.02q0 .82.38.95.12.04.3.04.16 0 .34-.08.18-.08.33-.21.32-.3.32-.68v-2.04q0-.1.05-.16.06-.07.19-.07h.36q.12 0 .17.07.06.06.06.16v2.13q0 .73.1 1.17l.01.1zm-4.97-3.62c.14 0 .21.1.21.27L32 40.67c2.53-2.06 4.66 1.14 1.13 2.33-.13 0-.13 0-.13-.12v-.28c0-.16.1-.2.1-.2 3.13-1.84-1.1-2.88-1.1.28 0 .24 0 .32-.18.32l-.42.01c-.2 0-.2-.1-.2-.32-.01-.76.04-3.76.07-4.3a1.3 1.3 0 01-.82.65c-.13.04-.29.05-.48.05-.2 0-.39-.05-.58-.16-.2-.11-.36-.26-.5-.45-.26-.38-.4-.86-.4-1.44 0-.55.16-1.02.48-1.4.32-.38.7-.57 1.13-.57.28 0 .52.05.71.16.2.12.37.28.51.5l.09-.32.03-.12c.01-.06.04-.1.08-.11a.33.33 0 01.12-.03zm-1.58 3.24a.8.8 0 00.41-.11c.13-.08.23-.17.33-.3.19-.26.28-.57.28-.92 0-.38-.1-.69-.32-.93a.95.95 0 00-.73-.35c-.29 0-.5.13-.67.4-.14.22-.21.52-.21.88 0 .37.07.67.22.92.17.27.4.4.69.4zm-5.08-1.12v.06q0 .47.3.76.3.3.84.3.48 0 .9-.3.08-.05.14-.05.13 0 .2.13l.08.19q.03.07.03.15 0 .07-.07.16-.07.08-.18.15-.11.07-.26.12l-.3.09q-.32.06-.66.06t-.7-.13q-.34-.13-.6-.38-.53-.53-.53-1.43 0-1.58 1.1-1.97.36-.12.72-.12.37 0 .63.08t.45.23q.4.33.4.91 0 .57-.47.87-.4.27-1.07.27-.41 0-.95-.15zm1.68-1q0-.49-.66-.49-.62 0-.87.46-.09.16-.12.4.3.14.75.14.9 0 .9-.51zm-6.92-.87q0-.25.24-.25h.19q.19 0 .26.15.1.2.16.54.3-.56.92-.72.19-.05.47-.05.29 0 .53.12.24.12.38.33.26.39.26 1.14v2.12q0 .1-.06.16-.06.07-.18.07h-.33q-.13 0-.2-.07-.06-.06-.06-.16v-2.12q0-.88-.64-.88-.38 0-.69.32-.33.33-.33.78v1.9q0 .1-.06.16-.05.07-.17.07h-.36q-.12 0-.18-.07-.06-.06-.06-.16v-2.1q0-.68-.04-.95l-.05-.33zm-4.66 0q0-.25.24-.25h.18q.2 0 .26.15.1.2.17.54.3-.56.91-.72.2-.05.48-.05.29 0 .53.12.24.12.38.33.26.39.26 1.14v2.12q0 .1-.06.16-.06.07-.18.07h-.34q-.13 0-.19-.07-.06-.06-.06-.16v-2.12q0-.88-.64-.88-.38 0-.69.32-.33.33-.33.78v1.9q0 .1-.06.16-.06.07-.18.07h-.35q-.12 0-.18-.07-.06-.06-.06-.16v-2.1q0-.68-.05-.95l-.04-.33zm-.99 3.43q0 .18-.18.18h-.33q-.13 0-.16-.05-.03-.06-.03-.1l-.01-.1-.06-.37q-.27.5-.84.65-.2.05-.44.05t-.49-.08q-.24-.08-.43-.23-.42-.36-.42-.94 0-.63.46-.96.39-.27.99-.27t1.02.35v-.3q0-.17-.06-.34-.07-.18-.2-.3-.26-.22-.72-.22-.42 0-.85.23-.08.04-.14.04-.1 0-.18-.18-.1-.18-.1-.27 0-.15.23-.29.43-.26 1.15-.26.66 0 1.1.36.5.43.5 1.21 0 .35-.11.88.29.83.3 1.3zm-2.29-1.45q-.14.1-.2.2t-.06.25q0 .13.05.24.05.1.14.18.19.15.42.15.24 0 .39-.06.15-.05.26-.14.23-.18.23-.39-.02-.25-.28-.4-.24-.14-.56-.14-.25 0-.39.1zm-5.69-2.31q.86 0 1.1.77.33-.55.9-.72.19-.06.48-.06t.56.15q.27.14.4.37.14.23.17.5.04.29.04.6v2.1q0 .1-.06.16-.06.07-.18.07H9.4q-.13 0-.2-.07-.05-.06-.05-.16v-2.13q0-.44-.16-.65-.15-.22-.47-.22-.38 0-.66.33-.3.34-.3.85v1.82q0 .1-.06.16-.06.07-.18.07h-.34q-.13 0-.19-.07-.06-.06-.06-.16v-2.13q0-.44-.15-.65-.15-.22-.48-.22-.37 0-.66.33-.3.34-.3.85v1.82q0 .1-.05.16-.06.07-.18.07h-.35q-.12 0-.18-.07-.07-.06-.07-.16v-2.1q0-.68-.04-.95l-.04-.33q0-.25.23-.25h.19q.2 0 .26.15.08.17.16.54.3-.54.86-.71.19-.06.4-.06z" fill="currentColor" stroke="none"/>
+                              </svg></p>
+
+                            <p>Elsewhere in Insights we go into much greater detail on how you can use Mannequin, but this article is just about the features.</p>
+
+                            <h2 class="h3">Using metafields</h2>
+                            <p>Shopify allows you to attach additional data to elements such as  article, pages, products collection and product variants.</p>
+                            <p>There's no end to the ways this could be used to enhance your site. For example, you could add a list of frequently asked question to your product pages, and have each one tailored to that specific product.</p>
+                            <p>Mannequin lets you create sets of metafields, attach them to elements, then gives you easy ways to allow your content authors to change that information.</p>
+                            <p><a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="btn btn-secondary">Read more about how to use metafields</a> <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/page.metafields.liquid" class="btn btn-secondary" target="_blank">Metafield code on GitHub</a></p>
+
+                            <h2 class="h3">Product filtering</h2>
+                            <p>When you're using the back end of Shopify, there's various options to filter your list of product. But for your customers, there's not an out-of-the-box solution to this problem.</p>
+                            <p>Mannequin allows your customers to filter by:</p>
+                            <ul>
+                                <li>Minimum price</li>
+                                <li>Maximum price</li>
+                                <li>Product type</li>
+                                <li>Manufacturer</li>
+                                <li>Product tag</li>
+                                <li>Product in stock or not</li>
+                            </ul>
+                            <p>That's how it comes pre-configured, but in addition, you can expand its functionality to add your own custom filters. For example, if you sold shoes, you could add custom metafields for features such as arch support and wide fitting.</p>
+                            <p>Now let's say you <em>also</em> sold hats and your products were sorted into two collections, shoes and hats. As long as none of the hats had any arch support or wide fitting data against them, when your customers landed on the "Hats" collection, they would only see filters which applied to just those products.</p>
+                            <p>It also has some other features:</p>
+                            <ul>
+                                <li>It can switch to legacy paginated mode, if there are too many products to filter</li>
+                                <li>Hides filters if there are one or fewer choices for the customer to make</li>
+                                <li>Automatically adjusts the maximum and minimum price, to fit the selection of products displayed</li>
+                                <li>Near instant results</li>
+                            </ul>
+                            <p><a href="/fine-tune-2020-dev/insights/product-filtering-in-shopify-without-apps/" class="btn btn-secondary">Read more about the product filter</a> <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/collection.liquid" class="btn btn-secondary" target="_blank">Product filtering code on GitHub</a></p>
+
+                            <h2 class="h3">Page specific images</h2>
+                            <p>By default, your content authors can only edit a heading and a single <abbr title="What You See Is What You Get">WYSIWYG</abbr> panel on each page of your site. You could add a hero panel to your page template, but this would share the same image across every page.</p>
+                            <p>Mannequin lets you define custom images for each page of your site, which can be reused in your social sharing snippet, to help your site stand out from the competition.</p>
+                            <p><a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="btn btn-secondary">Read more about page specific images</a> <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" class="btn btn-secondary" target="_blank">View page specific image code on GitHub</a></p>
+
+                            <h2 class="h3">Managing customer addresses</h2>
+                            <p>If your customers create an account in your shop, they need a means to view and manage their addresses. The templates required to manage this in Shopify Theme Kit are blank. Mannequin's customer templates allows your customers to:</p>
+                            <ul>
+                                <li>Register a new account</li>
+                                <li>Activate their account</li>
+                                <li>Login</li>
+                                <li>Log out</li>
+                                <li>Reset their password</li>
+                                <li>List their addresses</li>
+                                <li>Edit an existing address</li>
+                                <li>Delete an address</li>
+                                <li>Switch one address, so that it is the default</li>
+                                <li>View past orders (including a detailed view)</li>
+                            </ul>
+                            <p><a href="/fine-tune-2020-dev/insights/managing-user-addresses-in-shopify/" class="btn btn-secondary">Read more about managing customer addresses</a> <a href="https://github.com/FinetuneDevelopment/mannequin/tree/main/templates/customers" class="btn btn-secondary" target="_blank">View customers templates on GitHub</a></p>
+
+                            <h2 class="h3">Smart 404 page</h2>
+                            <p>Customers who end up on your 404 page deserve more than to be told they've taken a wrong turn. The Mannequin 404 page pre-populates a search box with the <abbr title="Universal Resource Locator">URL</abbr> they attempted to reach, plus pulls in the latest three blog posts.</p>
+                            <p><a href="/fine-tune-2020-dev/insights/improving-your-shopify-404-page/" class="btn btn-secondary">Read more about the smart 404 page</a> <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/404.liquid" class="btn btn-secondary" target="_blank">View 404 template on GitHub</a></p>
+
+                            <h2 class="h3">Advanced search options</h2>
+                            <p>There's a number of advanced site search features which are hidden in the Shopify documentation. Mannequin allows your advanced users to filter their searches by:</p>
+                            <ul>
+                                <li>Whether the product is in stock or not</li>
+                                <li>Restricting the search to three types of content (products, articles or pages)</li>
+                                <li>Treat the search terms as a prefix, so that <q>micro</q> will match <q>microwave</q> and <q>microcomputer</q>, or to search only for exact matches</li>
+                            </ul>
+                            <p><a href="/fine-tune-2020-dev/insights/advanced-search-in-shopify/" class="btn btn-secondary">Read more about advanced search</a> <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/search.liquid" class="btn btn-secondary" target="_blank">View search template on GitHub</a></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+
+        <aside class="container d-print-none gutter-xlarge" aria-label="Related">
+
+            <h2 class="text-center gutter-xlarge">Related</h2>
+
+            <div class="row gutter-base">
+
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Page specific images in Shopify">
+                    <a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-page-specific-images-in-shopify.jpg" class="img-fluid" alt=""></p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
+                            <h3 class="h5" itemprop="headline">Page specific images in Shopify</h3>
+                            <p>How to add social sharing and hero images to pages in Shopify, without metafields or apps</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+                    <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+                            <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+                            <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
+                    <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
+                        <div class="box-link__child">
+                            <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+                            <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+                            <h3 class="h5" itemprop="headline">Metafields in Shopify without apps</h3>
+                            <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+                    <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
+                      <div class="box-link__child">
+                        <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+                        <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+                        <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+                        <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
+                      </div>
+                    </a>
+                </article>
+
+            </div><!-- .row -->
+
+        </aside><!-- .container -->
+
+    </main>
+
+    <a href="/fine-tune-2020-dev/contact/" class="marquee d-block bg-interactive-blue semi-small text-uppercase d-print-none" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+        <p class="marquee__child mb-1">
+            Get in touch to find out more <span class="ic-arrow"></span>
+            &nbsp; &nbsp;
+            We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+        </p>
+    </a>
+
+    <footer class="bg-deep-blue text-center-sm">
+        <div class="container mt-5">
+            <div class="row d-print-none">
+                <div class="col-lg-4 col-md offset-md-0 col-sm-8 offset-sm-2">
+                    <div class="row">
+                        <p class="col-4 offset-4 offset-md-0 col-md-3">
+                            <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 159.1" aria-label="Finetune Partners">
+                                    <path fill="#2e38ef" d="M33 146l30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56 0 89l10 32z" />
+                                    <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                                    <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                                </svg>
+                            </a>
+                        </p>
+                    </div>
+
+                    <p class="h4">We turn casual browsers into committed buyers</p>
+                </div>
+                <nav class="col-12 col-md-3 col-xl-3 offset-md-1 offset-lg-0 offset-xl-1" aria-label="Footer">
+                    <h2 class="h6 type-etc-bold text-reset mb-4">Navigation</h2>
+                    <div class="text-uppercase semi-small mb-5">
+                        <p><a href="/fine-tune-2020-dev/about/" class="btn">About</a></p>
+                        <p><a href="/fine-tune-2020-dev/services/" class="btn">Services</a></p>
+                        <!--p><a href="/fine-tune-2020-dev/work/" class="btn">Work</a></p-->
+                        <p><a href="/fine-tune-2020-dev/insights/" class="btn">Insights</a></p>
+                        <p><a href="/fine-tune-2020-dev/contact/" class="btn">Contact</a></p>
+                    </div>
+                </nav>
+                <div class="col-md-5 col-lg-5 col-xl-4 mb-5">
+                    <h2 class="h6 type-etc-bold text-reset mb-4">Information</h2>
+                    <p>We're all working from home right now. Please email us at<br>
+                        <a href="mailto:hello@finetunepartners.com">hello@finetunepartners.com</a><br>
+                        We'd love to hear from you.</p>
+                </div>
+            </div>
+            <hr class="brd-white">
+            <div class="row">
+                <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+                <p class="col-sm-2 text-right text-center-sm d-print-none">
+                    <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+                            <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+<script type="text/javascript" src="../../js/app.js"></script></body>
+
+</html>

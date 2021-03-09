@@ -48,7 +48,7 @@
   </script>
   <!-- Google Tag Manager -->
   <script>
-    if (window.gdpr) {
+    if (window.gdpr.choice) {
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
@@ -138,7 +138,7 @@
         <p class="col-4 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
       </div>
       <div class="text-center d-block d-md-none">
-        <p class="small text-uppercase">&copy; 2020 Finetune Partners &bull;
+        <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
           <br>
           <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
         <p>
@@ -153,7 +153,7 @@
   </nav>
 
   <main id="main">
-    <article>
+    <article itemscope itemtype="https://schema.org/NewsArticle">
 
       <header aria-label="Metafields in Shopify without apps" class="bt-mint pad-vert-large">
         <div class="container">
@@ -162,11 +162,11 @@
           </aside>
           <div class="row">
             <div class="offset-lg-1 col-lg-9">
-              <h1 class="h2">Metafields in Shopify without apps</h1>
+              <h1 class="h2" itemprop="headline">Metafields in Shopify without apps</h1>
             </div>
             <aside class="col">
               <p class="overscore">9 minute read</p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
               <p class="d-print-none">Share</p>
               <p data-js="share-links" class="d-print-none">
                 <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
@@ -190,10 +190,10 @@
         </div>
       </header>
 
-      <div class="split-mint-1-5">
+      <div class="split-mint-1-5" itemprop="articleBody">
         <div class="container">
           <div class="row">
-            <p class="offset-lg-1 col-lg-9"><img src="/fine-tune-2020-dev/img/blog/full-metafields-in-shopify-without-apps.jpg" alt="" class="img-fluid"></p>
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-metafields-in-shopify-without-apps.jpg" alt="" class="img-fluid"></p>
           </div>
           <div class="row">
             <div class="offset-lg-2 col-lg-6 pad-vert-large">
@@ -201,7 +201,7 @@
 
             <p><small>Cover image by <a href="https://unsplash.com/@quasichiara">Chiara F</a></small></p>
 
-            <p class="lead text-uppercase">Poke about in the documentation for Shopify long enough and you'll end up in <a href="https://shopify.dev/docs/themes/liquid/reference/objects/metafield" target="_blank">metafields</a>. Metafields promise to unlock more than just a single heading and <abbr title="What You See Is What The Frick">WYSIWTF</abbr> panel's worth of unique content on each page of your Shopify store.</p>
+            <p class="lead text-uppercase"><strong itemprop="abstract">Poke about in the documentation for Shopify long enough and you'll end up in <a href="https://shopify.dev/docs/themes/liquid/reference/objects/metafield" target="_blank">metafields</a>. Metafields promise to unlock more than just a single heading and <abbr title="What You See Is What The Frick">WYSIWTF</abbr> panel's worth of unique content on each page of your Shopify store.</strong></p>
 
             <p>However, your excitement will quickly be dashed, when you realise that in order to actually <em>add</em> any data into a metafield, you need to build (and host) your own app, or pay a monthly fee for a third-party one.</p>
 
@@ -231,110 +231,9 @@
               <li>What type of data it is</li>
             </ul>
 
-            <p>Here's the markup, which you could dump into a Liquid template, then use that to create a page, then hide somewhere on your Shopify site where you're sure your customers won't find it (the legal terms and conditions page, for example):</p>
-          </div>
-        </div>
-      <pre id="new-metadata-form"><code class="language-html">&lt;form action="/fine-tune-2020-dev/admin/bulk" method="get" id="metaedit"&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Attach metafield to:&lt;/legend&gt;
-    &lt;p&gt;
-        &lt;input type="radio" name="resource_name" value="Article" id="resource_name_article"&gt;
-        &lt;label for="resource_name_article"&gt;An article&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="radio" name="resource_name" value="Page" id="resource_name_page" checked&gt;
-        &lt;label for="resource_name_page"&gt;A page&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="radio" name="resource_name" value="Product" id="resource_name_product"&gt;
-        &lt;label for="resource_name_product"&gt;A product&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="radio" name="resource_name" value="Collection" id="resource_name_collection"&gt;
-        &lt;label for="resource_name_collection"&gt;A collection&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="radio" name="resource_name" value="ProductVariant" id="resource_name_ProductVariant"&gt;
-        &lt;label for="resource_name_ProductVariant"&gt;A product variant&lt;/label&gt;
-    &lt;/p&gt;
-&lt;/fieldset&gt;
+            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-add.liquid" target="_blank" class="btn btn-primary">View metafield-add on Github</a></p>
 
-&lt;fieldset&gt;
-    &lt;legend&gt;Field labels:&lt;/legend&gt;
-    &lt;p&gt;Leave this blank for &lt;code&gt;global&lt;/code&gt;&lt;/p&gt;
-    &lt;p&gt;
-        &lt;input type="text" id="namespace"&gt;
-        &lt;label for="namespace"&gt;Namespace for your new metafield&lt;/label&gt;
-    &lt;/p&gt;
-    &lt;fieldset id="new-labels"&gt;
-        &lt;legend&gt;New metafield&lt;/legend&gt;
-        &lt;p&gt;
-            &lt;input type="text" id="newmeta1" pattern="[A-Za-z_-]+" data-js="new-field"&gt;
-            &lt;label for="newmeta1"&gt;Name your new metafield&lt;/label&gt;
-            &lt;select id="type1"&gt;
-                &lt;option value="string" selected&gt;String&lt;/option&gt;
-                &lt;option value="money"&gt;Money&lt;/option&gt;
-                &lt;option value="boolean"&gt;Boolean&lt;/option&gt;
-                {% comment %}
-                While you can create select boxes in the bulk editor,
-                they don't have any options, so I guess there's no point.
-                &lt;option value="select"&gt;Select&lt;/option&gt;
-                {% endcomment %}
-                &lt;option value="number"&gt;Number&lt;/option&gt;
-            &lt;/select&gt;
-            &lt;label for="type"&gt;Data type&lt;/label&gt;
-        &lt;/p&gt;
-    &lt;/fieldset&gt;
-    &lt;p&gt;
-      &lt;input type="hidden" name="edit" id="hiddenEdit"&gt;
-      &lt;button type="button" id="add-field"&gt;+ Add field&lt;/button&gt;&lt;/p&gt;
-      &lt;input type="submit" value="Bulk edit metafields"&gt;
-    &lt;/p&gt;
-  &lt;/fieldset&gt;
-&lt;/form&gt;</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-            <p>This'll also need some JavaScript, to concatenate together the different strings into the URL to generate new fields:</p>
-          </div>
-        </div>
-      <pre><code class="language-js">// Create new metafields
-var addFieldTrigger = document.getElementById('add-field');
-// Adds a new field into the form
-addFieldTrigger.addEventListener('click', function() {
-    var newLabels = document.getElementById('new-labels');
-    if (newLabels) {
-        var count = document.querySelectorAll('[data-js="new-field"]').length + 1;
-        // Additional metafield inputs markup
-        var fieldMarkup = '&lt;input type="text" id="newmeta'+count+'" pattern="[A-Za-z_-]+" data-js="new-field"&gt;&lt;label for="newmeta'+count+'"&gt;Name your new metafield&lt;/label&gt; &lt;select id="type'+count+'"&gt;&lt;option value="string" selected&gt;String&lt;/option&gt;&lt;option value="money"&gt;Money&lt;/option&gt;&lt;option value="boolean"&gt;Boolean&lt;/option&gt;&lt;option value="number"&gt;Number&lt;/option&gt;&lt;/select&gt;&lt;label for="type'+count+'"&gt;Data type&lt;/label&gt;';
-        var newField = document.createElement('p');
-        newField.innerHTML = fieldMarkup;
-        newLabels.appendChild(newField);
-    }
-});
-
-var theForm = document.getElementById('metaedit');
-theForm.onsubmit = buildQuery;
-function buildQuery() {
-    var hiddenEdit = document.getElementById('hiddenEdit');
-    var newSpace =   document.getElementById('namespace').value;
-    if (newSpace === '') newSpace = 'global';
-    var newFields =  document.querySelectorAll('[data-js="new-field"]');
-    var editString = '';
-    var metaType;
-    // Loop through the input elements
-    for (var i = 0; i &lt; newFields.length; i++) {
-        // Don't include any placeholder values
-        if (newFields[i].value !== '') {
-            metaType = document.getElementById('type' + (i + 1)).value;
-            // Build up the URL
-            if (i !== 0) editString = editString + ',';
-            editString = editString + 'metafields.' + newSpace + '.' + newFields[i].value + ':' + metaType;
-        }
-    }
-    hiddenEdit.value = editString;
-}</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
+            <p>This'll also need some JavaScript, to concatenate together the different strings into the URL to generate new fields. As the metafield creation form is only used on one page, the JavaScript is inline at the bottom of the file.</p>
             <p>Completing this form will send you to Shopify's bulk editor, but rather than editing the built-in fields which are part of products and pages by default, it allows you to edit any number of arbitrary fields of your own devising.</p>
 
             <h2 class="h3">Structuring your data</h2>
@@ -368,18 +267,17 @@ function buildQuery() {
 
             <p>This generates a bunch of meta-tags and JavaScript intended to sit within the <code>head</code> of your site controlling various aspects of Shopify's functionality. By turning this into a string and looking for patterns within it, we can work out if the current user is an admin or not.</p>
             <p>Luckily, <code>{{ content_for_header }}</code> is global which means we're not just limited to using it in <code>theme.liquid</code>.</p>
-            <p>Let's say you have an <abbr>FAQ</abbr> section on your product pages which is populated with content using metadata. You could include the link to edit this content like this:</p>
+            <p>I've made this into another <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/admin-check.liquid">snippet in Mannequin, which you can find on Github</a>. Note that it returns a <em>string</em>, rather than a boolean and one with whitespace around it too. This means we need to do a little work, before it's useful:</p>
           </div>
         </div>
-      <pre><code class="language-liquid">{% capture CFH %}{{ content_for_header  }}{% endcapture %}
-
-{% if CFH contains 'admin_bar_iframe' %}
-  {% assign admin = true %}
-{% elsif CFH contains 'preview_bar_injector-' %}
-  {% assign admin = true %}
-{% endif %}
-
-{% if admin %}
+      <pre><code class="language-liquid">{% capture tempadmin %}{% render 'admin-check' %}{% endcapture %}
+{% assign admin = tempadmin | strip %}</code></pre>
+        <div class="row">
+          <div class="offset-lg-2 col-lg-6 pad-vert-large">
+            <p>Because you (mostly) can't change the values of variables in Liquid, we first assign a temporary variable the value of the admin check snippet. This then gets <code>strip</code>ped of its whitespace, when it's assigned to the <em>real</em> variable, <code>admin</code>. We use <code>admin</code> like this:</p>
+          </div>
+        </div>
+      <pre><code class="language-liquid">{% if admin == 'true' %}
   &lt;p&gt;
     &lt;a href="/fine-tune-2020-dev/admin/bulk?resource_name=Product&edit=metafields.faq.q-one%3Astring%2Cmetafields.faq.a-one%3Astring%2Cmetafields.faq.q-two%3Astring%2Cmetafields.faq.a-two%3Astring%2Cmetafields.faq.q-three%3Astring%2Cmetafields.faq.a-three%3Astring%2Cmetafields.faq.q-four%3Astring%2Cmetafields.faq.a-four%3Astring"&gt;
       Edit metadata
@@ -388,100 +286,21 @@ function buildQuery() {
 {% endif %}</code></pre>
         <div class="row">
           <div class="offset-lg-2 col-lg-6 pad-vert-large">
-            <p>That big, ugly <abbr>URL</abbr> is what is generated by the form we made earlier. Because this markup only appears in <code>product.liquid</code>, the <abbr>URL</abbr> is specific to that set of meta-data. If you wanted to add an edit link for another set of meta-data, you could generate one using <a href="#new-metadata-form">the form you created above</a>.</p>
+            <p>That big, ugly <abbr>URL</abbr> is what is generated by the form we made earlier. Because this markup only appears in <code>product.liquid</code>, the <abbr>URL</abbr> is specific to that set of meta-data. If you wanted to add an edit link for another set of meta-data, you could generate one using <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-add.liquid" target="_blank">the add metafield form</a>.</p>
+
+            <h2 class="h3">What if I want to expand the set of captures metafields at a later date?</h2>
+            <p>The querystring which the metafield form generates goes both ways - it can be passed to the Shopify bulk editor, to generate a spreadsheet-like way of editing content, but it can <em>also</em> be passed back to the metafield form, in order to pre-populate it with the correct values.</p>
+            <p>If you wanted to add a fifth <abbr>FAQ</abbr> question, you could take the original querystring and add it to the end of wherever you store your metafield page, make the adjustments to the form, then generate a new <abbr>URL</abbr>. Content authors who use this will see all of the existing data, plus new cells for them to add the new <abbr>FAQ</abbr> question and answer.</p>
 
             <h2 class="h3">How can I see the data which is saved against content elements?</h2>
 
-            <p>I'm so glad you asked. <a href="https://shopify.dev/docs/admin-api/rest/reference/metafield" target="_blank">The Shopify documentation points at <abbr>URL</abbr>s</a> which will show you the <abbr title="JavaScript Object Notation">JSON</abbr> for individual elements. But that would be more <abbr>URL</abbr> hacking, so let's create another form:</p>
-          </div>
-        </div>
-      <pre><code class="language-liquid">&lt;fieldset&gt;
-  &lt;legend&gt;Select a content block&lt;/legend&gt;
+            <p>I'm so glad you asked. <a href="https://shopify.dev/docs/admin-api/rest/reference/metafield" target="_blank">The Shopify documentation points at <abbr>URL</abbr>s</a> which will show you the <abbr title="JavaScript Object Notation">JSON</abbr> for individual elements. But that would be more <abbr>URL</abbr> hacking. Luckily, however, <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view.liquid" target="_blank">Mannequin has another snippet for viewing existing metafield data</a>.</p>
 
-  &lt;p&gt;
-      &lt;select id="pages" data-js="auto"&gt;
-          &lt;option value=""&gt;Select a page&lt;/option&gt;
-          {% for linklist in linklists %}
-              &lt;optgroup label="{{ linklist.title }}"&gt;
-                  {% for link in linklist.links %}
-                      {% unless link.object.id == blank %}
-                          &lt;option value="{{ link.object.id }}"&gt;{{ link.object.title }}&lt;/option&gt;
-                      {% endunless %}
-                  {% endfor %}
-              &lt;/optgroup&gt;
-          {% endfor %}
-      &lt;/select&gt;
-      &lt;label for="pages"&gt;Select a page&lt;/label&gt;
-  &lt;/p&gt;
+            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view.liquid" target="_blank" class="btn btn-secondary">View metafield-view on Github</a></p>
 
-  &lt;p&gt;
-      &lt;select id="products" data-js="auto"&gt;
-          &lt;option value=""&gt;Select a product&lt;/option&gt;
-          {% for product in collections.all.products %}
-              {% unless product.id == blank %}
-                  &lt;option value="{{ product.id }}"&gt;{{ product.title }}&lt;/option&gt;
-              {% endunless %}
-          {% endfor %}
-      &lt;/select&gt;
-      &lt;label for="products"&gt;Select a product&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-      &lt;select id="articles" data-js="auto"&gt;
-          &lt;option value=""&gt;Select an article&lt;/option&gt;
-          {% comment %}
-          Add in the names of all of your blogs here,
-          for example "news,updates,how-to"
-          {% endcomment %}
-          {% assign all_blogs = "news" | split: "," %}
-          {% for blog_handle in all_blogs %}
-              {% assign current_blog = blogs[blog_handle] %}
-              &lt;optgroup label="{{ current_blog.title }}"&gt;
-              {% for article in current_blog.articles %}
-                  &lt;option value="{{ article.id }}" data-parentid="{{ current_blog.id }}"&gt;{{ article.title }}&lt;/option&gt;
-              {% endfor %}
-              &lt;/optgroup&gt;
-          {% endfor %}
-      &lt;/select&gt;
-      &lt;label for="articles"&gt;Select an article&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-      &lt;select id="collections" data-js="auto"&gt;
-          &lt;option value=""&gt;Select a collection&lt;/option&gt;
-          {%- for collection in collections -%}
-          &lt;option value="{{ collection.id }}"&gt;{{ collection.title }}&lt;/option&gt;
-          {%- endfor -%}
-      &lt;/select&gt;
-      &lt;label for="articles"&gt;Select a collection&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-      &lt;select id="variants" data-js="auto"&gt;
-          &lt;option value=""&gt;Select a product variant&lt;/option&gt;
-          {% for product in collections.all.products %}
-              {% if product.variants.size &gt; 1 %}
-                  &lt;optgroup label="{{product.title}}"&gt;
-                  {% for variant in product.variants %}
-                      &lt;option value="{{ variant.id }}" data-parentid="{{ product.id }}"&gt;{{ variant.title }}&lt;/option&gt;
-                  {% endfor %}
-                  &lt;/optgroup&gt;
-              {% endif %}
-          {% endfor %}
-      &lt;/select&gt;
-      &lt;label for="product_variant"&gt;Select a product variant&lt;/label&gt;
-  &lt;/p&gt;
-
-  &lt;p&gt;
-      &lt;button type="button" id="view-json"&gt;View &lt;abbr&gt;JSON&lt;/abbr&gt;&lt;/button&gt;
-  &lt;/p&gt;
-&lt;/fieldset&gt;</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
             <p>This form will create five <code>select</code> boxes which contain a list of (respectively) your pages (specifically, all the pages which appear in linklists), your products, your blog articles, your collections and your product variants.</p>
 
-            <p>It needs a <em>tiny</em> bit of configuration, around this line:<br>
-            </p>
+            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-articles.liquid">The snippet which lists the articles</a> needs a <em>tiny</em> bit of configuration, around this line:</p>
 
             <pre><code class="language-liquid">{% assign all_blogs = "news" | split: "," %}</code></pre>
 
@@ -489,50 +308,20 @@ function buildQuery() {
 
             <pre><code class="language-liquid">{% assign all_blogs = "news,how-to" | split: "," %}</code></pre>
 
-            <p>Here's some JavaScript, which does the redirecting:</p>
-          </div>
-        </div>
-      <pre><code class="language-js">// Show content JSON, select boxes
-var btnView = document.getElementById('view-json');
-btnView.addEventListener('click', function() {
-    // The five select boxes, letting you choose the content
-    var id, selectBoxes = document.querySelectorAll('[data-js="auto"]');
-    for (var i = 0; i &lt; selectBoxes.length; i++) {
-        // Content item ID
-        id = selectBoxes[i].value;
-        // Used for blog articles and product variations
-        parentID = selectBoxes[i].options[selectBoxes[i].selectedIndex].getAttribute('data-parentid');
-        // This will follow the first valid link found, then stop.
-        if (parentID && id !== '') {
-            bounce(id,selectBoxes[i].getAttribute('id'),parentID);
-            break;
-        }
-        else if (id !== '') {
-            bounce(id,selectBoxes[i].getAttribute('id'));
-            break;
-        }
-    }
-});
+            <p>There's some inline JavaScript, which redirects content authors to the correct <abbr>JSON</abbr> file.</p>
+            <p>This JavaScript loops through the values of the select boxes (marked with a <code>data-js="auto"</code> attribute) until it finds one where the user has made a selection. It takes the <code>id</code> from that select box, plus the <code>value</code> (which, confusingly, is the <code>id</code> of that particular content item), then passes them onto a function called <code>bounce()</code>.</p>
 
-// "Bounces" the user to the correct JSON URL
-function bounce(id,contentType,parentID) {
-    var URL = '';
-    // shopify.dev/docs/admin-api/rest/reference/metafield
-    switch (contentType) {
-        case 'variants':
-            URL = '/admin/products/' + parentID + '/' + contentType + '/' + id + '/metafields.json';
-            break;
-        case 'articles':
-            URL = '/admin/blogs/' + parentID + '/' + contentType + '/' + id + '/metafields.json';
-            break;
-        default:
-            URL = '/admin/' + contentType + '/' + id + '/metafields.json';
-    }
-    document.location.href = '//' + document.location.hostname + URL;
-}</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-            <p>This JavaScript loops through the values of the select boxes (marked with a <code>data-js="auto"</code> attribute) until it finds one which isn't empty. It takes the <code>id</code> from that select box, plus the <code>value</code> (which, confusingly, is the <code>id</code> of that particular content item), then passes them onto a function called <code>bounce()</code>.</p>
+            <h3>Wait, what about performance?</h3>
+            <p>Shopify stores can have thousands of products, with some of those having perhaps ten variations. This will generate some <em>huge</em> select boxes. While this isn't a page intended for your customers, performance may still be an issue. This is why each select box appears as a separate snippet, allowing you to split them out onto different pages, if required (remember to include <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/assets/metafield-view.js">metafield-view.js</a> on that page, if you do this).</p>
+
+            <h3>Is this secure?</h3>
+            <p>While you probably don't want your customers stumbling upon your metafield editing pages, all those pages are doing is generating links which point to the <code>/admin/</code> section of your site. Even if your customers (or competitors) <em>did</em> stumble upon this page, they'd still need valid credentials to either see or edit any of your data. The only information you're giving out is a list of your products, plus their identification numbers, but I assume your catalog page already does that.</p>
+
+            <p>You could also hide all of the content behind the <code>admin</code> variable, so that your customers would just see a blank page:</p>
+
+            <pre><code class="language-liquid">{% if admin == 'true' %}
+  (metafield forms go here)
+{% endif %}</code></pre>
 
             <h3>So what does this do, exactly?</h3>
 
@@ -624,9 +413,21 @@ Check if there's anything in our <abbr title="Frequently Asked Questions">FAQ</a
 
             <p>However, if you edit an old metafield and then remove its content, it will disappear from the JSON.</p>
 
-            <h2 class="h3">Conclusion</h2>
+            <h2 class="h3">Dependencies</h2>
 
-            <p>While these tools are useful, having your <abbr title="Content Management System">CMS</abbr> authors creating endless metafields and populating them with content is meaningless without this data being reflected in the front end. What's probably more useful for these folk is the generated URL which lets them bulk-edit all of your products or whatnot.</p>
+            <p>Mannequin doesn't have any dependencies outside of the repo, but the metafields functionality is quite modular. This was done to allow it to be spread over several pages, if required. The files are as follows:</p>
+            <ul>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/page.metafields.liquid" target="_blank"><code>page.metafields.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-add.liquid" target="_blank"><code>metafield-add.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-articles.liquid" target="_blank"><code>metafield-view-articles.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-collections.liquid" target="_blank"><code>metafield-view-collections.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-pages.liquid" target="_blank"><code>metafield-view-pages.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-product-variants.liquid" target="_blank"><code>metafield-view-product-variants.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view-products.liquid" target="_blank"><code>metafield-view-products.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/metafield-view.liquid" target="_blank"><code>metafield-view.liquid</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/assets/metafield-view.js" target="_blank"><code>metafield-view.js</code></a></li>
+              <li><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank"><code>page-images.liquid</code></a> (this is not required for functionality, but is referenced from <code>page.metafields.liquid</code>)</li>
+            </ul>
         </div>
       </div>
 
@@ -638,49 +439,49 @@ Check if there's anything in our <abbr title="Frequently Asked Questions">FAQ</a
 
       <div class="row gutter-base">
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Page specific images in Shopify">
-          <a href="/fine-tune-2020-dev/insights/page-specific-images-in-shopify/" class="box-link">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+          <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-page-specific-images-in-shopify.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Open Graph, SEO</p>
-              <h3 class="h5">Page specific images in Shopify</h3>
-              <p>How to add social sharing and hero images to pages in Shopify, without metafields or apps</p>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce, Open Source</p>
+              <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+              <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model">
           <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme2/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme2.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
-              <h3 class="h5">Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme2.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 2: The Strategic Output Model</h3>
               <p>In the second part of our &quot;CRO: In Graphs&quot; series, we’re going to turn our attention to the Strategic Output Model.</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
           <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
-              <h3 class="h5"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+              <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
               <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
             </div>
           </a>
-        </section>
+        </article>
 
-        <section class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Managing user addresses in Shopify">
           <a href="/fine-tune-2020-dev/insights/managing-user-addresses-in-shopify/" class="box-link">
             <div class="box-link__child">
-              <p><img src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
-              <p class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
-              <h3 class="h5">Managing user addresses in Shopify</h3>
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-managing-user-addresses-in-shopify.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Managing user addresses in Shopify</h3>
               <p>Building the addresses.liquid template with full functionality</p>
             </div>
           </a>
-        </section>
+        </article>
 
       </div><!-- .row -->
 
@@ -732,7 +533,7 @@ Check if there's anything in our <abbr title="Frequently Asked Questions">FAQ</a
       </div>
       <hr class="brd-white">
       <div class="row">
-        <p class="col-sm-10 small text-uppercase">&copy; 2020 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
         <p class="col-sm-2 text-right text-center-sm d-print-none">
           <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">

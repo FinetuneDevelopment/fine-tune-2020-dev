@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" aria-label="Buy OK products.">
+<!--  width="48" height="24" -->
+  <style>
+      @-webkit-keyframes buy-tempt {
+         0%   { transform: rotate(4deg); }
+         100% { transform: rotate(-10deg); }
+      }
+      @keyframes buy-tempt {
+         0%   { transform: rotate(4deg); }
+         100% { transform: rotate(-10deg); }
+      }
+      .buy-arm {
+         -webkit-animation: 1s ease-in-out 0s infinite alternate buy-tempt;
+                 animation: 1s ease-in-out 0s infinite alternate buy-tempt;
+         animation-play-state: paused;
+         transform-origin: 60% 80%;
+      }
+      @-webkit-keyframes buy-ok {
+         0%   { transform: rotate(4deg); }
+         100% { transform: rotate(-10deg); }
+      }
+      @keyframes buy-ok {
+         0%   { transform: rotate(2deg); }
+         100% { transform: rotate(-5deg); }
+      }
+      .ok-fingers {
+         -webkit-animation: .5s ease-in-out 0s infinite alternate buy-ok;
+                 animation: .5s ease-in-out 0s infinite alternate buy-ok;
+         animation-play-state: paused;
+         transform-origin: 80% 60%;
+      }
+      .scrolling .ok-fingers, .scrolling .buy-arm { animation-play-state: running; }
+      .I{stroke:#010111}
+      .K{stroke-width:.1}
+  </style>
+  <defs>
+    <clipPath id="A">
+      <path d="M26.18 19.26l-6.08.05v4.57H0V.15h26.27c.1 6.37.03 12.74-.09 19.11z"/>
+    </clipPath>
+  </defs>
+  <path fill="#d7f2db" d="M28.7 23.42h19.16V4.26H28.7z"/>
+  <g fill="#fff" class="I K ok-fingers">
+    <path d="M35.37 7.68c-.46.48 1.28 1.67 1.92 2.44 1.33 5.4 4.19 4.14.98-.88-.4-.3-2.54-1.94-2.9-1.56z"/>
+    <path d="M36.15 6.94c-.3.3 1.14 2.01 1.82 2.91 2.12 3.65 2.3 1.7.83-.85-.79-.8-2.17-2.55-2.65-2.06z"/>
+    <path d="M37.5 6.64c-.4.48.94 2.37 1.54 3.44.4 3.42 2.86 3.2 1.22-.45-.88-1-2.36-3.47-2.75-2.99z"/>
+  </g>
+  <path d="M37.36 14.73c.86-.48.47-2.6.37-2.84 2.15.78 1.72 3.15-.37 2.84z"/>
+  <path fill="#fff" d="M43.26 31.54l-2.41-13.43c2.2-5.65-.32-9.41-5.67-6.9-.24.1-.48.06-.46.48.01.41 2.1.2 3 .2 2.16.8 1.7 3.18-.36 2.84-1.06-.62-1.41-2.27-2.37-2.74-.2.02-.13.55-.08 1.05.14 1.75.7 3.63 1.95 4.53-.12.97-1.26 13.97-1.26 13.97h7.66" class="I K"/>
+  <path d="M36.85 17.57l-.04.59s.46.72 1.78.5a6.19 6.19 0 01-1.73-1.1" fill="#010111"/>
+  <path fill="none" d="M8.66 19.3h17.55V.3H8.65z" class="I K"/>
+  <g clip-path="url(#A)">
+   <g class="buy-arm">
+    <circle r="1" cy="4.3" cx="20"/>
+    <path d="M7.76 1.73l12.2.72-1.37 18.01-12.2-.72z" fill="#d7f2db" class="I K"/>
+    <path d="M7.6 17.6l4.53.33m-4.46-1.4l4.54.33m-4.46-1.4l4.54.32" class="I K"/>
+    <path fill="none" d="M8.77 8.62a4.5 4.5 0 118.98.64 4.5 4.5 0 01-8.98-.64z" class="I K"/>
+    <g class="K I">
+      <path d="M13.08 7.74a3.78 3.78 0 00-.56-1.38m1.36 1.47c.26-.6.63-1 .86-1.21m-1.45-.95c.1.57.18 1.28.13 2.1" fill="none"/>
+      <g fill="#fff">
+        <path d="M12.51 7.66l.3.86c-1.03 1.29-.6 2.34-.38 3.9l1 .11c.76-1.75 1.05-2.49.4-3.95l.45-.7z"/>
+        <path d="M14.16 9.45l-1.8-.21"/>
+        <path d="M14.16 9.45l-1.8-.21m-.03 2.46l1.36.16"/>
+        <path d="M12.33 11.7l1.36.16"/>
+      </g>
+    </g>
+    <path d="M12.77 6.39a.24.24 0 01-.28.2.24.24 0 11.06-.48.24.24 0 01.22.27m.77-.68a.24.24 0 01-.48-.05.24.24 0 01.26-.22.24.24 0 01.22.27m1.44.94a.24.24 0 11-.22-.27.24.24 0 01.22.27"/>
+    <path d="M21.3 4.07L19.58 1c-.15.06.73 3.43.73 3.43l-.64.86a9.16 9.16 0 01-.22-1.14c-.08-.7-.27-.23-.36.01-.1.24-.55 2.18-.48 2.76.5 3.83 8.5 18.94 8.5 18.94L32.56 24 24.1 11.98a148.88 148.88 0 00-3.29-4.22l.56-2.95c0-.06.16-.27-.08-.74" fill="#d7f2db" class="I K"/>
+    <path d="M20.64,8.65 21.09,8.1 20.81,7.76 Z"/>
+    <path d="m25.81,14.3 0.37,4.96 3.306439,5.843158 L 32.56,24 Z"/>
+    <g fill="none" class="K" stroke="#010011">
+      <path d="M13.36 15.87l4.43.24-.16 2.22-4.43-.25z" fill="#fff"/>
+      <path d="M13.93 16.6l-.05.73.45.04c.24.01.21-.35 0-.38l-.42-.04.42.03c.15.02.26-.31.02-.34zm1.21.1l-.03.52c0 .28.65.33.66.04l.04-.52m.59 0l.32.48-.04.32.04-.32.36-.44"/>
+    </g>
+   </g>
+  </g>
+</svg>
