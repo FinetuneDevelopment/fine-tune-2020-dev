@@ -201,52 +201,51 @@
               <p>Out of the box, Shopify lets you edit very little information about a normal page.</p>
             </div>
           </div>
-        </div>
-        <p><img src="/fine-tune-2020-dev/img/blog/img-new-shopify-page.png" alt="The form used to create a new page within Shotify"></p>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-          <p>Your content authors just get the following:</p>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-new-shopify-page.png" alt="The form used to create a new page within Shotify"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+            <p>Your content authors just get the following:</p>
 
-            <ul>
-              <li>Title</li>
-              <li>Content (<abbr title="What You See Is What You Get">WYSIWYG</abbr> field)</li>
-              <li><em>Page</em> title</li>
-              <li>Description (for <abbr title="Search Engine Optimisation">SEO</abbr> purposes)</li>
-              <li><abbr title="Uniform Resource Locator">URL</abbr> and handle</li>
-            </ul>
+              <ul>
+                <li>Title</li>
+                <li>Content (<abbr title="What You See Is What You Get">WYSIWYG</abbr> field)</li>
+                <li><em>Page</em> title</li>
+                <li>Description (for <abbr title="Search Engine Optimisation">SEO</abbr> purposes)</li>
+                <li><abbr title="Uniform Resource Locator">URL</abbr> and handle</li>
+              </ul>
 
-            <p>... but nothing which lets us plonk a nice, eye-catching image in a hero panel. Or, more importantly, adds a thumbnail image to the link, when someone shares it on social media.</p>
+              <p>... but nothing which lets us plonk a nice, eye-catching image in a hero panel. Or, more importantly, adds a thumbnail image to the link, when someone shares it on social media.</p>
 
-            <h2 class="h3">Getting a handle on the situation</h2>
+              <h2 class="h3">Getting a handle on the situation</h2>
 
-            <p>What Shopify <em>does</em> generate automatically is something it calles a <code>handle</code>. Here's an example: let's say you created a page called <q>Our controversial founder, Marcel de Scélérat</q>. Shopify would create a <code>handle</code> from this text which would read as follows: <code>our-controversial-founder-marcel-de-scelerat</code>. Notice how everything is now lower-case, all of the spaces have been converted into hyphens and all the extended characters have been converted to the boring English versions.</p>
+              <p>What Shopify <em>does</em> generate automatically is something it calles a <code>handle</code>. Here's an example: let's say you created a page called <q>Our controversial founder, Marcel de Scélérat</q>. Shopify would create a <code>handle</code> from this text which would read as follows: <code>our-controversial-founder-marcel-de-scelerat</code>. Notice how everything is now lower-case, all of the spaces have been converted into hyphens and all the extended characters have been converted to the boring English versions.</p>
 
-            <p>This handle is used to generate the <abbr title="Universal Resource Locator">URL</abbr> of the page, but can also be added to liquid templates like this:</p>
+              <p>This handle is used to generate the <abbr title="Universal Resource Locator">URL</abbr> of the page, but can also be added to liquid templates like this:</p>
 
-            <pre><code class="language-liquid">{{ handle }}</code></pre>
+              <pre><code class="language-liquid">{{ handle }}</code></pre>
 
-            <h2 class="h3">Shopify and images</h2>
-            <p>Shopify has <a href="https://webdesign.tutsplus.com/tutorials/how-to-work-with-images-in-shopify--cms-26149" target="_blank">a few different kinds of images</a>, but from a content author's perspective, there's really only one. If you click on <q>Settings</q> (bottom left), then select <q>Files</q>, you'll see a selection of the images on your site which can be managed when not editing a product or article:</p>
+              <h2 class="h3">Shopify and images</h2>
+              <p>Shopify has <a href="https://webdesign.tutsplus.com/tutorials/how-to-work-with-images-in-shopify--cms-26149" target="_blank">a few different kinds of images</a>, but from a content author's perspective, there's really only one. If you click on <q>Settings</q> (bottom left), then select <q>Files</q>, you'll see a selection of the images on your site which can be managed when not editing a product or article:</p>
+            </div>
           </div>
-        </div>
-        <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-shopify-files-menu.png" alt="In order to reach the files listing, first click on `settings`, then `Files`."></p>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-shopify-files-menu.png" alt="In order to reach the files listing, first click on `settings`, then `Files`."></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>The list of files looks like this:</p>
+            </div>
+          </div>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-shopify-files-list.png" alt="The menu within Shopify displaying all of the files the user has uploaded."></p>
         <div class="row">
           <div class="offset-lg-2 col-lg-6 pad-vert-large">
-          <p>The list of files looks like this:</p>
-        </div>
-      </div>
-      <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-shopify-files-list.png" alt="The menu within Shopify displaying all of the files the user has uploaded."></p>
-      <div class="row">
-        <div class="offset-lg-2 col-lg-6 pad-vert-large">
-        <h2 class="h3">Naming convention</h2>
+            <h2 class="h3">Naming convention</h2>
 
             <p>If content authors upload images and give them the same name as the <code>handle</code> of the page they're intended for, we can match them up. Here's an example.</p>
 
             <p>I usually include social media share images (or <q>Open Graph</q> images) in three ways:</p>
           </div>
         </div>
-<pre><code class="language-html">&lt;meta property="og:image" content="og.jpg"&gt;
-&lt;meta itemprop="image" content="og.jpg"&gt;
+        <pre><code class="language-html">&lt;meta property="og:image" content="og.jpg"&gt;
+  &lt;meta itemprop="image" content="og.jpg"&gt;
 &lt;link rel="image_src" href="og.jpg"&gt;</code></pre>
         <div class="row">
           <div class="offset-lg-2 col-lg-6 pad-vert-large">
@@ -258,46 +257,46 @@
             <p>The original solution used the page <code>handle</code> to generate a path to an image content authors could add to your Shop's files:</p>
           </div>
         </div>
-      <pre><code class="language-liquid">{% if handle != blank %}
+        <pre><code class="language-liquid">{% if handle != blank %}
   {% capture page-img %}{{ handle }}.jpg{% endcapture %}
-{% else %}
+  {% else %}
   {% capture page-img %}og-default.jpg{% endcapture %}
-{% endif %}
-&lt;meta property="og:image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
-&lt;meta itemprop="image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
-&lt;link rel="image_src" href="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;</code></pre>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
+  {% endif %}
+  &lt;meta property="og:image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
+  &lt;meta itemprop="image" content="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;
+  &lt;link rel="image_src" href="{{ page-img | file_img_url: '1200x630', crop: 'center' }}"&gt;</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
 
-            <p>This code attempts to create a string representing the path to an image in the <code>files</code> menu. If there isn't a <code>handle</code>, it falls back to a default image (the home page of your shop usually doesn't have a <code>handle</code>).</p>
+              <p>This code attempts to create a string representing the path to an image in the <code>files</code> menu. If there isn't a <code>handle</code>, it falls back to a default image (the home page of your shop usually doesn't have a <code>handle</code>).</p>
 
-            <p>Because we can't nest liquid logic, we need to define <code>page-img</code> as a kind of variable, using <code>{% capture %}</code>.</p>
+              <p>Because we can't nest liquid logic, we need to define <code>page-img</code> as a kind of variable, using <code>{% capture %}</code>.</p>
 
-            <p>This gets passed to <code>file_img_url</code>, and resized into the standard 1200x630 size favoured by most social media outlets.</p>
+              <p>This gets passed to <code>file_img_url</code>, and resized into the standard 1200x630 size favoured by most social media outlets.</p>
 
-            <p>Note that we cannot check if the content author has added an image which matches the <code>handle</code> of the page using liquid logic alone. This means that if your content authors fail to provide an image, Shopify will fall back to their <q>not found</q> image.</p>
+              <p>Note that we cannot check if the content author has added an image which matches the <code>handle</code> of the page using liquid logic alone. This means that if your content authors fail to provide an image, Shopify will fall back to their <q>not found</q> image.</p>
 
-            <h2 class="h3">Hang on - what about blog posts or product pages?</h2>
+              <h2 class="h3">Hang on - what about blog posts or product pages?</h2>
 
-            <p>Blog posts and products are different to pages, in that you <em>can</em> assign an image to them:</p>
+              <p>Blog posts and products are different to pages, in that you <em>can</em> assign an image to them:</p>
+            </div>
           </div>
-        </div>
-        <p><img src="/fine-tune-2020-dev/img/blog/img-shopify-new-blog-post.png" alt="The new blog post form within Shopify"></p>
-        <div class="row">
-          <div class="offset-lg-2 col-lg-6 pad-vert-large">
-            <p>Blog posts have an <code>article.image</code> object, where as products have a <code>product.featured_image</code> object. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" target="_blank">The Mannequin version of the Open Graph code</a> checks for those kind of images first.</p>
-            <p>Blog and product images are stored in a different location from the <code>files</code> menu of Shopify, so we need to use a different parameter, in order to access them. Where as pages use <code>image_src</code>, product and blog images use <code>image_url</code>. This doubles-up on the tags (but only one set of tags are output into the final page).</p>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-shopify-new-blog-post.png" alt="The new blog post form within Shopify"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Blog posts have an <code>article.image</code> object, where as products have a <code>product.featured_image</code> object. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/og-image.liquid" target="_blank">The Mannequin version of the Open Graph code</a> checks for those kind of images first.</p>
+              <p>Blog and product images are stored in a different location from the <code>files</code> menu of Shopify, so we need to use a different parameter, in order to access them. Where as pages use <code>image_src</code>, product and blog images use <code>image_url</code>. This doubles-up on the tags (but only one set of tags are output into the final page).</p>
 
-            <h2 class="h3">Reusing this technique for page images</h2>
-            <p>We can use this trick to pull in the same image into the page, for example in a hero panel. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid">The snippet <code>page-images.liquid</code> in Mannequin demonstrates this technique</a>. Note that as this snippet is designed to be included on  pages and not blog articles or product pages, it is closer to Ricky Dazla's original code.</p>
+              <h2 class="h3">Reusing this technique for page images</h2>
+              <p>We can use this trick to pull in the same image into the page, for example in a hero panel. <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid">The snippet <code>page-images.liquid</code> in Mannequin demonstrates this technique</a>. Note that as this snippet is designed to be included on  pages and not blog articles or product pages, it is closer to Ricky Dazla's original code.</p>
 
-            <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank" class="btn btn-secondary">View page images snippet on GitHub</a></p>
+              <p><a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank" class="btn btn-secondary">View page images snippet on GitHub</a></p>
 
-            <p>Because liquid only allows us to determine if <code>page.handle</code> has a value or not, there's not a means for us to check if an image matching <code>page-img</code> exists. The <code>onerror</code> attribute is added, <a href="https://community.shopify.com/c/Shopify-Design/testing-if-a-file-exists/td-p/75892">in order to dynamically hide broken images</a>.</p>
+              <p>Because liquid only allows us to determine if <code>page.handle</code> has a value or not, there's not a means for us to check if an image matching <code>page-img</code> exists. The <code>onerror</code> attribute is added, <a href="https://community.shopify.com/c/Shopify-Design/testing-if-a-file-exists/td-p/75892">in order to dynamically hide broken images</a>.</p>
 
-            <h2 class="h3">What if you want to add more than one image?</h2>
+              <h2 class="h3">What if you want to add more than one image?</h2>
 
-            <p>Attaching additional data to individual pages, products, articles, collections or product variants is possible using metafields. This allows you to (for example) create a carousel of images which is different on different pages. You might have noticed that <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank">page-images.liquid</a> checks for the metafield <code>page.metafields.global.image</code>, to see if it can add a second image. If you're interested in learing more about this technique, you might find <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">our article on metafields</a> useful.</p>
+              <p>Attaching additional data to individual pages, products, articles, collections or product variants is possible using metafields. This allows you to (for example) create a carousel of images which is different on different pages. You might have noticed that <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/page-images.liquid" target="_blank">page-images.liquid</a> checks for the metafield <code>page.metafields.global.image</code>, to see if it can add a second image. If you're interested in learing more about this technique, you might find <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">our article on metafields</a> useful.</p>
             </div>
           </div>
         </div>
