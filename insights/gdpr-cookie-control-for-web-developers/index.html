@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>GDPR Cookie control for web developers - Finetune</title>
+  <title>GDPR Cookie control for web developers - Finetune Partners</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
@@ -31,11 +31,11 @@
   <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
   <script>
     window.gdpr = {
-      "addTag": function (tag, attr, content) {
+      "addTag": function(tag,attr,content) {
         var newTag = document.createElement(tag);
         for (var prop in attr) {
           if (!attr.hasOwnProperty(prop)) continue;
-          newTag.setAttribute(prop, attr[prop]);
+          newTag.setAttribute(prop,attr[prop]);
         }
         if (content) newTag.innerHTML = content;
         var scripts = document.getElementsByTagName("script");
@@ -49,20 +49,11 @@
   <!-- Google Tag Manager -->
   <script>
     if (window.gdpr.choice) {
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-          'gtm.start': new Date().getTime(),
-          event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PQ3XP7N');
     }
   </script>
   <!-- End Google Tag Manager -->
