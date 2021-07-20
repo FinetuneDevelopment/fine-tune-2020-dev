@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Amplifier" stroke="currentColor" fill="none" viewBox="0 0 24 24" height="24" width="24">
+  <rect y="10" x="1" height="10" width="22"/>
+  <rect y="20" x="3" height="2" width="4"/>
+  <rect width="4" height="2" x="17" y="20"/>
+  <circle r="3" cy="15" cx="11"/>
+  <circle r="1" cy="13" cx="20"/>
+  <path d="M 19,10 V 8 c -2,-2 -2,-7 1,-7 3,0 3,5 1,7 v 2 M 11,10 V 8 C 9,6 9,1 12,1 c 3,0 3,5 1,7 v 2 M 3,10 V 8 C 1,6 1,1 4,1 7,1 7,6 5,8 v 2"/>
+</svg>
