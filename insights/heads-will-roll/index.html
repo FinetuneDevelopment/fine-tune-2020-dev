@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Heads will roll - Finetune Partners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description" content="An introduction to Finetune Partner's tech stack and why we chose it">
+  <meta property="og:title" content="Heads will roll - Finetune">
+  <meta property="og:description" content="An introduction to Finetune Partner's tech stack and why we chose it">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://finetunepartners.com/insights/heads-will-roll/">
+  <link rel="canonical" href="https://finetunepartners.com/insights/heads-will-roll/">
+  <meta property="og:site_name" content="Finetune">
+  <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-heads-will-roll.jpg">
+  <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-heads-will-roll.jpg">
+  <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-heads-will-roll.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
+  <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#d7f2db">
+  <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
+  <script>
+    window.gdpr = {
+      "addTag": function (tag, attr, content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop, attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
+      }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    if (window.gdpr.choice) {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+<link href="../../css/app.css" rel="stylesheet"></head>
+
+<body>
+  <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
+
+  <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
+    <div class="container">
+      <div class="row">
+        <p class="col-8 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 flush text-right">
+          <label for="nav-toggle" class="pad-vert-tiny text-interactive-blue" title="Expand navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="shape sh-ellipsis"></span>
+          </label>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main" class="bt-white brd-bottom pad-vert-tiny main-nav toggle-container">
+    <a href="/fine-tune-2020-dev/contact/" class="main-nav__marquee marquee d-block d-print-none d-md-none bg-interactive-blue semi-small text-uppercase mb-4" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+      <p class="marquee__child mb-2">
+        Get in touch to find out more <span class="ic-arrow"></span>
+        &nbsp; &nbsp;
+        We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+      </p>
+    </a>
+    <div class="container">
+      <div class="row">
+        <p class="col-8 col-md-3 col-lg-2 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 d-md-none text-right mb-5">
+          <label for="nav-toggle" class="brd-all round icon-tiny icon-sq" title="Hide navigation" aria-label="Hide navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img" aria-label="Close">
+              <line x1="23" y1="1" x2="1" y2="23"></line>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </label>
+        </p>
+        <div class="col-12 col-md d-print-none">
+          <h2 class="d-md-none h6 type-etc-bold text-reset mb-4 text-center mt-5">Navigation</h2>
+          <a href="/fine-tune-2020-dev/about/" class="btn btn-nav">About</a>
+          <a href="/fine-tune-2020-dev/services/" class="btn btn-nav">Services</a>
+          <!--a href="/fine-tune-2020-dev/work/" class="btn btn-nav">Work</a-->
+          <em><a href="/fine-tune-2020-dev/insights/" class="btn btn-nav">Insights</a></em>
+          <a href="/fine-tune-2020-dev/contact/" class="btn btn-nav d-block d-md-none mb-5">Contact</a>
+        </div>
+        <p class="col-md-4 col-lg-3 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
+      </div>
+      <div class="text-center d-block d-md-none">
+        <p class="small text-uppercase">&copy; 2021 Finetune Partners &bull;
+          <br>
+          <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+        <p>
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <article itemscope itemtype="https://schema.org/NewsArticle">
+
+      <header aria-label="Heads will roll" class="bt-mint pad-vert-large">
+        <div class="container">
+          <aside class="row justify-content-center">
+            <p class="col-lg-10"><a href="/fine-tune-2020-dev/insights/" class="btn text-uppercase text-interactive-blue"><span class="shape sh-arrow-left"></span> Back to insights</a></p>
+          </aside>
+          <div class="row">
+            <div class="offset-lg-1 col-lg-9">
+              <h1 class="h2" itemprop="headline">Heads will roll</h1>
+            </div>
+            <aside class="col">
+              <p class="overscore">6 minute read</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Jamstack, Headless, eCommerce</p>
+              <p class="d-print-none">Share</p>
+              <p data-js="share-links" class="d-print-none">
+                <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Twitter">
+                    <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Facebook">
+                    <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="LinkedIn">
+                    <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                  </svg>
+                </a>
+              </p>
+            </aside>
+          </div><!-- .row -->
+        </div>
+      </header>
+
+      <div class="split-mint-1-5" itemprop="articleBody">
+        <div class="container">
+          <div class="row">
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-heads-will-roll.jpg" alt="" class="img-fluid"></p>
+          </div>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p class="small">Cover image by <a href="https://www.pexels.com/@sarah-chai" target="_blank">Sarah Chai</a></p>
+              <p class="lead text-uppercase"><strong itemprop="abstract">Why Finetune Partners chose to go headless, and what headless means.</strong></p>
+              <h2 class="h3">Lets Pretend Your eCommerce Business looks like this</h2>
+              <p>You're running Wordpress for a <abbr title="Content Management System">CMS</abbr> and Woo Commerce for the ecommerce bit. In the past seven years your site acquired three different <abbr title="Search Engine Optimisation">SEO</abbr> plugins, another to ensure it was <abbr title="General Data Protection Regulation">GDPR</abbr> compliant and changed hosting so it would always be running the latest version of Wordpress. This broke a few of the older plugins, which meant you had to make some new hires just to keep the site running.</p>
+              <p>The site's been redesigned a few times, but it never really feels like a fresh start. It runs OK on mobile, but the <a href="https://developers.google.com/web/tools/lighthouse" target="_blank">Lighthouse</a> score is pretty bad. You don't really want to run the numbers on how many customers you lose to the load times. Moving to another platform is a real pain. Time. Hassle.</p>
+              <p>None of the decisions which have led to this place were wrong. Until recently, your only way out of this mess would be moving to a brand new infrastructure.</p>
+
+              <h2 class="h3">Your Option - Headless eCommerce</h2>
+              <p>Headless in a web sense means that various different services communicate securely with each other and something sits in the middle and collates all of that data together, in order to build your site.</p>
+              <p>This is the part where I tell you about how going headless is this shining, perfect solution, right? Kinda. I'm not going to lie to you, headless is complicated. But it's complicated in the same way as this:</p>
+
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-stereo-separates.jpg" alt="A stereo system made up of several different components connected together."></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>... takes longer to set up than this:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-boom-box.jpg" alt="A boom box stereo sitting on the ground next to a grafitted wall."></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Let's continue with this metaphor. You own a stereo, so you can listen to your old records, then a friend gives you a box full of minidiscs. A boombox probably won't play them by default, but you could attach an external minidisc player, I guess. It'll look a bit ugly and means you can't move the boom box around any more, but it'll work.</p>
+              <p>Adding a minidisc player to a series of stereo separates is easy. Find a spare input on the amp, wire it all up and away you go.</p>
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" aria-label="Stereo diagram" fill="none" viewBox="0 0 130 80" width="130" height="80">
+                  <path d="M68.5 28v-2c-2-2-2-7 1-7s3 5 1 7v2m-10 0v-2c-2-2-2-7 1-7s3 5 1 7v2m-10 0v-2c-2-2-2-7 1-7s3 5 1 7v2M71 30.5a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1m-7 2a3 3 0 01-3 3 3 3 0 01-3-3 3 3 0 013-3 3 3 0 013 3m2.5 5.5h4v2h-4zm-14 0h4v2h-4zm-2-10h22v10h-22zM20 36a1.5 1.5 0 01-1.5 1.5A1.5 1.5 0 0117 36a1.5 1.5 0 011.5-1.5A1.5 1.5 0 0120 36m0-14.5a1.5 1.5 0 01-1.5 1.5 1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5zm2.5 7.5a4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4zm-10-11h12v22h-12zm93 18a1.5 1.5 0 01-1.5 1.5 1.5 1.5 0 01-1.5-1.5 1.5 1.5 0 011.5-1.5 1.5 1.5 0 011.5 1.5m0-14.5A1.5 1.5 0 01104 23a1.5 1.5 0 01-1.5-1.5A1.5 1.5 0 01104 20a1.5 1.5 0 011.5 1.5zM108 29a4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4zM98 18h12v22H98zM76.5 63.5a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1zm2.5 0c0 1.5-1 2.5-1 2.5h-5s-1-1-1-2.5 1-3.5 3.5-3.5 3.5 2 3.5 3.5zm-7 4h8v3h-8zm18.5 1a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1M86 72h4v2h-4zm-14 0h4v2h-4zm-2-6h22v6H70zm-50-6.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0m7 7.5c-2 0-5 0-7 2m9-2a1 1 0 11-2 0 1 1 0 012 0zM8 70v-6h22v6m-4-10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0M10 70v-1h18v1m-4 2h4v2h-4zm-14 0h4v2h-4zm-2-2h22v2H8zm94-11v0h4m-6-2h8v4h-8zm0 9h8v4h-8zm18.5 2.5a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1M114 72h4v2h-4zm-14 0h4v2h-4zm-2-8h22v8H98zm-46-6h3v2h-3zm1.8 2a3 3 0 110-2M47 55h8v8h-8zm0 13h8v2h-8zm13.5.5a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1M56 72h4v2h-4zm-14 0h4v2h-4zm-2-6h22v6H40z" stroke="currentColor"/>
+                  <path d="M104 56c0-13-35-4-35-14m6 17c0-9-12-11-12-17M51 54c0-6 8-6 8-12m-40 9c0-9 33 1 33-9m23-9.8h19m-46.6 0h-19" stroke="#2e38ef"/>
+                </svg>
+              </p>
+              <h3 class="h4">What if something breaks?</h3>
+              <p>In a boombox, if your tape recorder breaks, congratulations! You now have a very heavy radio. If one part of your hi-fi breaks, you can pull out the unit and get a new one.</p>
+
+              <h3 class="h4">What if you want to upgrade?</h3>
+              <p>In the boombox, you don't have the option. In a <abbr title="High fidelity">hi-fi</abbr>, any component can be removed and replaced whenever you like.</p>
+
+              <h2 class="h3">Many parts -  not just one</h2>
+              <p>You might have different  services which handle your <abbr>CMS</abbr>, ecommerce ,and product reviews. Perhaps there’s a legacy blog you want to pull in too. Ultimately, all of these services produce and process data. If you can separate them from the front end of your website, they can focus just on the thing they’re good at and not get distracted by the painful job of interacting with users.</p>
+
+              <h2 class="h3">Have your cake and eat it</h2>
+              <p>
+                Finetune Partners uses a <a href="https://jamstack.org/" target="_blank">jamstack</a> to generate your website. This is a way of using headless infrastructure to get a best-of-both-worlds approach to your website. Every brochureware
+                <span class="tooltip" data-js="tooltip">
+                  <input type="checkbox" name="tip-brochureware" id="tip-brochureware" class="sr-only">
+                  <label for="tip-brochureware" class="bt-muted-blue brd-all brd-interactive-blue" title="Brochureware pages are the static parts of your website which don’t change all the time, such as the product pages or all the legal documents.">?</label>
+                  <span class="details bt-muted-blue small">Brochureware pages are the <q>static</q> parts of your website which don’t change all the time, such as the product pages or all the legal documents.</span>
+                </span>
+                page on your site exists as a static <abbr title="HyperText Markup Language">HTML</abbr> file, which means it can load blisteringly fast and is easy for search engines to index. But once the page has loaded, it starts to behave more like a mobile application so the page doesn’t reload any more and the user interactions are seamless.
+              </p>
+
+              <h2 class="h3">Just Pay For The Services You Need</h2>
+              <p>Shopify is an excellent ecommerce system, but it isn't really interested in your content. You can expand the capabilities of Shopify with apps but doing so risks straying back into boombox territory: suddenly you need to worry that the app you've chosen will still be maintained in five years time.</p>
+              <p>It’s not just that individual, dedicated services are better than monolithic services which attempt to do everything. It’s that you only have to pay for the services you need.</p>
+              <p>Let’s say that your site has a turnover of £10 million, but only needs two content editors. You don’t need to invest in a £1 million <abbr>CMS</abbr>. Instead, the <abbr>CMS</abbr> part of your site can include just enough features to be useful, for a lower cost. Or a new marketing manager wants to hire ten new content authors. No problem! You move your contract with the <abbr>CMS</abbr> up to the next tier and gain access to additional workflow features (or migrate to a different platform).</p>
+
+              <h2 class="h3">Security</h2>
+              <p>Using a jamstack approach means that no private data is stored on your server. Only your brochureware pages exist as static <abbr>HTML</abbr> files. Everything else will be dynamically loaded in from either your CMS or your ecommerce platform.</p>
+              <p>This means you present a tiny <q>attack surface</q> to potential malcontents. All other security responsibilities are held by the headless services you use. This is also true for any <abbr>GDPR</abbr> concerns - for example storing personal information and payment details.</p>
+
+              <h2 class="h3">Speed</h2>
+              <p>Most content management systems focus - understandably - on the content author’s experience. This means that they strive towards having your whole site as instantly editable as a Word document, as long as the current user is an editor.</p>
+              <p>This is achieved with JavaScript. <em>Lots</em> of JavaScript. This means that for a web developer building your website, there’s a certain payload of code which they are unable to remove and have no control over. In Wordpress, third-party plugins can add to this burden and further bloat the page weight of your site, in a way which only your development team and several thousand customers per month will notice.</p>
+              <p>Because headless infrastructure separates the front end completely from the back, your development team is free to make the site load as fast as possible. But don’t take their word for it. Run Lighthouse audits and see for yourself.</p>
+
+              <h2 class="h3">Flexibility</h2>
+              <p>Going headless also allows you to swap one service out for another. Want to move from Shopify to Centra? No problem! We’ll export the product data from Shopify, import it into Centra and you’re good to go (I might be oversimplifying this a little). The beauty of this approach is that other parts of your workflow are unchanged. Your front end remains (from the user’s perspective) identical. This kind of shift would be impossible using a monolithic <abbr>CMS</abbr> which handles all aspects of your internet footprint.</p>
+              <p>However, this also potentially opens up a (relatively) easy way into the headless ecosystem: Wordpress can run in headless mode. This means you can still use Wordpress as the content management part of your workflow, but rebuild the front end in a more modern way.</p>
+
+              <h2 class="h3">The downsides of headless</h2>
+              <p>A headless infrastructure is no doubt complicated. Content needs to be structured. Those structures need to be reflected by the templates. Different data needs to be pulled together and made sense of. This often leads to headless projects costing more than traditional template driven sites.</p>
+              <p>There is no shortage of competition in headless. This has led to many services offering multiple tiers of payment, depending upon number of users, bandwidth and so on. And it’s not as if traditional monolithic CMSs didn’t come with their own share of hidden costs beyond the licence fees.</p>
+              <p>Headless requires a specific skill set and a particular way of working. Moving to headless might find you swapping one login for two or more as you and your team need to manage content across multiple platforms. In an ideal world, your headless CMS would be the repository for all of your content - products, contacts, white papers, etc. And while it’s possible to persuade two different headless services to exchange data with each other, for performance reasons, often the best solution is to separate the content.</p>
+
+              <h2 class="h3">Is headless your future?</h2>
+              <p>It’s traditional for articles such as this to spell doom for monolithic content management systems, but I don’t see them going anywhere. Finetune Partners needed a tech stack which allowed others to take on the responsibility of managing data and was scalable to meet the needs of our partners as they grew. It isn’t cost effective for us to migrate partners between different platforms as they grow. Our tech stack is built with growth in mind. If this feels like a good fit for your business, why not get in touch with us?</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+    <aside class="container d-print-none gutter-xlarge" aria-label="Related">
+
+      <h2 class="text-center gutter-xlarge">Related</h2>
+
+      <div class="row gutter-base">
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Product filtering in Shopify without apps">
+          <a href="/fine-tune-2020-dev/insights/product-filtering-in-shopify-without-apps/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-product-filtering-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Products, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Product filtering in Shopify without apps</h3>
+              <p>How to add a product filter to your catalogue and collections pages in Shopify, without paying for an app</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value">
+          <a href="/fine-tune-2020-dev/insights/running-a-strategic-cro-programme1/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-running-a-strategic-cro-programme1.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Conversion Strategy eCommerce</p>
+              <h3 class="h5" itemprop="headline">Running a Strategic CRO Programme: In Graphs. Part 1: The Symbiosis of Conversion Rate and Average Order Value</h3>
+              <p>When you set out to run a strategic Conversion Rate Optimisation programme, there is a huge amount to consider.</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Metafields in Shopify without apps">
+          <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-metafields-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Metafields, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Metafields in Shopify without apps</h3>
+              <p>How to create and edit metafields, then display them in a theme, without paying for or developing an app.</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="GDPR Cookie control for web developers">
+          <a href="/fine-tune-2020-dev/insights/gdpr-cookie-control-for-web-developers/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-gdpr-cookie-control-for-web-developers.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, GDPR, Legal, Open Source</p>
+              <h3 class="h5" itemprop="headline"><abbr title="General Data Protection Regulation">GDPR</abbr> Cookie control for web developers</h3>
+              <p>A simple, open source, free cookie control, for web developers wishing to comply with the GDPR legislation.</p>
+            </div>
+          </a>
+        </article>
+
+      </div><!-- .row -->
+
+    </aside><!-- .container -->
+
+  </main>
+
+  <a href="/fine-tune-2020-dev/contact/" class="marquee d-block bg-interactive-blue semi-small text-uppercase d-print-none" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+    <p class="marquee__child mb-1">
+      Get in touch to find out more <span class="ic-arrow"></span>
+      &nbsp; &nbsp;
+      We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+    </p>
+  </a>
+
+  <footer class="bg-deep-blue text-center-sm">
+    <div class="container mt-5">
+      <div class="row d-print-none">
+        <div class="col-lg-4 col-md offset-md-0 col-sm-8 offset-sm-2">
+          <div class="row">
+            <p class="col-4 offset-4 offset-md-0 col-md-3">
+              <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 159.1" aria-label="Finetune Partners">
+                  <path fill="#2e38ef" d="M33 146l30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56 0 89l10 32z" />
+                  <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                  <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                </svg>
+              </a>
+            </p>
+          </div>
+
+          <p class="h4">We turn casual browsers into committed buyers</p>
+        </div>
+        <nav class="col-12 col-md-3 col-xl-3 offset-md-1 offset-lg-0 offset-xl-1" aria-label="Footer">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Navigation</h2>
+          <div class="text-uppercase semi-small mb-5">
+            <p><a href="/fine-tune-2020-dev/about/" class="btn">About</a></p>
+            <p><a href="/fine-tune-2020-dev/services/" class="btn">Services</a></p>
+            <!--p><a href="/fine-tune-2020-dev/work/" class="btn">Work</a></p-->
+            <p><a href="/fine-tune-2020-dev/insights/" class="btn">Insights</a></p>
+            <p><a href="/fine-tune-2020-dev/contact/" class="btn">Contact</a></p>
+          </div>
+        </nav>
+        <div class="col-md-5 col-lg-5 col-xl-4 mb-5">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Information</h2>
+          <p>We're all working from home right now. Please email us at<br>
+            <a href="mailto:hello@finetunepartners.com">hello@finetunepartners.com</a><br>
+            We'd love to hear from you.</p>
+        </div>
+      </div>
+      <hr class="brd-white">
+      <div class="row">
+        <p class="col-sm-10 small text-uppercase">&copy; 2021 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-2 text-right text-center-sm d-print-none">
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+<script type="text/javascript" src="../../js/app.js"></script></body>
+
+</html>
