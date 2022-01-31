@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebSite">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Shopify Webstore 2.0 product FAQ example - Finetune Partners</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-bold.a36b69.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-medium.205719.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/etc-trispace-regular.647168.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/fine-tune-2020-dev/fonts/anton-regular.556918.woff2" type="font/woff2" crossorigin>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description" content="Using features of Webstore 2.0 to implement a product page FAQ panel">
+  <meta property="og:title" content="Shopify Webstore 2.0 product FAQ example - Finetune">
+  <meta property="og:description" content="Using features of Webstore 2.0 to implement a product page FAQ panel">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://finetunepartners.com/insights/shopify-webstore-2-product-faq-example/">
+  <link rel="canonical" href="https://finetunepartners.com/insights/shopify-webstore-2-product-faq-example/">
+  <meta property="og:site_name" content="Finetune">
+  <meta property="og:image" content="/fine-tune-2020-dev/img/og/og-shopify-webstore-2-product-faq-example.jpg">
+  <meta itemprop="image" content="/fine-tune-2020-dev/img/og/og-shopify-webstore-2-product-faq-example.jpg">
+  <link rel="image_src" href="/fine-tune-2020-dev/img/og/og-shopify-webstore-2-product-faq-example.jpg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fine-tune-2020-dev/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fine-tune-2020-dev/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fine-tune-2020-dev/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/fine-tune-2020-dev/site.webmanifest">
+  <link rel="mask-icon" href="/fine-tune-2020-dev/img/favicon/safari-pinned-tab.svg" color="#2e38ef">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#d7f2db">
+  <meta name="google-site-verification" content="Q_pU1NcVNhRdEntMQE-K2ZMEpCTRbSdOEtMpk_8iVCQ">
+  <script>
+    window.gdpr = {
+      "addTag": function (tag, attr, content) {
+        var newTag = document.createElement(tag);
+        for (var prop in attr) {
+          if (!attr.hasOwnProperty(prop)) continue;
+          newTag.setAttribute(prop, attr[prop]);
+        }
+        if (content) newTag.innerHTML = content;
+        var scripts = document.getElementsByTagName("script");
+        var here = scripts[scripts.length - 1];
+        here.parentElement.insertBefore(newTag, here.nextSibling);
+      }
+    };
+    var gdprChoice = document.cookie.match(new RegExp('(^| )gdpr=([^;]+)'));
+    window.gdpr.choice = gdprChoice ? (gdprChoice[0].split('=')[1] == 'true') : null;
+  </script>
+  <!-- Google Tag Manager -->
+  <script>
+    if (window.gdpr.choice) {
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-PQ3XP7N');
+    }
+  </script>
+  <!-- End Google Tag Manager -->
+<link href="../../css/app.css" rel="stylesheet"></head>
+
+<body>
+  <a href="#main" class="skip bg-interactive-blue small text-uppercase pad-vert-tiny">Skip to content <span class="shape sh-arrow-down"></span></a>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <input type="checkbox" name="nav-toggle" id="nav-toggle" class="sr-only toggle d-md-none">
+
+  <header class="brd-bottom d-md-none pad-vert-tiny toggle-container">
+    <div class="container">
+      <div class="row">
+        <p class="col-8 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 flush text-right">
+          <label for="nav-toggle" class="pad-vert-tiny text-interactive-blue" title="Expand navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="shape sh-ellipsis"></span>
+          </label>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Main" class="bt-white brd-bottom pad-vert-tiny main-nav toggle-container">
+    <a href="/fine-tune-2020-dev/contact/" class="main-nav__marquee marquee d-block d-print-none d-md-none bg-interactive-blue semi-small text-uppercase mb-4" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+      <p class="marquee__child mb-2">
+        Get in touch to find out more <span class="ic-arrow"></span>
+        &nbsp; &nbsp;
+        We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+      </p>
+    </a>
+    <div class="container">
+      <div class="row">
+        <p class="col-8 col-md-3 col-lg-2 flush">
+          <a href="/fine-tune-2020-dev/" title="Return to the home page">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 721 159.1" width="721" height="159" fill="currentColor" aria-label="Finetune Partners" class="logo-finetune">
+              <path d="M197 8h51v12h-38v13h36v12h-36v22h-13zM277 20v35h-17v12h47V55h-17V20h17V8h-47v12zM377 8v59h-13l-33-40v40h-13V8h13l33 40V8zM389 8h55v12h-41v12h39v11h-39v12h41v12h-55zM477 20h-23V8h60v12h-23v47h-14zM524 40V8h13v32c0 10 6 15 16 15s16-5 16-15V8h13v32c0 17-12 28-29 28-18 0-29-11-29-28zM652 8v59h-12l-34-40v40h-12V8h12l34 40V8zM664 8h56v12h-43v12h41v11h-41v12h43v12h-56zM197 91h36c14 0 23 7 23 18v1c0 12-9 19-23 19h-23v20h-13zm36 26c6 0 9-2 9-7v-1c0-4-3-6-9-6h-23v14zM317 146v3h-13l-5-12h-29l-6 12h-13v-3l26-55h15zm-23-21l-8-21h-3l-9 21zM386 111v-1c0-12-9-19-23-19h-36v58h13v-21h23l7 21h15l-9-23a16 16 0 0010-15zm-46-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM655 111v-1c0-12-8-19-22-19h-37v58h14v-21h23l6 21h15l-8-23a16 16 0 009-15zm-45-8h23c6 0 9 2 9 6v1c0 5-3 7-9 7h-23zM414 103h-22V91h58v12h-22v46h-14zM518 91v58h-13l-33-39v39h-13V91h13l33 39V91zM530 91h55v12h-42v11h40v12h-40v11h42v12h-55zM663 130v-1h13v1c0 6 6 9 17 9 9 0 15-3 15-7 0-3-3-5-10-6l-15-2c-13-2-19-7-19-16v-1c0-11 10-17 27-17 19 0 29 7 29 19v1h-13v-1c0-5-5-8-16-8-9 0-14 2-14 6v1c0 2 3 4 9 5l15 2c14 2 20 7 20 16v1c0 12-10 18-29 18s-29-7-29-20z" />
+              <path fill="#2e38ef" d="M0 89l10 32 23 25 30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56z" />
+              <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+              <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+            </svg>
+          </a>
+        </p>
+        <p class="col-4 d-md-none text-right mb-5">
+          <label for="nav-toggle" class="brd-all round icon-tiny icon-sq" title="Hide navigation" aria-label="Hide navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" role="img" aria-label="Close">
+              <line x1="23" y1="1" x2="1" y2="23"></line>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </label>
+        </p>
+        <div class="col-12 col-md d-print-none">
+          <h2 class="d-md-none h6 type-etc-bold text-reset mb-4 text-center mt-5">Navigation</h2>
+          <a href="/fine-tune-2020-dev/about/" class="btn btn-nav">About</a>
+          <a href="/fine-tune-2020-dev/services/" class="btn btn-nav">Services</a>
+          <!--a href="/fine-tune-2020-dev/work/" class="btn btn-nav">Work</a-->
+          <em><a href="/fine-tune-2020-dev/insights/" class="btn btn-nav">Insights</a></em>
+          <a href="/fine-tune-2020-dev/contact/" class="btn btn-nav d-block d-md-none mb-5">Contact</a>
+        </div>
+        <p class="col-md-4 col-lg-3 text-right d-none d-md-block flush"><a href="/fine-tune-2020-dev/contact/" class="btn btn-primary btn-small flush">Get in touch</a></p>
+      </div>
+      <div class="text-center d-block d-md-none">
+        <p class="small text-uppercase">&copy; 2022 Finetune Partners &bull;
+          <br>
+          <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a></p>
+        <p>
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <article itemscope itemtype="https://schema.org/NewsArticle">
+
+      <header aria-label="Shopify Webstore 2.0 product FAQ example" class="bt-mint pad-vert-large">
+        <div class="container">
+          <aside class="row justify-content-center">
+            <p class="col-lg-10"><a href="/fine-tune-2020-dev/insights/" class="btn text-uppercase text-interactive-blue"><span class="shape sh-arrow-left"></span> Back to insights</a></p>
+          </aside>
+          <div class="row">
+            <div class="offset-lg-1 col-lg-9">
+              <h1 class="h2" itemprop="headline">Shopify Webstore 2.0 product <abbr title="Frequently Asked Questions">FAQ</abbr> example</h1>
+            </div>
+            <aside class="col">
+              <p class="overscore">12 minute read</p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, Webstore 2.0, eCommerce</p>
+              <p class="d-print-none">Share</p>
+              <p data-js="share-links" class="d-print-none">
+                <a href="https://twitter.com/intent/tweet" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Twitter">
+                    <path d="M31.35 91.63c37 0 57.26-30.67 57.26-57.26 0-.87 0-1.74-.06-2.6a40.89 40.89 0 0 0 10-10.41A40.33 40.33 0 0 1 87 24.52a20.18 20.18 0 0 0 8.85-11.13 40.21 40.21 0 0 1-12.75 4.89 20.14 20.14 0 0 0-34.29 18.35 57.1 57.1 0 0 1-41.47-21 20.14 20.14 0 0 0 6.23 26.87A20 20 0 0 1 4.43 40v.25a20.15 20.15 0 0 0 16.15 19.68 20.09 20.09 0 0 1-9.09.34 20.15 20.15 0 0 0 18.8 14A40.38 40.38 0 0 1 .51 82.59a57 57 0 0 0 30.84 9" />
+                  </svg>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="Facebook">
+                    <path d="M57.7 99.66v-45.3h15.16l2.33-17.66H57.7V25.41c0-5.07 1.37-8.6 8.71-8.6h9.37V1.06c-1.6-.24-7.16-.72-13.6-.72-13.5 0-22.74 8.24-22.74 23.34V36.7H24.22v17.67h15.22v45.29z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="round bg-interactive-blue icon-small icon-sq" title="Share this article on LinkedIn">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" aria-label="LinkedIn">
+                    <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+                  </svg>
+                </a>
+              </p>
+            </aside>
+          </div><!-- .row -->
+        </div>
+      </header>
+
+      <div class="split-mint-1-5" itemprop="articleBody">
+        <div class="container">
+          <div class="row">
+            <p class="offset-lg-1 col-lg-9"><img itemprop="image" src="/fine-tune-2020-dev/img/blog/full-shopify-webstore-2-product-faq-example.jpg" alt="" class="img-fluid"></p>
+          </div>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p class="small">Cover image by <a href="https://www.pexels.com/@cottonbro" target="_blank">cottonbro</a></p>
+              <p class="lead text-uppercase"><strong itemprop="abstract">Using features of Webstore 2.0 to implement a product page FAQ panel.</strong></p>
+              <p>Shopify Webstore 2.0 implements a suite of new features, some of which you might be familiar with if you&#8217;ve worked with themes directly. This guide shows you how to set up individual FAQ sections in your product pages. You&#8217;ll also learn how your Shopify content authors can edit them using native features of Webstore 2.0, without the use of apps.</p>
+              <h2 class="h3">Getting metafields set up</h2>
+              <p>You can now access and configure metafields from the Shopify menu (previously, you needed to use apps or <a href="/fine-tune-2020-dev/insights/metafields-in-shopify-without-apps/">tricky <abbr title="Universal Resource Locator">URL</abbr>s</a>). To set up metafields, within Shopify, click on <em>Settings</em> (bottom left) and from the new menu select <em>Metafields</em>. You should see this:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-menu-1.png" alt="The Metafields menu in Shopify." loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>At the time of writing, metafields are only available on products and product variants. Click on <em>Products</em>:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-menu-2.png" alt="The Metafield Product menu in Shopify." loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>Unfortunately, the whole concept of <em>blocks</em> (which we&#8217;ll cover later) doesn&#8217;t extend to metafields. This means we&#8217;ll need to know the maximum number of questions and answers each product will support in advance. While it&#8217;s possible to add more questions and answers later, this will lead to a slightly ugly interface for your Shopify users.</p>
+              <p>Add the metafields via the interface in the <q>wrong</q> order, so they appear in the correct order for your Shopify users. For example, if you want to allow up to 10 questions and answers, the first metafield you need to add is the <em>answer</em> to question 10:</p>
+
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-menu-3.png" alt="The metafield form for answer 10 of the FAQs." loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Namespaces are useful for organising groups of data into categories. I&#8217;ve used <code>faq</code> in the example above.</p>
+              <p>Notice that text fields come in two flavours: big and little. This becomes relevant much later when we&#8217;re attaching these dynamic data points to the customisation options in Shopify. The data type of the metafield needs to match what the Shopify template expects.</p>
+              <p>The lower half of the metafield form gives additional options. For example:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-menu-4.png" alt="Valudation fields in Shopify metadata capture form." loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>You can add regular expressions to limit what input the user can provide. These don&#8217;t seem to be <a href="https://www.html5pattern.com/" target="_blank"><abbr title="Hyper-Text Markup Language">HTML</abbr>5 pattern attributes</a>, but are run <a href="https://regexlib.com/" target="_blank">server-side</a> and if your Shopify users break them, they&#8217;ll get a message only after attempting to save:</p>
+              <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-validation.png" alt="" loading="lazy"></p>
+              <p>Not especially useful for our purposes, but good to know.</p>
+
+            </div>
+          </div>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-moving-in-1.jpg" alt="" loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <h2 class="h3">Populating metafield content</h2>
+              <p>Visit a product within Shopify, scroll to the bottom and you should see your new metafields appearing:</p>
+            </div>
+          </div>
+          <p><img src="/fine-tune-2020-dev/img/blog/img-faq-metafields-shopify.png" alt="Metafield data being populated from within Shopify." loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Note that the data we&#8217;re setting up here is specific to individual products. Much of the headline features of Shopify Webstore 2.0 refers to features which are applied globally to <em>every</em> instance of a particular content type. We&#8217;ll use this to our advantage a little later.</p>
+              <p>Populate one of your products with <abbr>FAQ</abbr> content. We&#8217;ll need some data to test our code later.</p>
+
+              <h2 class="h3">Creating an <abbr>FAQ</abbr> section</h2>
+              <p>We could build logic at this point to check metafield data and include product-specific content. But if we did this, we wouldn&#8217;t be able to use some powerful features of Webstore 2.0.</p>
+              <p>In order to get the best out of the new features, we need to pull the section in using a particular kind of product template. Let&#8217;s look at that first.</p>
+
+              <h2 class="h3">The product template</h2>
+              <p>If you&#8217;re migrating to Webstore 2.0 from a theme built for Webstore 1.0 (I don&#8217;t think anyone actually called it that), you&#8217;ll need to make some changes to your product template.</p>
+              <p>Webstore 2.0 is a lot more modular than before. Essentially, liquid files are being replaced with <a href="https://shopify.dev/themes/architecture/templates/json-templates" target="_blank">human-readable <abbr title="JavaScript Object Notation">JSON</abbr> files</a> which can be dynamically updated by non-technical Shopify users using the Customise features of Shopify themes.</p>
+              <p>The file <code>/templates/product.liquid</code> should be renamed to something like <code>product-backup.liquid</code>. You cannot have <code>product.liquid</code> and <code>product.json</code> in the same directory as both perform the same task.</p>
+
+              <aside class="cta-box height-auto gutter-base bt-mint" aria-label="Default product template">
+                <h2 class="h6">Default product template</h2>
+                <p class="small"><code>product.liquid</code> or <code>product.json</code> are the default product templates used by Shopify. It's still possible to have as many <em>alternate</em> product templates which you could use for specialist products. Any <em>new</em> product will use the default template, until you change it.</p>
+              </aside>
+
+              <p>The simplest possible <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/templates/product.json" target="_blank"><code>product.json</code></a> would look like this:</p>
+
+            </div>
+          </div>
+        <pre><code class="language-js">{
+  "name": "Default product template",
+  "sections": {
+    "main": {
+      "type": "product-section"
+    }
+  },
+  "order": [
+    "main"
+  ]
+}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <aside class="cta-box height-auto gutter-base bt-pink small" aria-label="JSON names, explained">
+                <h2 class="h5 text-center">JSON names, explained</h2>
+                <h3 class="h6">Name</h3>
+                <p>This text appears in the left hand pane within Shopify, when your content authors are reorganising the page.</p>
+                <h3 class="h6">Sections</h3>
+                <p>This is where each of your sections are included into the product page. If your existing product template does not include any Shopify sections, simply copy all of the code inside it to a new section, then point your <code>product.json</code> file at this.</p>
+                <h3 class="h6">Main</h3>
+                <p>This is the alias for the section - it&#8217;s reused later in the <abbr>JSON</abbr>, under <code>order</code>.</p>
+                <h3 class="h6">Type</h3>
+                <p>This is the filename of the section. For example, <code>product-section</code> refers to the file found here: <code>/sections/<em>product-section</em>.liquid</code>.</p>
+                <h3 class="h6">Order</h3>
+                <p>An Array of section aliases, which define the order markup is rendered to the page. Should you rearrange the order of sections during customisation, this would be reflected in the <abbr>JSON</abbr> here.</p>
+              </aside>
+
+              <h3 class="h4">A more complicated example</h3>
+              <p>Let&#8217;s assume your current product template has this structure (each of the nested boxes represent sections):</p>
+
+              <figure>
+                <section aria-label="product.liquid" class="cta-box height-auto gutter-base bt-mint">
+                  <h4 class="text-center h6">product.liquid</h4>
+                  <p class="bt-smoke pad-all-tiny">product-intro-section.liquid</p>
+                  <p class="bt-smoke pad-all-tiny">product-body-section.liquid</p>
+                  <p class="bt-smoke pad-all-tiny">product-footer-section.liquid</p>
+                </section>
+                <figcaption class="sr-only">A product template in Shopify which imports  three section elements</figcaption>
+              </figure>
+
+              <p>Shopify sections cannot be nested inside each other. This means you can&#8217;t simply take all of the markup inside the product.liquid and put it into one new section file.</p>
+              <p>Instead, the above structure would be represented in <code>product.json</code> like this:</p>
+            </div>
+          </div>
+        <pre><code class="language-js">{
+  "name": "Default product template",
+  "wrapper": "div.container",
+  "sections": {
+    "intro": {
+      "type": "product-intro-section"
+    },
+    "body": {
+      "type": "product-body-section"
+    },
+    "footer": {
+      "type": "product-footer-section"
+    }
+  },
+  "order": [
+    "intro", "body", "footer"
+  ]
+}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+              <p>Note that only one wrapper element can be added, which may restrict your markup.</p>
+              <p>Once this is done, your product page is ready to deal with dynamic sections. Congratulations!</p>
+
+            </div>
+          </div>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-moving-in-2.jpg" alt="" loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <h2 class="h3">Creating a dynamic section</h2>
+              <p>Remember back at the start, when we created the data for the <abbr>FAQ</abbr>s and assigned them to a product? It&#8217;s time to start dealing with that.</p>
+              <p>Inside the sections directory, create a new file called <code>faq.liquid</code> (or just look at <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/sections/faq.liquid" target="_blank">the example we&#8217;ve created in the Mannequin repo</a>).</p>
+
+              <h3 class="h4">Checking if the questions and answers exist</h3>
+              <p>The file starts with ten <em>almost</em> identical if statements. Here's the first one:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if product.metafields.faq.question_1 != blank or product.metafields.faq.answer_1 != blank %}
+  {% assign q1_exists = true %}
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>This sets a series of variables which allow us to show or hide both individual question and answer sets or even the <abbr>FAQ</abbr> as a whole.</p>
+              <p>Once we&#8217;ve done this for the ten pairs of metafields, we work out if there&#8217;s anything to display at all:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if q1_exists or q2_exists or q3_exists or q4_exists or q5_exists or q6_exists or q7_exists or q8_exists or q9_exists or q10_exists %}
+  {% assign faq_exists = true %}
+{% else %}
+  {% assign faq_exists = false %}
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>This variable is used to decide if the <abbr>FAQ</abbr> panel (and its heading) will display or not. It's used like this:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if faq_exists %}
+  &lt;section aria-label="{{ section.settings.title }}"&gt;
+    &lt;h2>{{ section.settings.title }}&gt;/h2&gt;
+    {% comment %} Questions and answers go here {% endcomment %}
+  &lt;/section&gt;
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <h3 class="h4">Adding checks for site-wide content</h3>
+              <p>We&#8217;ll go into more detail on this subject in the future, but we also need a bit of code here which checks for any content which <em>doesn&#8217;t</em> come from metafields:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% for qanda in section.blocks %}
+  {% if qanda.settings.title != '' %}
+    {% render "faq-panel", question: qanda.settings.title, answer: qanda.settings.answer %}
+  {% endif %}
+{% endfor %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>This code loops through the content blocks for the current page and finds any which don&#8217;t match the metafield pattern.</p>
+              <h3 class="h4">Avoiding repeating markup</h3>
+              <p>Individual sets of questions and answers might need to be wrapped in specific markup. To avoid repeating that markup multiple times, let&#8217;s <a href="https://github.com/FinetuneDevelopment/mannequin/blob/main/snippets/faq-panel.liquid" target="_blank">outsource it to a snippet</a> (or a poor man&#8217;s function, as I like to think of it):</p>
+
+            </div>
+          </div>
+          <pre><code class="language-html">&lt;!-- faq-panel.liquid --&gt;
+&lt;details&gt;
+    &lt;summary&gt;{{ question }}&lt;/summary&gt;
+    {{ answer }}
+&lt;/details&gt;
+&lt;!-- end faq-panel.liquid --&gt;
+</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>Now we can call this snippet ten times and pass it the correct data from within <code>faq.liquid</code>. Here&#8217;s how that looks for the data relating to question 1:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if q1_exists %}
+  {% render "faq-panel", question: product.metafields.faq.question_1, answer: product.metafields.faq.answer_1 %}
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <h3 class="h4">Section schema</h3>
+              <p>So far, this is a pretty standard section file. But it&#8217;s the <code>schema</code> where the advanced functionality starts to show up.</p>
+
+            </div>
+          </div>
+          <pre><code class="language-js">{% schema %}
+{
+  "name": "FAQs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Frequently Asked Questions",
+      "info": "The heading which appears above the frequently asked question panel."
+    }
+  ],
+  "blocks": [{
+    "name": "Q&A block",
+    "type": "qanda",
+    "settings": [
+      {
+        "type": "text",
+        "id": "question",
+        "label": "Question"
+      },
+      {
+        "type": "richtext",
+        "id": "answer",
+        "label": "Answer"
+      }
+    ]
+  }],
+  "presets": [
+      { "name": "Frequently Asked Questions" }
+    ]
+}
+{% endschema %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>This has some similarity to the schema for the product template, but with added features.</p>
+
+              <aside class="cta-box height-auto gutter-base bt-pink small" aria-label="JSON names, explained">
+                <h2 class="h5 text-center">JSON names, explained</h2>
+
+                <h3 class="h6">Name</h3>
+                <p>This is what your new section will be called for your Shopify users, when they add it during the customisation stage. Keep it short, or the file won&#8217;t validate.</p>
+                <h3 class="h6">Settings</h3>
+                <p>This configures the fields which will be editable by your Shopify users. If you&#8217;ve built a dynamic Shopify home page, you might have seen similar code there.</p>
+                <h3 class="h6">Type</h3>
+                <p>This defines <a href="https://shopify.dev/themes/architecture/settings/input-settings" target="_blank">the type of content being captured</a>. All we&#8217;re using the settings for here is to allow the Shopify users to globally change the text inside the heading at the top of the FAQ panel.</p>
+                <h3 class="h6"><abbr title="Identification">ID</abbr></h3>
+                <p>Using an <abbr>ID</abbr> of <code>title</code> is a hint for Shopify to use the value of this string in the <abbr title="User Interface">UI</abbr>. Whatever value your users add will be displayed like this:</p>
+
+                <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-naming-questions.png" alt="" loading="lazy"></p>
+
+                <p>A settings block might contain any number of different text fields and Shopify doesn&#8217;t know which one is the most important. Using <code>title</code> can ensure that the correct text gets shown to the Shopify user.</p>
+                <h3 class="h6">Label</h3>
+                <p>The text of the label node will be displayed to the Shopify user when they edit the content.</p>
+                <h3 class="h6">Default</h3>
+                <p>The default value of the field.</p>
+                <h3 class="h6">Info</h3>
+                <p>A hint to the Shopify user, as to the purpose of the field.</p>
+
+                <figure class="pad-vert-base">
+                  <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-capture-form.png" alt="A break down of how different fields are rendered in the capture form for the Shopify user." loading="lazy"></p>
+                  <figcaption class="small">A summary of how different fields are rendered in the capture form for the Shopify user.</figcaption>
+                </figure>
+
+                <h3 class="h6">Blocks</h3>
+                <p>Blocks allows Shopify users to replicate a set of fields. Each of these blocks can have its own settings object which follows the same rules as the main settings object.</p>
+                <h3 class="h6">Presets</h3>
+                <p>The name you give here will show up when your Shopify users choose a new section to add to a product page. If you don&#8217;t specify a pre-set your users will be unable to find your new section.</p>
+                <p>This is one of the key pieces of Webstore 2.0 functionality - the ability to add new sections to product pages, in the same way as was previously only possible on the home page.</p>
+
+                <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-presets-use.png" alt="How text added to the presets node of the JSON is rendered to the user interface." loading="lazy"></p>
+              </aside>
+
+            </div>
+          </div>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-moving-in-3.jpg" alt="" loading="lazy"></p>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <h2 class="h3">Data scope</h2>
+              <p>It&#8217;s worth pausing here to talk about data scope. The metafields we&#8217;ve used here are scoped to the individual element - in our case, the product page.</p>
+              <p>Changes made to <em>pages</em> when customising them in Shopify, however, will occur across <em>every</em> page of that type in the site.</p>
+              <p>This means that if you rearrange your sections to be in a particular order on one product page, that same order will be repeated on every other page which uses the same template.</p>
+              <p>The same goes for data - if we added content to the <abbr>FAQ</abbr> section within customisation, that information would show up on every page of our site.</p>
+              <p>However, Shopify allows us to use a hybrid of the two, by using <em>dynamic sources</em>. Within the customisation settings of the product page, add the <abbr>FAQ</abbr> section and click on the first block:</p>
+
+              <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-adding-dynamic-sources.gif" alt="Animation showing how to select a dynamic source to feed content to an FAQ template." loading="lazy"></p>
+
+              <p>This links the metafield values we added at the start to the <abbr>FAQ</abbr> section, allowing them to be displayed directly to the customer.</p>
+              <p>Now continue the process above for the other nine questions. But you don&#8217;t have to stop there: if you add in content which does <em>not</em> come from dynamic content, you could have questions and answers which appeared against every single product on your site, saving you from adding boilerplate questions such as <q>Can I return this product?</q> to every single product.</p>
+              <p>Note that by default, your product-wide questions will only appear if there are any other metafield questions added to your product. If you want the product-wide questions to appear even when there are no product specific questions, you should make a small change to the logic of <code>faq.liquid</code>:</p>
+
+            </div>
+          </div>
+          <pre><code class="language-liquid">{% if q1_exists or q2_exists or q3_exists or q4_exists or q5_exists or q6_exists or q7_exists or q8_exists or q9_exists or q10_exists %}
+  {% assign faq_exists = true %}
+{% else %}
+  {% assign faq_exists = false %}
+{% endif %}</code></pre>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-6 pad-vert-large">
+
+              <p>Assign <code>faq_exists</code> to <var>true</var>, to ensure that the default questions appear for every product on the site.</p>
+
+              <h2 class="h3">Next steps</h2>
+              <p>Your products should now display frequently asked question panels, if the content for them exists. Congratulations!</p>
+              <p>Metafields can do so much more, but the process will involve most of the steps above. For example, you could add a <a href="https://shopify.dev/themes/architecture/settings/input-settings#product" target="_blank">product chooser metafield</a> and allow your content authors to fill out a related products panel. Or make it even smarter, so it finds related products based on similar tags, but these will be used only if your authors fail to specify alternatives.</p>
+            </div>
+          </div>
+          <p class="text-center"><img src="/fine-tune-2020-dev/img/blog/img-faq-moving-in-4.jpg" alt="" loading="lazy"></p>
+      </div>
+
+    </article>
+
+    <aside class="container d-print-none gutter-xlarge" aria-label="Related">
+
+      <h2 class="text-center gutter-xlarge">Related</h2>
+
+      <div class="row gutter-base">
+
+        <article class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Introducing Mannequin, Finetune Partner's Shopify library">
+          <a href="/fine-tune-2020-dev/insights/introducing-mannequin-shopify-library/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-introducing-mannequin-shopify-library.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, liquid, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Introducing Mannequin, Finetune Partner's Shopify library</h3>
+              <p>Mannequin is a library of templates which extends the functionality of Shopify without the use of apps</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Pulling in related blogs in Shopify">
+          <a href="/fine-tune-2020-dev/insights/pulling-in-related-blogs-in-shopify/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-pulling-in-related-blogs-in-shopify.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, Liquid, search, Open Source</p>
+              <h3 class="h5" itemprop="headline">Pulling in related blogs in Shopify</h3>
+              <p>Adding related links to blogs in Shopify which automatically pull in the most relevant and up-to-date content</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Product filtering in Shopify without apps">
+          <a href="/fine-tune-2020-dev/insights/product-filtering-in-shopify-without-apps/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-product-filtering-in-shopify-without-apps.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Code, Shopify, Products, eCommerce</p>
+              <h3 class="h5" itemprop="headline">Product filtering in Shopify without apps</h3>
+              <p>How to add a product filter to your catalogue and collections pages in Shopify, without paying for an app</p>
+            </div>
+          </a>
+        </article>
+
+        <article itemscope itemtype="https://schema.org/NewsArticle" class="col-sm-6 col-lg-4 col-xl-3 gutter-medium" aria-label="Improving your Shopify 404 page">
+          <a href="/fine-tune-2020-dev/insights/improving-your-shopify-404-page/" class="box-link">
+            <div class="box-link__child">
+              <p><img itemprop="image" src="/fine-tune-2020-dev/img/blog/cta-improving-your-shopify-404-page.jpg" class="img-fluid" alt=""></p>
+              <p itemprop="keywords" class="type-etc-medium small text-uppercase text-grey">Shopify, Liquid, 404</p>
+              <h3 class="h5" itemprop="headline">Improving your Shopify 404 page</h3>
+              <p>How to improve conversions from your Shopify 404 page</p>
+            </div>
+          </a>
+        </article>
+
+      </div><!-- .row -->
+
+    </aside><!-- .container -->
+
+  </main>
+
+  <a href="/fine-tune-2020-dev/contact/" class="marquee d-block bg-interactive-blue semi-small text-uppercase d-print-none" style="--tw: 65em; --ad: 12s;" title="Get in touch">
+    <p class="marquee__child mb-1">
+      Get in touch to find out more <span class="ic-arrow"></span>
+      &nbsp; &nbsp;
+      We turn casual browsers into committed buyers <span class="ic-arrow"></span>
+    </p>
+  </a>
+
+  <footer class="bg-deep-blue text-center-sm">
+    <div class="container mt-5">
+      <div class="row d-print-none">
+        <div class="col-lg-4 col-md offset-md-0 col-sm-8 offset-sm-2">
+          <div class="row">
+            <p class="col-4 offset-4 offset-md-0 col-md-3">
+              <a href="/fine-tune-2020-dev/" title="Return to the home page">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 159.1" aria-label="Finetune Partners">
+                  <path fill="#2e38ef" d="M33 146l30 13h34l30-13 23-25 10-32-4-33-16-29-27-20-33-7-33 7-27 20L4 56 0 89l10 32z" />
+                  <path fill="#fff" d="M92 74a71 71 0 016 7c7-5 11-14 11-23 0-13-7-24-18-24-13 0-21 12-21 26 0 16 18 23 18 37 0 7-4 15-14 15-8 0-14-7-15-11l-10 4c2 7 11 17 25 17 17 0 25-13 25-26 0-16-18-24-18-35s4-16 10-16 8 6 8 13c0 9-3 13-7 16z" />
+                  <path fill="#fff" d="M63 68l-5 10a40 40 0 0021 8c0-3-5-10-5-10l-11-8z" />
+                </svg>
+              </a>
+            </p>
+          </div>
+
+          <p class="h4">We turn casual browsers into committed buyers</p>
+        </div>
+        <nav class="col-12 col-md-3 col-xl-3 offset-md-1 offset-lg-0 offset-xl-1" aria-label="Footer">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Navigation</h2>
+          <div class="text-uppercase semi-small mb-5">
+            <p><a href="/fine-tune-2020-dev/about/" class="btn">About</a></p>
+            <p><a href="/fine-tune-2020-dev/services/" class="btn">Services</a></p>
+            <!--p><a href="/fine-tune-2020-dev/work/" class="btn">Work</a></p-->
+            <p><a href="/fine-tune-2020-dev/insights/" class="btn">Insights</a></p>
+            <p><a href="/fine-tune-2020-dev/contact/" class="btn">Contact</a></p>
+          </div>
+        </nav>
+        <div class="col-md-5 col-lg-5 col-xl-4 mb-5">
+          <h2 class="h6 type-etc-bold text-reset mb-4">Information</h2>
+          <p>We're all working from home right now. Please email us at<br>
+            <a href="mailto:hello@finetunepartners.com">hello@finetunepartners.com</a><br>
+            We'd love to hear from you.</p>
+        </div>
+      </div>
+      <hr class="brd-white">
+      <div class="row">
+        <p class="col-sm-10 small text-uppercase">&copy; 2022 Finetune Partners <span class="d-print-none">&bull; <a href="/fine-tune-2020-dev/terms/" class="btn">Terms of Use</a> &bull; <a href="/fine-tune-2020-dev/privacy-policy/" class="btn">Privacy Policy</a> &bull; <a href="/fine-tune-2020-dev/master-services-agreement/" class="btn">Master Services Agreement</a> &bull; <button type="button" class="btn" data-js="cookie-config">Edit cookie settings</button></span></p>
+        <p class="col-sm-2 text-right text-center-sm d-print-none">
+          <a href="https://www.linkedin.com/company/72778083/" target="_blank" class="brd-all round icon-tiny icon-sq" title="Connect with us on LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" role="img" aria-label="LinkedIn">
+              <path d="M12.44 24.79c7.4 0 12.03-4.89 11.96-11-.06-6.23-4.56-11-11.83-11C5.37 2.8.61 7.57.61 13.8c0 6.11 4.57 11 11.7 11zM55.92 97.2V61.64c0-1.93.19-3.8.7-5.21 1.55-3.8 5.02-7.72 10.87-7.72 7.65 0 10.74 5.86 10.74 14.4v34.1H99.4V60.67c0-19.56-10.42-28.69-24.37-28.69-10.97 0-16.04 5.85-18.87 10.19l-.23.35v-9.06H34.76v.1c.03 1 .24 9.95 0 63.63zm-32.87 0V33.47H1.83V97.2z" />
+            </svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+<script type="text/javascript" src="../../js/app.js"></script></body>
+
+</html>
