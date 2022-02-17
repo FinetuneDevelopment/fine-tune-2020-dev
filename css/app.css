@@ -19,14 +19,31 @@
   font-weight: 400;
   font-style: normal; }
 
-@font-face {
+/*@font-face {
   font-display: swap;
-  font-family: 'Anton';
-  src: url(../fonts/anton-regular.556918.woff2) format("woff2"), url(../fonts/anton-regular.1015e9.woff) format("woff");
+  font-family:'Anton';
+  src: url('../fonts/anton-regular.woff2') format('woff2'),
+  url('../fonts/anton-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-2074; }
+  unicode-range: U+0020-2074;
+}*/
+@font-face {
+  font-display: swap;
+  font-family: 'Epilogue';
+  src: url(../fonts/epilogue.2dafa4.woff2) format("woff2"), url(../fonts/epilogue.ba8979.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Epilogue Italic';
+  src: url(../fonts/epilogue-italic.ed0c86.woff2) format("woff2"), url(../fonts/epilogue-italic.bf93db.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal; }
 
 @font-face {
   font-display: swap;
@@ -3127,7 +3144,7 @@ pre[data-line] {
   @media (max-width: 767.98px) {
     .btn-nav {
       display: block;
-      font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
+      font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 55px;
       text-align: center; } }
 
@@ -3400,9 +3417,8 @@ body {
   line-height: 1.8; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, caption {
-  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
-  font-weight: normal;
-  letter-spacing: .05em;
+  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
   line-height: 1.1;
   margin-bottom: .5em;
   margin-top: 0;
@@ -3502,7 +3518,7 @@ ins {
   content: counters(list-item, ".") "."; }
 
 .list-decimal > ::marker {
-  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
+  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 55px;
   letter-spacing: .05em; }
   @media (max-width: 991.98px) {
@@ -3849,7 +3865,7 @@ input[id="tab1"]:checked ~ [id="pane1"], input[id="tab2"]:checked ~ [id="pane2"]
     .service-progress > li > *::before {
       content: "0" counter(service-count);
       display: block;
-      font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
+      font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 110px;
       line-height: 1.2; }
       @media (max-width: 767.98px) {
@@ -4102,14 +4118,14 @@ thead th, thead td {
   padding-top: .1px; }
 
 .bt-hand-reassuring-right {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-reassuring-right.svg) 0 0 no-repeat; }
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-reassuring-right.svg) 0 0 no-repeat; }
 
 .bg-hand-reassuring-left {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-reassuring-left.svg) 100% 0 no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-reassuring-left.svg) 100% 0 no-repeat;
   background-size: 250px; }
 
 .bt-hand-money-se {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-money-se.svg) 100% 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-money-se.svg) 100% 100% no-repeat;
   background-size: 300px;
   min-height: 300px;
   transition: background-position 1s; }
@@ -4122,7 +4138,7 @@ thead th, thead td {
     background-position: 70% 100%; } }
 
 .bt-hand-money-nw {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-money-nw.svg) 0 0 no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-money-nw.svg) 0 0 no-repeat;
   background-size: 134px 181px;
   transition: background-position 1s; }
   @media (max-width: 991.98px) {
@@ -4139,7 +4155,7 @@ thead th, thead td {
   background-position: 0 -25px; }
 
 .bt-hand-money-sw {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-money-sw.svg) 0 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-money-sw.svg) 0 100% no-repeat;
   background-size: 20%;
   transition: background-position 1s; }
 
@@ -4147,7 +4163,7 @@ thead th, thead td {
   background-position: 10% 110%; }
 
 .bt-hand-money-e {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-money-e.svg) 100% 0 no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-money-e.svg) 100% 0 no-repeat;
   background-size: 20%;
   transition: background-position 1s; }
 
@@ -4155,7 +4171,7 @@ thead th, thead td {
   background-position: 105% 0; }
 
 .bt-phone-e {
-  background: url(/img/fine-tune-2020-dev/bg/bg-phone-e.svg) 100% 50% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-phone-e.svg) 100% 50% no-repeat;
   background-size: 20%;
   transition: background-position .75s; }
 
@@ -4163,7 +4179,7 @@ thead th, thead td {
   background-position: 110% 30%; }
 
 .bt-hand-pen {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-holding-pen.svg) 0 50% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-holding-pen.svg) 0 50% no-repeat;
   background-size: contain;
   min-height: 200px;
   transition: background-position 1s; }
@@ -4172,7 +4188,7 @@ thead th, thead td {
   background-position: 0 20%; }
 
 .bt-calculator {
-  background: url(/img/fine-tune-2020-dev/bg/bg-calculator.svg) 50% 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-calculator.svg) 50% 100% no-repeat;
   background-size: contain;
   min-height: 400px;
   transition: background-position 1s; }
@@ -4185,7 +4201,7 @@ thead th, thead td {
     background-size: 20%; } }
 
 .bt-hand-pen-left {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-pen-left.svg) 0 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-pen-left.svg) 0 100% no-repeat;
   background-size: contain;
   transition: background-position 1s; }
 
@@ -4193,15 +4209,15 @@ thead th, thead td {
   background-position: 0 95%; }
 
 .bt-hand-pinch-ne-foreground {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-pinch-ne-foreground.svg) 5% 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-pinch-ne-foreground.svg) 5% 100% no-repeat;
   background-size: 300px; }
 
 .bt-hand-pinch-ne-background {
-  background: url(/img/fine-tune-2020-dev/bg/bg-hand-pinch-ne-background.svg) 5% 100% no-repeat;
+  background: url(/fine-tune-2020-dev/img/bg/bg-hand-pinch-ne-background.svg) 5% 100% no-repeat;
   background-size: 300px; }
 
 .bt-logocoin {
-  background: url(/img/fine-tune-2020-dev/content/logocoin-blank.png) 50% 50% no-repeat;
+  background: url(/fine-tune-2020-dev/img/content/logocoin-blank.png) 50% 50% no-repeat;
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyOTYgMjk2IiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiPjxwYXRoIGQ9Ik0yMjQgMjc2bC01MSAxOS01NS0xLTUwLTIwLTQwLTM4LTIzLTQ5LTQtNTQgMTUtNTIgMzQtNDMgNDYtMjggNTQtOSA1MyAxMSA0NiAyOSAzMiA0NCAxNCA1My02IDU0LTI0IDQ4eiIvPjwvc3ZnPgo=") 50% 50% no-repeat;
   background-size: contain; }
 
@@ -4212,7 +4228,7 @@ thead th, thead td {
 
 @media (min-width: 768px) {
   .bt-strategy {
-    background: #fff url(/img/fine-tune-2020-dev/bg/bg-strategy.svg) 0 0 no-repeat;
+    background: #fff url(/fine-tune-2020-dev/img/bg/bg-strategy.svg) 0 0 no-repeat;
     background-size: 400%;
     color: #010111; }
   .bp-0-3 {
@@ -4299,7 +4315,7 @@ svg [data-js="rotate-20"] {
   transition: all 1s; }
 
 .type-heading {
-  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif !important; }
+  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 .type-etc-regular {
   font-family: "ETC Trispace regular", "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monaco, Consolas, monospace !important; }
