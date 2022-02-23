@@ -19,31 +19,14 @@
   font-weight: 400;
   font-style: normal; }
 
-/*@font-face {
+@font-face {
   font-display: swap;
-  font-family:'Anton';
-  src: url('../fonts/anton-regular.woff2') format('woff2'),
-  url('../fonts/anton-regular.woff') format('woff');
+  font-family: 'Anton';
+  src: url(../fonts/anton-regular.556918.woff2) format("woff2"), url(../fonts/anton-regular.1015e9.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-2074;
-}*/
-@font-face {
-  font-display: swap;
-  font-family: 'Epilogue';
-  src: url(../fonts/epilogue.2dafa4.woff2) format("woff2"), url(../fonts/epilogue.ba8979.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
-
-@font-face {
-  font-display: swap;
-  font-family: 'Epilogue Italic';
-  src: url(../fonts/epilogue-italic.ed0c86.woff2) format("woff2"), url(../fonts/epilogue-italic.bf93db.woff) format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
+  unicode-range: U+0020-2074; }
 
 @font-face {
   font-display: swap;
@@ -3097,7 +3080,6 @@ pre[data-line] {
   color: #010111;
   margin-bottom: 25px;
   margin-right: 13px;
-  min-height: 400px;
   padding: 30px; }
 
 [class*='col'] > .cta-quest:only-child,
@@ -3144,7 +3126,7 @@ pre[data-line] {
   @media (max-width: 767.98px) {
     .btn-nav {
       display: block;
-      font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
       font-size: 55px;
       text-align: center; } }
 
@@ -3417,7 +3399,7 @@ body {
   line-height: 1.8; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, caption {
-  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-weight: 100;
   line-height: 1.1;
   margin-bottom: .5em;
@@ -3518,7 +3500,7 @@ ins {
   content: counters(list-item, ".") "."; }
 
 .list-decimal > ::marker {
-  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
   font-size: 55px;
   letter-spacing: .05em; }
   @media (max-width: 991.98px) {
@@ -3606,6 +3588,13 @@ thead th {
 @media (max-width: 991.98px) {
   .split-mint-last {
     background: linear-gradient(to top, transparent 0%, transparent 1.45em, #d7f2db 1.45em, #d7f2db 100%); } }
+
+.split-white-last {
+  background: linear-gradient(to top, transparent 0%, transparent 3em, #fff 3em, #fff 100%); }
+
+@media (max-width: 991.98px) {
+  .split-white-last {
+    background: linear-gradient(to top, transparent 0%, transparent 1.45em, #fff 1.45em, #fff 100%); } }
 
 .split-mint-1-5 {
   background: linear-gradient(#d7f2db 0, #d7f2db 12.3em, transparent 12.3em, transparent 100%); }
@@ -3865,7 +3854,7 @@ input[id="tab1"]:checked ~ [id="pane1"], input[id="tab2"]:checked ~ [id="pane2"]
     .service-progress > li > *::before {
       content: "0" counter(service-count);
       display: block;
-      font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif;
       font-size: 110px;
       line-height: 1.2; }
       @media (max-width: 767.98px) {
@@ -4315,7 +4304,7 @@ svg [data-js="rotate-20"] {
   transition: all 1s; }
 
 .type-heading {
-  font-family: Epilogue, "Arial Narrow", "AvantGarde CondBook", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
+  font-family: Anton, "AvenirNextCondensed-Bold", "AvenirNextCondensed-Heavy", "Roboto Condensed Bold", Impact, "Arial Black", "Arial Bold", Gadget, sans-serif !important; }
 
 .type-etc-regular {
   font-family: "ETC Trispace regular", "Lucida Console", "Lucida Sans Typewriter", "Bitstream Vera Sans Mono", monaco, Consolas, monospace !important; }
