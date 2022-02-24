@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" height="192" width="192" aria-label="Google Data Studio">
+  <path d="M159 131H98c-15 0-23 10-23 21 0 10 7 21 23 21h61z" fill="#669df6"/>
+  <circle r="21" cy="152" cx="159" fill="#1a73e8"/>
+  <path d="M96 75H35c-15 0-23 10-23 21 0 10 7 21 23 21h61z" fill="#669df6"/>
+  <circle r="21" cy="96" cx="96" fill="#1a73e8"/>
+  <path d="M159 19H98c-15 0-23 10-23 21 0 10 7 21 23 21h61z" fill="#669df6"/>
+  <circle r="21" cy="40" cx="159" fill="#1a73e8"/>
+</svg>
