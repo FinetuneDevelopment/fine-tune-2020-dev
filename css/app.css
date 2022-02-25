@@ -4244,14 +4244,20 @@ thead th, thead td {
 .bt-attach {
   display: inline-block;
   position: relative; }
-  .bt-attach .bt-hand-reassuring-right {
-    left: -.28em;
-    top: -.6em; }
+  @media (min-width: 768px) {
+    .bt-attach .bt-hand-reassuring-right {
+      left: -.28em;
+      top: -.6em; } }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .bt-attach .bt-hand-reassuring-right {
+      background-size: 120px;
+      left: -.28em;
+      top: -.6em; } }
   @media (max-width: 575.98px) {
     .bt-attach .bt-hand-reassuring-right {
-      background-size: 150px;
-      left: -.5em;
-      top: -1em; } }
+      background-size: 100px;
+      left: -.3em;
+      top: -.8em; } }
 
 .bt-abs-top-middle {
   position: absolute;
