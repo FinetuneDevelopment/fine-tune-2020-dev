@@ -4049,6 +4049,34 @@ thead th, thead td {
 .dialog:not([aria-hidden="true"]) {
   display: block; }
 
+.faq {
+  border-bottom: solid 1px #010111;
+  margin-bottom: 1em; }
+  .faq label {
+    border: solid 2px transparent;
+    cursor: pointer; }
+  .faq .details {
+    display: none; }
+  .faq input:checked ~ .details {
+    display: block; }
+  .faq input:checked ~ label .faq__icon {
+    transform: rotate(45deg); }
+  .faq input:focus ~ label {
+    border: solid 2px #f4f4f4; }
+
+.faq__icon {
+  display: inline-block;
+  padding: 0 .2em;
+  transform: rotate(0deg);
+  transform-origin: 50% 60%;
+  transition: all .2s; }
+
+@media print {
+  .faq .details {
+    display: block !important; }
+  .faq__icon {
+    display: none; } }
+
 .bt-white {
   background: #fff;
   color: #010111;
