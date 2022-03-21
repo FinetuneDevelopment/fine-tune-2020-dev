@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="A pair of eyes looks down" height="144" width="172" viewBox="0 0 172 144">
+  <style>
+    @-webkit-keyframes peek {
+      0%,100% { transform: translate(0); }
+      50%     { transform: translate(20px); }
+    }
+    @keyframes peek {
+      0%,100% { transform: translate(0); }
+      50%     { transform: translate(20px); }
+    }
+    .pupil {
+      -webkit-animation: 2s ease 0s infinite alternate peek;
+              animation: 2s ease 0s infinite alternate peek;
+      animation-play-state: paused;
+    }
+    .scrolling .pupil {
+      animation-play-state: running;
+    }
+    .E{fill:none}
+    .F{stroke:#010111}
+    .G{fill:#fff}
+    .H{fill:#d7f2db}
+  </style>
+  <defs>
+    <clipPath id="A">
+      <path d="m 192.2,84.3 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 18.9,0 34.4,-19 34.4,-19" />
+    </clipPath>
+    <clipPath id="H">
+      <path d="M 443.7,185.5 3,185.4 V 700 H 322.2 V 595.9 l 121.4,0.1 z" />
+    </clipPath>
+    <path d="M 239.2,618.3 0.4,601 25.3,257.3 264,274.6 Z" />
+    <path d="m 219.5,577.4 -85.4,-6.2 3,-41.4 85.4,6.2 z" />
+    <path d="m 139,373 -18.5,-2.2 5.7,16.4 c 0,0 -7.1,11 -9.7,16.3 a 44.4,44.4 0 0 0 -2.8,21.4 l 5.3,37.7 19.1,2.3 14,-35.5 c 2.6,-6.6 3,-16.5 1.6,-20.5 -1.4,-4 -7.8,-20.4 -7.8,-20.4 l 8.7,-13.6 z" />
+  </defs>
+  <path stroke-width="0.8" d="M 14.742784,143.2 H 157.5 V 0.4 H 14.7 Z" class="H F"/>
+  <path d="m 69.342784,83.3 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 18.9,0 34.4,-19 34.4,-19 z" class="G F"/>
+  <path class="F G" d="m 170.84278,82 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 19,0 34.4,-19 34.4,-19 z" />
+  <path d="m 72.8,98.3 c 0,0 -2,30.3 -7.8,44.9 M 169.6,54.8 c 0,0 -15.4,-12 -34.4,-12 -19,0 -34.3,12 -34.3,12 m -31.6,0 c 0,0 -15.4,-12 -34.4,-12 -19,0 -34.3,12 -34.3,12" class="F E"/>
+  <g transform="translate(-123,-1)" clip-path="url(#A)">
+    <circle class="pupil" cx="148.2" cy="91.7" r="18.7" />
+  </g>
+  <g clip-path="url(#A)" transform="translate(-21.4,-2.3)">
+    <circle class="pupil" r="18.7" cy="91.7" cx="148.2" />
+  </g>
+</svg>
