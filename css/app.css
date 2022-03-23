@@ -3698,7 +3698,7 @@ input[id="tab1"]:checked ~ [id="pane1"], input[id="tab2"]:checked ~ [id="pane2"]
   padding-left: 65px;
   position: relative; }
   .quote-endorsement > p {
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
     text-transform: uppercase; }
     @media (max-width: 767.98px) {
