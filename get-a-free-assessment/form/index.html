@@ -58,6 +58,7 @@
   </script>
   <!-- End Google Tag Manager -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <!-- Global site tag (gtag.js) - Google Ads: 468952464 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-468952464"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-468952464'); </script>
 <link href="../../css/app.css" rel="stylesheet"></head>
 
 <body>
@@ -65,22 +66,22 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQ3XP7N"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <form method="post" action="https://formspree.io/f/mwkyqgnr">
+  <form method="post" action="https://formspree.io/f/mwkyqgnr" id="assessment-form">
     <input type="hidden" name="subject" value="Get a Free Assessment form submission">
 
     <p>
         <label for="name">Your name</label>
-        <input class="input" type="text" name="name" id="name" placeholder="First and last name">
+        <input class="input" type="text" name="name" id="name" placeholder="First and last name" required>
     </p>
 
     <p>
         <label for="email">Email address</label>
-        <input class="input" type="email" name="email" id="email" placeholder="name@company.com">
+        <input class="input" type="email" name="email" id="email" placeholder="name@company.com" required>
     </p>
 
     <p>
         <label for="phone">Phone number</label>
-        <input class="input" type="tel" name="phone" id="phone">
+        <input class="input" type="tel" name="phone" id="phone" pattern="[0-9() -]*" required>
     </p>
 
     <div class="g-recaptcha gutter-large" data-sitekey="6LeKpeMZAAAAAHe2v_jGLu2cO8wCqSmx28FqpQwZ"></div>
@@ -88,6 +89,15 @@
     <p><button class="btn btn-primary btn-arrow">Submit</button></p>
 
   </form>
+  <script>
+    (function () {
+      var form = document.getElementById('assessment-form');
+      form.addEventListener('submit',handleSubmit);
+      function handleSubmit(e) {
+        if (typeof gtag === "function") gtag('event', 'conversion', {'send_to': 'AW-468952464/Z9rZCOiH66sDEJDLzt8B'});
+      }
+    } ());
+  </script>
 <script type="text/javascript" src="../../js/app.js"></script></body>
 
 </html>
