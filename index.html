@@ -147,154 +147,115 @@
     <section aria-label="We find the extra revenue hidden in your current site." class="bt-mint gutter-xlarge">
       <div class="container text-center pad-vert-xlarge">
         <div class="row align-items-center">
-            <figure class="col-lg order-lg-last">
+            <figure class="col-lg-5 order-lg-last d-none d-sm-block">
               <p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" aria-label="Buy OK products.">
-                  <!--  width="48" height="24" -->
-                    <style>
-                        @-webkit-keyframes buy-tempt {
-                          0%   { transform: rotate(4deg); }
-                          100% { transform: rotate(-10deg); }
-                        }
-                        @keyframes buy-tempt {
-                          0%   { transform: rotate(4deg); }
-                          100% { transform: rotate(-10deg); }
-                        }
-                        .buy-arm {
-                          -webkit-animation: 1s ease-in-out 0s infinite alternate buy-tempt;
-                                  animation: 1s ease-in-out 0s infinite alternate buy-tempt;
-                          animation-play-state: paused;
-                          transform-origin: 60% 80%;
-                        }
-                        @-webkit-keyframes buy-ok {
-                          0%   { transform: rotate(4deg); }
-                          100% { transform: rotate(-10deg); }
-                        }
-                        @keyframes buy-ok {
-                          0%   { transform: rotate(2deg); }
-                          100% { transform: rotate(-5deg); }
-                        }
-                        .ok-fingers {
-                          -webkit-animation: .5s ease-in-out 0s infinite alternate buy-ok;
-                                  animation: .5s ease-in-out 0s infinite alternate buy-ok;
-                          animation-play-state: paused;
-                          transform-origin: 80% 60%;
-                        }
-                        .scrolling .ok-fingers, .scrolling .buy-arm { animation-play-state: running; }
-                        .buyI {stroke:#010111}
-                        .buyK{stroke-width:.1}
+                <svg xmlns="http://www.w3.org/2000/svg" height="242" width="496" viewBox="0 0 496 242" aria-label="One of the greatest websites ever made.">
+                  <style>
+                      @-webkit-keyframes web-browse {
+                        0%,100% { transform: translate(0, 0); }
+                        40%     { transform: translate(-4%, 4%); }
+                        60%     { transform: translate(0, 3%); }
+                        80%     { transform: translate(1%, 1%); }
+                      }
+                      @keyframes web-browse {
+                        0%,100% { transform: translate(0, 0); }
+                        40%     { transform: translate(-4%, 4%); }
+                        60%     { transform: translate(0, 3%); }
+                        80%     { transform: translate(1%, 1%); }
+                      }
+                      .laptop-arm {
+                         -webkit-animation: 2s ease 0s infinite running web-browse;
+                                 animation: 2s ease 0s infinite running web-browse;
+                         animation-play-state: paused;
+                      }
+                      @-webkit-keyframes finger-wiggle {
+                        0%   { transform: rotate(-6deg); }
+                        100% { transform: rotate(4deg); }
+                      }
+                      @keyframes finger-wiggle {
+                        0%   { transform: rotate(-6deg); }
+                        100% { transform: rotate(4deg); }
+                      }
+                      .laptop-fingers {
+                         -webkit-animation: .4s ease 0s infinite alternate finger-wiggle;
+                                 animation: .4s ease 0s infinite alternate finger-wiggle;
+                         animation-play-state: paused;
+                         transform-origin: 60% 80%;
+                      }
+                      .scrolling .laptop-fingers, .scrolling .laptop-arm { animation-play-state: running; }
                     </style>
-                    <defs>
-                      <clipPath id="buyA">
-                        <path d="M26.18 19.26l-6.08.05v4.57H0V.15h26.27c.1 6.37.03 12.74-.09 19.11z"/>
-                      </clipPath>
-                    </defs>
-                    <path fill="#d7f2db" d="M28.7 23.42h19.16V4.26H28.7z"/>
-                    <g fill="#fff" class="buyI buyK ok-fingers">
-                      <path d="M35.37 7.68c-.46.48 1.28 1.67 1.92 2.44 1.33 5.4 4.19 4.14.98-.88-.4-.3-2.54-1.94-2.9-1.56z"/>
-                      <path d="M36.15 6.94c-.3.3 1.14 2.01 1.82 2.91 2.12 3.65 2.3 1.7.83-.85-.79-.8-2.17-2.55-2.65-2.06z"/>
-                      <path d="M37.5 6.64c-.4.48.94 2.37 1.54 3.44.4 3.42 2.86 3.2 1.22-.45-.88-1-2.36-3.47-2.75-2.99z"/>
-                    </g>
-                    <path d="M37.36 14.73c.86-.48.47-2.6.37-2.84 2.15.78 1.72 3.15-.37 2.84z"/>
-                    <path fill="#fff" d="M43.26 31.54l-2.41-13.43c2.2-5.65-.32-9.41-5.67-6.9-.24.1-.48.06-.46.48.01.41 2.1.2 3 .2 2.16.8 1.7 3.18-.36 2.84-1.06-.62-1.41-2.27-2.37-2.74-.2.02-.13.55-.08 1.05.14 1.75.7 3.63 1.95 4.53-.12.97-1.26 13.97-1.26 13.97h7.66" class="buyI buyK"/>
-                    <path d="M36.85 17.57l-.04.59s.46.72 1.78.5a6.19 6.19 0 01-1.73-1.1" fill="#010111"/>
-                    <path fill="none" d="M8.66 19.3h17.55V.3H8.65z" class="buyI buyK"/>
-                    <g clip-path="url(#buyA)">
-                    <g class="buy-arm">
-                      <circle r="1" cy="4.3" cx="20"/>
-                      <path d="M7.76 1.73l12.2.72-1.37 18.01-12.2-.72z" fill="#d7f2db" class="buyI buyK"/>
-                      <path d="M7.6 17.6l4.53.33m-4.46-1.4l4.54.33m-4.46-1.4l4.54.32" class="buyI buyK"/>
-                      <path fill="none" d="M8.77 8.62a4.5 4.5 0 118.98.64 4.5 4.5 0 01-8.98-.64z" class="buyI buyK"/>
-                      <g class="buyK buyI">
-                        <path d="M13.08 7.74a3.78 3.78 0 00-.56-1.38m1.36 1.47c.26-.6.63-1 .86-1.21m-1.45-.95c.1.57.18 1.28.13 2.1" fill="none"/>
-                        <g fill="#fff">
-                          <path d="M12.51 7.66l.3.86c-1.03 1.29-.6 2.34-.38 3.9l1 .11c.76-1.75 1.05-2.49.4-3.95l.45-.7z"/>
-                          <path d="M14.16 9.45l-1.8-.21"/>
-                          <path d="M14.16 9.45l-1.8-.21m-.03 2.46l1.36.16"/>
-                          <path d="M12.33 11.7l1.36.16"/>
-                        </g>
-                      </g>
-                      <path d="M12.77 6.39a.24.24 0 01-.28.2.24.24 0 11.06-.48.24.24 0 01.22.27m.77-.68a.24.24 0 01-.48-.05.24.24 0 01.26-.22.24.24 0 01.22.27m1.44.94a.24.24 0 11-.22-.27.24.24 0 01.22.27"/>
-                      <path d="M21.3 4.07L19.58 1c-.15.06.73 3.43.73 3.43l-.64.86a9.16 9.16 0 01-.22-1.14c-.08-.7-.27-.23-.36.01-.1.24-.55 2.18-.48 2.76.5 3.83 8.5 18.94 8.5 18.94L32.56 24 24.1 11.98a148.88 148.88 0 00-3.29-4.22l.56-2.95c0-.06.16-.27-.08-.74" fill="#d7f2db" class="buyI buyK"/>
-                      <path d="M20.64,8.65 21.09,8.1 20.81,7.76 Z"/>
-                      <path d="m25.81,14.3 0.37,4.96 3.306439,5.843158 L 32.56,24 Z"/>
-                      <g fill="none" class="buyK" stroke="#010011">
-                        <path d="M13.36 15.87l4.43.24-.16 2.22-4.43-.25z" fill="#fff"/>
-                        <path d="M13.93 16.6l-.05.73.45.04c.24.01.21-.35 0-.38l-.42-.04.42.03c.15.02.26-.31.02-.34zm1.21.1l-.03.52c0 .28.65.33.66.04l.04-.52m.59 0l.32.48-.04.32.04-.32.36-.44"/>
-                      </g>
-                    </g>
-                    </g>
-                  </svg>
+                 <rect fill="#d7f2db" height="242" width="496"/><path d="m 59.5,36.5 c -7,1.2 -8.5,3.4 -8.5,6 l 0.7,155 c 0,0.8 0,3.2 1.7,4.3 1.2,0.8 2.6,1.2 6.8,1.7 10.6,1.4 137.8,9.8 137.8,9.8 0,0 8.3,0.6 13,-1.4 4.2,-1.7 84.4,-31.7 85.8,-33.7 1.4,-2 1.8,-4 -1.4,-4.4 -3.2,-0.4 -148.4,-9 -148.4,-9 L 146.3,25.6 c 0,-2.9 -3.5,-3.3 -5.7,-2.8 l -81,13.7 z"/><path fill="#35353a" d="m 197.5,197.7 22.6,1 35,-12 -24.2,-0.8 z"/><path stroke="#fff" d="M 75.2,198.3 149.6,171 m -62.2,28 74.3,-27.3 m -62,28.1 74,-27.4 m -61.8,28.2 73.8,-27.5 m -61.6,28.2 73.6,-27.5 m -61.4,28.2 73.4,-27.5 m -61.1,28.2 73.2,-27.5 m -61,28.3 73,-27.6 m -182.1,22.7 95.3,-34 m -4,-3.3 -86.7,29.8 -0.4,-149 87.8,-15.5 z m -67.8,37 73.7,4.5 m -65.5,-7.5 73.5,4.4 m -65.2,-7.4 73.3,4.3 m -65,-7.3 73,4.4 m -64.7,-7.4 72.8,4.3 m -64.6,-7.3 72.7,4.2 m -64.4,-7.3 72.4,4.3 m -64.1,-7.3 72.2,4.2 m -64,-7.2 72,4.1 m -63.7,-7.2 71.8,4.2 m -78.4,-14 -86.7,29.8 -0.4,-148.5 87.8,-16 z"/><g class="laptop-arm"><g class="laptop-fingers"><path stroke="#010111" d="M220.7 159.8c-3.4 1.7 5.2 4.4 8.6 4.6l36.4 1.9c10.7 0 36.7 1.9 29.1-6.1-5.3-5.3-20.1-11.1-25.5-9.4-14.7 4.6-45.1 7.2-48.6 9z" fill="#fff"/><path stroke="#010111" d="M224.6 141.3c-5.3-1-4 2.4.6 6.3a219.9 219.9 0 0042.3 13.4s25.3 7.7 28.2-2.4c-3.3-7.3-11-4.3-21.7-8.8-16-2-45.6-7.7-49.4-8.5z" fill="#fff"/></g><path stroke="#010111" fill="#fff" d="M656.2-90.4c-16 18-342.9 246.5-342.9 246.5s-33.6-3.5-42 .7c-20.7 10-51.5 24.9-45.4 30.5 2.3 2.2 33.6-7 44.2-10.7 11.2-4 23-1.7 27.8 3.2.8.8.5 2-.6 2.4-7 2.4-22.1 2-31 3.4-7 1-.3 6.1 5.3 8.4a97 97 0 0034.6 4.9c13-2.2 30-11.3 55.3-23.1L657 35.3"/><path d="M338.2 186.8l317-166.9 1.8 15.4z"/></g><rect stroke="#010111" fill="none" height="242" width="496"/><path d="m 122.0817,111.44073 a 1.7,1.7 0 0 0 0.7,0.3 h 0.7 c 0.6,-0.1 1,-0.4 1.3,-0.7 a 1.8,1.8 0 0 0 0.5,-1.2 c 0,-0.3 0,-0.6 -0.2,-0.7 a 1.2,1.2 0 0 0 -0.6,-0.4 l -1,-0.3 a 1,1 0 0 0 -0.2,0 0.9,0.9 0 0 1 -0.1,0 l -1,-0.5 c -0.3,-0.2 -0.6,-0.4 -0.7,-0.7 -0.1,-0.3 -0.3,-0.7 -0.3,-1.3 0,-0.6 0.1,-1.1 0.3,-1.6 0.2,-0.5 0.6,-0.8 1,-1.1 a 3.4,3.4 0 0 1 1.2,-0.7 h 1 c 0.3,0 0.6,0.1 0.8,0.3 a 2.1,2.1 0 0 1 0.5,0.7 l -0.7,1 a 2.6,2.6 0 0 0 -0.4,-0.4 0.5,0.5 0 0 0 -0.5,-0.3 1.3,1.3 0 0 0 -0.7,0 2.5,2.5 0 0 0 -1.2,0.7 c -0.3,0.3 -0.4,0.7 -0.4,1.1 0,0.3 0,0.5 0.2,0.7 a 1.3,1.3 0 0 0 0.5,0.4 l 0.9,0.3 h 0.2 c 0.5,0 0.9,0.2 1.2,0.4 l 0.7,0.7 c 0.2,0.3 0.3,0.8 0.3,1.3 0,0.7 0,1.3 -0.3,1.8 -0.3,0.5 -0.5,0.8 -1,1.1 l -1.2,0.7 c -0.7,0.2 -1.2,0.1 -1.6,0 -0.4,-0.1 -0.7,-0.6 -1,-1 l 0.7,-1 0.5,0.4 M 70.5,89.3 c 0.3,-0.4 0.6,-0.9 0.8,-1.6 a 9,9 0 0 0 0.3,-2.5 c 0,-1 -0.1,-1.7 -0.3,-2.3 -0.2,-0.6 -0.5,-1 -0.8,-1.2 a 1.2,1.2 0 0 0 -1,-0.2 l -1,0.7 C 68.2,82.6 68,83 67.8,83.7 a 9,9 0 0 0 -0.3,2.5 c 0,1 0,1.8 0.3,2.3 0.3,0.5 0.5,1 0.8,1.2 a 1.2,1.2 0 0 0 1,0.2 2,2 0 0 0 0.9,-0.7 M 68.1,91 c -0.4,-0.2 -0.8,-0.7 -1,-1.5 -0.2,-0.8 -0.5,-1.8 -0.5,-3.1 0,-1.3 0.2,-2.5 0.4,-3.3 0.2,-0.8 0.7,-1.6 1.1,-2 0.4,-0.4 1,-0.7 1.4,-0.8 a 2,2 0 0 1 1.4,0.2 c 0.5,0.2 0.8,0.7 1.1,1.4 a 11,11 0 0 1 0,6.5 c -0.3,0.9 -0.6,1.5 -1,2 -0.4,0.5 -1,0.6 -1.4,0.8 A 2,2 0 0 1 68.1,91 m 11,-12.8 v 10.5 l -1,0.2 -3.3,-8.2 0.1,-0.1 v 9.1 l -0.8,0.2 V 79.3 l 1,-0.2 3.4,8.4 h -0.2 v -9.1 z m 3,0.5 v 3.6 l 3.5,-0.8 v 1.2 l -3.4,0.8 v 3.3 l 3.7,-0.9 v 1.3 l -4.6,1 V 77.8 l 4.6,-1 V 78 Z M 96.7,83 c 0.3,-0.3 0.5,-0.8 0.7,-1.4 0.2,-0.6 0.3,-1.5 0.3,-2.5 0,-1 0,-1.7 -0.3,-2.2 -0.3,-0.5 -0.4,-1 -0.7,-1.2 -0.3,-0.2 -0.6,-0.2 -0.9,-0.2 l -0.9,0.6 c -0.3,0.3 -0.5,0.8 -0.7,1.5 -0.2,0.7 -0.3,1.5 -0.3,2.4 0,0.9 0,1.8 0.3,2.3 0.3,0.5 0.4,1 0.7,1.2 a 1.1,1.1 0 0 0 1,0.1 c 0.2,0 0.5,-0.2 0.8,-0.6 m -2.2,1.7 c -0.4,-0.2 -0.8,-0.7 -1,-1.4 -0.2,-0.7 -0.4,-1.8 -0.4,-3 0,-1.2 0.1,-2.5 0.4,-3.3 0.3,-0.8 0.6,-1.5 1,-2 0.4,-0.5 0.9,-0.6 1.3,-0.7 a 1.8,1.8 0 0 1 1.3,0.2 c 0.5,0.2 0.8,0.7 1,1.4 0.2,0.7 0.5,1.7 0.5,3 0,1.3 -0.2,2.4 -0.4,3.3 -0.2,0.9 -0.6,1.5 -1,1.9 -0.4,0.4 -1,0.7 -1.4,0.8 a 2,2 0 0 1 -1.3,-0.2 m 7.1,-10.4 v 3.4 l 3.2,-0.7 v 1.2 l -3.2,0.8 v 4.3 l -0.8,0.2 V 73.3 l 4.2,-1 v 1.2 z m 15.2,-3.5 -2.1,0.5 v 9 l -0.8,0.1 v -8.9 l -2.1,0.5 v -1.2 l 5,-1.2 z m 6,-2.5 v 10 l -0.7,0.2 v -4.6 l -3,0.6 v 4.8 l -0.8,0.2 V 69.3 l 0.9,-0.2 v 4.2 l 2.9,-0.6 v -4.4 z m 2.9,0.5 v 3.3 l 3,-0.7 v 1.2 l -3,0.7 v 3 l 3.3,-0.8 v 1.2 l -4.1,1 v -10 l 4.1,-1 v 1.2 z m -47.4,32.5 v 1 c 0,1 -0.1,2 -0.3,2.8 -0.2,0.8 -0.6,1.5 -1,1.9 -0.4,0.4 -0.8,0.7 -1.2,0.8 -0.8,0.2 -1.5,0 -2,-0.7 -0.5,-0.7 -0.8,-2 -0.8,-4 0,-1.3 0,-2.4 0.4,-3.2 0.4,-0.8 0.6,-1.6 1,-2 0.4,-0.4 0.9,-0.7 1.4,-0.9 0.5,-0.1 1,0 1.4,0.2 0.4,0.2 0.7,0.6 1,1.2 l -0.8,1 a 3.2,3.2 0 0 0 -0.2,-0.3 l -0.6,-0.7 c -0.2,0 -0.5,-0.2 -0.8,0 -0.6,0 -1,0.5 -1.4,1.2 -0.4,0.7 -0.5,1.9 -0.5,3.3 0,1 0,1.9 0.2,2.4 0.2,0.5 0.4,1 0.7,1.2 0.3,0.2 0.6,0.2 1,0 0.3,0 0.6,-0.2 0.9,-0.5 0.3,-0.3 0.4,-0.8 0.6,-1.3 0.2,-0.5 0.2,-1.2 0.2,-2 l -1.6,0.4 v -1.2 z m 5.1,-0.4 0.8,-0.5 1,4.9 -1,0.2 z m -2.3,-0.3 2.2,-0.5 c 0.4,0 0.6,-0.3 0.8,-0.6 0.2,-0.3 0.3,-0.8 0.3,-1.5 0,-0.6 -0.1,-1 -0.3,-1.3 -0.2,-0.3 -0.4,-0.3 -0.8,-0.2 l -2.2,0.6 z m 0,1.3 v 4.4 l -0.8,0.2 V 95.9 l 3,-0.7 h 1 c 0.3,0 0.4,0.3 0.6,0.6 0.2,0.3 0.3,1 0.3,1.8 0,0.9 0,1.5 -0.3,2 l -0.6,1.2 -0.9,0.4 -2.3,0.6 z m 7,-6.6 v 3.5 l 3.3,-0.9 v 1.2 l -3.3,1 v 3.1 l 3.6,-0.9 v 1.2 l -4.5,1.2 V 94.3 l 4.5,-1 v 1 z m 9.7,2.7 v 1.3 l -3.5,0.9 v -1.3 z m -1.4,-4.7 -0.6,0.1 -1.6,9.5 -0.8,0.2 1.6,-10.8 2,-0.5 1.6,9.8 -0.9,0.3 -1.5,-8.7 z m 8.4,-2.1 -2.2,0.5 v 9 l -0.8,0.2 v -9 l -2.2,0.6 v -1.3 l 5.2,-1.2 z m 2.7,-0.7 v 3.4 l 3.2,-0.9 v 1.3 l -3.2,0.8 v 3.1 l 3.4,-0.9 v 1.3 l -4.3,1 V 89.5 l 4.3,-1 v 1.1 z m 6.2,5.5 0.6,0.4 h 0.8 c 0.5,-0.1 0.9,-0.4 1.2,-0.7 a 1.7,1.7 0 0 0 0.5,-1.2 l -0.2,-0.7 A 1.3,1.3 0 0 0 116,93.4 l -1,-0.3 a 1,1 0 0 0 -0.2,0 1,1 0 0 1 -0.1,0 l -1,-0.5 -0.7,-0.7 c -0.2,-0.3 -0.2,-0.8 -0.2,-1.3 0,-0.6 0,-1.2 0.3,-1.6 0.3,-0.4 0.5,-0.8 0.9,-1.1 a 3.2,3.2 0 0 1 1.2,-0.6 h 1 c 0.3,0 0.5,0.1 0.7,0.3 l 0.5,0.7 -0.6,1 -0.4,-0.5 c -0.1,-0.2 -0.4,-0.2 -0.6,-0.2 a 1.2,1.2 0 0 0 -0.6,0 c -0.5,0 -0.8,0.3 -1.1,0.6 -0.3,0.3 -0.5,0.7 -0.5,1.1 0,0.3 0,0.5 0.2,0.7 l 0.5,0.4 0.9,0.3 a 0.3,0.3 0 0 0 0.2,0 l 1.1,0.4 c 0.3,0.2 0.6,0.4 0.8,0.8 0.2,0.4 0.3,0.7 0.3,1.3 a 4,4 0 0 1 -0.3,1.7 3,3 0 0 1 -1,1.1 3.5,3.5 0 0 1 -1.2,0.6 c -0.6,0.2 -1.1,0.2 -1.5,0 -0.4,-0.2 -0.8,-0.6 -1,-1 l 0.7,-1 a 2.2,2.2 0 0 0 0.4,0.4 m 10.2,-9.7 -2,0.5 v 8.8 L 121,95.8 V 87 l -2,0.6 v -1.3 l 5,-1.3 z m -44.129662,37.42855 1,-9.5 1,-0.3 -1.3,10.7 -0.8,0.2 z m -1.7,-6.7 -0.2,-2 0.5,-0.1 1.6,8.8 -0.2,1.1 -0.3,0.1 -1.4,-7.8 z m -2,7.8 1.6,-9.7 0.5,-0.2 -0.1,2.2 -1.5,8.6 -0.4,0.1 v -1 z m -1.8,-9 1,-0.2 1,9.1 v 1 l -0.7,0.3 -1.3,-10.1 z m 10,-1.3 v 3.4 l 3.3,-1 v 1.3 l -3.4,1 v 3.1 l 3.7,-1 v 1.3 l -4.5,1.2 v -10.3 l 4.5,-1.2 v 1.2 z m 9.4,4.8 c 0.2,-0.3 0.3,-0.8 0.3,-1.5 0,-0.6 -0.1,-1 -0.3,-1.1 -0.2,-0.1 -0.5,-0.3 -0.8,-0.2 l -2,0.5 v 3.5 l 1.9,-0.5 c 0.4,-0.1 0.7,-0.4 0.9,-0.7 z m -2.8,-3.4 1.8,-0.5 a 1.2,1.2 0 0 0 0.7,-0.6 c 0.2,-0.3 0.3,-0.7 0.3,-1.3 0,-0.4 0,-0.6 -0.2,-0.8 l -0.4,-0.4 h -0.5 l -1.6,0.5 v 3.1 z m 3.6,0.3 c 0.2,0.3 0.3,0.9 0.3,1.6 0,0.6 0,1.2 -0.2,1.7 -0.2,0.5 -0.3,0.8 -0.6,1.1 a 2,2 0 0 1 -1,0.6 l -2.9,0.8 v -10.3 l 2.5,-0.8 h 1 c 0.3,0 0.5,0.1 0.7,0.5 0.2,0.4 0.3,0.8 0.3,1.5 l -0.1,1.2 -0.3,0.8 -0.4,0.5 c 0.3,0 0.6,0.2 0.8,0.6 z m 2.8,2 a 1.7,1.7 0 0 0 0.7,0.3 h 0.7 c 0.6,-0.1 1,-0.4 1.3,-0.7 a 1.8,1.8 0 0 0 0.500002,-1.2 c 0,-0.3 0,-0.6 -0.2,-0.7 a 1.2,1.2 0 0 0 -0.600002,-0.4 l -1,-0.3 a 1,1 0 0 0 -0.2,0 0.9,0.9 0 0 1 -0.1,0 l -1,-0.5 c -0.3,-0.2 -0.6,-0.4 -0.7,-0.7 -0.1,-0.3 -0.3,-0.7 -0.3,-1.3 0,-0.6 0.1,-1.1 0.3,-1.6 0.2,-0.5 0.6,-0.8 1,-1.1 a 3.4,3.4 0 0 1 1.2,-0.7 h 1 c 0.300002,0 0.600002,0.1 0.800002,0.3 a 2.1,2.1 0 0 1 0.5,0.7 l -0.7,1 a 2.6,2.6 0 0 0 -0.4,-0.4 0.5,0.5 0 0 0 -0.500002,-0.3 1.3,1.3 0 0 0 -0.7,0 2.5,2.5 0 0 0 -1.2,0.7 c -0.3,0.3 -0.4,0.7 -0.4,1.1 0,0.3 0,0.5 0.2,0.7 a 1.3,1.3 0 0 0 0.5,0.4 l 0.9,0.3 h 0.2 c 0.5,0 0.9,0.2 1.200002,0.4 l 0.7,0.7 c 0.2,0.3 0.3,0.8 0.3,1.3 0,0.7 0,1.3 -0.3,1.8 -0.3,0.5 -0.5,0.8 -1.000002,1.1 l -1.2,0.7 c -0.7,0.2 -1.2,0.1 -1.6,0 -0.4,-0.1 -0.7,-0.6 -1,-1 l 0.7,-1 0.5,0.4 m 7.800002,-9.3 v 7.7 l 1.6,-0.4 v 1.2 l -4,1.1 v -1.2 l 1.6,-0.5 v -7.6 l -1.6,0.4 v -1.2 l 4,-1.1 v 1.2 z m 7.9,-2 -2.1,0.5 v 8.8 l -0.9,0.3 v -8.9 l -2,0.6 v -1.3 l 5,-1.4 z m 2.5,-1 v 3.3 l 3.1,-0.8 v 1.1 l -3.1,1 v 3 l 3.3,-1 v 1.4 l -4,1 v -10 l 4.2,-1 v 1.1 z M 73.1,135 v 3.4 l 3.5,-1 v 1.2 l -3.5,1 v 3.3 l 3.8,-1 v 1.2 l -4.6,1.3 v -10.5 l 4.6,-1.3 v 1.3 z m 11,-4.4 -1.9,10.9 -1.7,0.5 -1.8,-9.9 0.9,-0.3 1.6,8.7 h 0.4 l 1.6,-9.7 z m 2.8,0.4 v 3.4 l 3.4,-1 v 1.2 l -3.4,1 v 3.2 l 3.6,-1 V 139 L 86,140.3 V 130 l 4.5,-1.3 v 1.2 z m 8.8,1.8 0.8,-0.6 0.8,4.7 -0.8,0.3 z m -2.2,-0.2 2.1,-0.7 a 1.2,1.2 0 0 0 0.8,-0.6 l 0.2,-1.4 c 0,-0.7 0,-1.1 -0.2,-1.3 -0.2,-0.2 -0.5,-0.2 -0.8,-0.1 l -2.1,0.6 z m 0,1.2 v 4.3 l -0.8,0.2 v -10 l 3,-0.9 h 0.8 c 0.2,0 0.5,0.3 0.7,0.6 0.2,0.3 0.2,1 0.2,1.8 0,0.8 0,1.4 -0.2,2 -0.2,0.6 -0.4,0.8 -0.7,1 l -0.8,0.6 -2.2,0.6 z m 16,-10.6 0.7,-0.2 0.8,9.8 -0.8,0.3 z m -1.8,7.5 1.7,-7.4 0.3,-0.1 v 1.5 l -1.7,8 -0.5,0.2 z m -2,-4.8 v -1.6 h 0.3 l 1.7,6.5 0.2,2 -0.5,0.1 z m -0.5,-1.4 0.7,-0.2 -0.7,10.3 -0.8,0.2 z m 11.3,2.9 v 1.2 l -3.4,1 v -1.2 z m -1.4,-4.6 -0.6,0.2 -1.4,9.2 -0.9,0.3 1.8,-10.4 1.8,-0.6 1.6,9.6 -0.8,0.2 -1.4,-8.4 z m 7,5.2 c 0.2,-0.3 0.4,-0.7 0.5,-1.3 a 13,13 0 0 0 0,-4.5 c -0.1,-0.5 -0.3,-0.9 -0.5,-1 -0.2,-0.1 -0.6,-0.2 -1,-0.1 l -1.2,0.3 v 7.6 l 1.2,-0.4 c 0.4,0 0.7,-0.3 1,-0.6 m 0.2,-8.2 c 0.3,0 0.6,0.4 0.9,1 a 14.6,14.6 0 0 1 0,6.8 c -0.2,0.8 -0.6,1.4 -1,1.6 l -1.2,0.7 -2,0.5 v -10 l 2,-0.5 c 0.5,-0.1 1,-0.2 1.3,0 m 3.9,-0.3 v 3.3 l 3,-1 v 1.3 l -3,0.9 v 3 l 3.2,-1 v 1.2 l -4,1.3 v -10 l 4,-1.1 v 1.2 z" fill="#fff"/></svg>
+
               </p>
               <figcaption class="sr-only"></figcaption>
             </figure>
-            <div class="col-lg">
+            <div class="col-lg-7">
             <h1 class="h3">We find the extra revenue hidden in your current site.</h1>
-            <p class="lead">How Long Do You Have?</p>
+            <p>How Long Do You Have?</p>
             <p class="flush">
-              <a href="#10seconds" class="btn btn-secondary btn-arrow">10 Seconds</a>
+              <a href="#10seconds" class="btn btn-secondary btn-arrow">10 <abbr title="Seconds">Sec</abbr></a>
               <a href="#5min" class="btn btn-secondary btn-arrow">5 <abbr title="Minutes">Min</abbr></a>
-              <a href="#30min" class="btn btn-primary btn-arrow">30 <abbr>Min</abbr></a>
+              <a href="#30min" class="btn btn-secondary btn-arrow">30 <abbr>Min</abbr></a>
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section aria-label="10 seconds" id="10seconds" class="container gutter-xxlarge">
-      <div class="row">
-        <div class="col text-center">
-          <h3 class="h2">10 seconds</h3>
-          <p>You’re driving from point A to point B (your goal).</p>
-          <p>Along the way, you encounter dead ends, forks in the road, and signs you can’t understand. The wheels are turning, but petrol is getting more and more expensive and point B is still far away.</p>
-          <p>You need a map.</p>
-          <p>We’re a SatNav.</p>
-          <p><a href="#5min" class="btn btn-secondary btn-arrow">Got 5 <abbr>Min</abbr>?</a></p>
+    <section aria-label="Imagine..." id="10seconds" class="container gutter-xxlarge">
+      <div class="row align-items-center">
+        <div class="col gutter-large">
+          <h3>Imagine...</h3>
+          <p>You’re driving from <strong>point A to point B</strong> (your goal).</p>
+          <p>Along the way, you encounter dead ends, forks in the road, and signs you can’t understand. The <strong>wheels are turning</strong>, but petrol is getting more and more expensive and <strong>point B is still far away</strong>.</p>
+          <p><strong>You need a map.</strong></p>
+          <p class="lead"><strong>We’re a SatNav.</strong></p>
         </div>
-        <figure class="col-md-5">
-          <blockquote class="quote-endorsement">
+        <figure class="col-md-5 offset-lg-1">
+          <blockquote class="quote-endorsement gutter-medium">
             <p class="h3 flush">30%</p>
             <p>Average increase in revenue per user</p>
           </blockquote>
-          <hr>
-          <blockquote class="quote-endorsement">
+          <hr class="gutter-medium">
+          <blockquote class="quote-endorsement gutter-medium">
             <p class="h3 flush">28%</p>
             <p>Average increase in lifetime value</p>
           </blockquote>
-          <hr>
-          <blockquote class="quote-endorsement">
+          <hr class="gutter-medium">
+          <blockquote class="quote-endorsement gutter-medium">
             <p class="h3 flush">25%</p>
             <p>Average increase in retention</p>
           </blockquote>
-          <figcaption><a href="https://tribe-template.webflow.io/landing/landing-7" target="_blank">Source</a></figcaption>
+          <figcaption class="sr-only"><a href="https://tribe-template.webflow.io/landing/landing-7" target="_blank">Source</a></figcaption>
         </figure>
       </div>
     </section>
 
-    <section aria-label="It felt a bit like I'd come into an inheritance..." class="container gutter-xlarge">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8 col-sm-10">
-          <figure class="quote-endorsement">
-            <blockquote>
-              <p>It felt a bit like I'd come into an inheritance...</p>
-            </blockquote>
-            <figcaption><strong>Nick Jones</strong>, chief executive and co-founder at Blockstar Developments</figcaption>
-          </figure>
+    <section aria-label="It felt a bit like I'd come into an inheritance..." class="bt-muted-blue pad-vert-xlarge gutter-xlarge">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10">
+            <figure class="quote-endorsement flush">
+              <blockquote>
+                <p class="h3">It felt a bit like I'd come into an inheritance...</p>
+              </blockquote>
+              <figcaption><strong>Nick Jones</strong>, chief executive and co-founder at Blockstar Developments</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="container gutter-xlarge" aria-label="5 minutes: Data-Driven Revenue Growth" id="5min">
+    <section class="container gutter-xlarge" aria-label="Data-Driven Revenue Growth" id="5min">
       <div class="row align-items-center gutter-large">
         <figure class="offset-lg-1 col-lg order-lg-last">
           <p><img src="/fine-tune-2020-dev/img/content/sonic-youth.jpg" alt=""></p>
           <figcaption class="sr-only">Sonic Youth</figcaption>
         </figure>
         <div class="col-lg">
-          <h2 class="cat h6">5 minutes</h2>
-          <h3 class="h3">Data-Driven Revenue Growth</h3>
-          <p>We take a forensic look at all aspects of your site and customer data to find clear measurable opportunities to increase your revenue. Whether you’re thinking about getting a new site, or you’re just not getting the results you want, we might be able to help. We’re able to find the hidden opportunities in your data to provide you with a measurable plan of action to increase your revenue. If we can’t, we’ll tell you in the first 30 minutes.</p>
-          <p>For less than the cost of a junior marketer</p>
+          <h2 class="h3">Data-Driven Revenue Growth</h2>
+          <p>We take a <strong>forensic look at</strong> all aspects of your site and customer <strong>data</strong> to find clear measurable opportunities to increase your revenue. Whether you’re thinking about getting a new site, or you’re just not getting the results you want, we might be able to help. We’re able to <strong>find the hidden opportunities</strong> in your data to <strong>provide</strong> you with a measurable <strong>plan of action to increase your revenue</strong>. If we can’t, we’ll tell you in the first 30 minutes.</p>
+          <p class="lead"><strong>For less than the cost of a junior marketer.</strong></p>
         </div>
       </div>
     </section>
@@ -334,7 +295,6 @@
           </div>
         </section>
 
-        <p class="flush"><a href="/fine-tune-2020-dev/process/" class="btn btn-primary btn-arrow">Learn About Our Process</a></p>
       </div>
 
 
