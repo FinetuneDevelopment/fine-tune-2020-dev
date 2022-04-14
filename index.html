@@ -144,16 +144,97 @@
 
   <main id="main">
 
-    <section aria-label="We find the extra revenue hidden in your current site." class="bt-mint overflow-hidden gutter-xlarge">
+    <section aria-label="We find the extra revenue hidden in your current site." class="bt-mint gutter-xlarge">
       <div class="container text-center pad-vert-xlarge">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <h1 class="h-splash">We find the extra revenue hidden in your current site.<span class="bt-attach"><span class="bt-attach__child bt-attach__child-se bt-hand-reassuring-right"></span></span></h1>
+        <div class="row align-items-center">
+            <figure class="col-lg order-lg-last">
+              <p>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" aria-label="Buy OK products.">
+                  <!--  width="48" height="24" -->
+                    <style>
+                        @-webkit-keyframes buy-tempt {
+                          0%   { transform: rotate(4deg); }
+                          100% { transform: rotate(-10deg); }
+                        }
+                        @keyframes buy-tempt {
+                          0%   { transform: rotate(4deg); }
+                          100% { transform: rotate(-10deg); }
+                        }
+                        .buy-arm {
+                          -webkit-animation: 1s ease-in-out 0s infinite alternate buy-tempt;
+                                  animation: 1s ease-in-out 0s infinite alternate buy-tempt;
+                          animation-play-state: paused;
+                          transform-origin: 60% 80%;
+                        }
+                        @-webkit-keyframes buy-ok {
+                          0%   { transform: rotate(4deg); }
+                          100% { transform: rotate(-10deg); }
+                        }
+                        @keyframes buy-ok {
+                          0%   { transform: rotate(2deg); }
+                          100% { transform: rotate(-5deg); }
+                        }
+                        .ok-fingers {
+                          -webkit-animation: .5s ease-in-out 0s infinite alternate buy-ok;
+                                  animation: .5s ease-in-out 0s infinite alternate buy-ok;
+                          animation-play-state: paused;
+                          transform-origin: 80% 60%;
+                        }
+                        .scrolling .ok-fingers, .scrolling .buy-arm { animation-play-state: running; }
+                        .buyI {stroke:#010111}
+                        .buyK{stroke-width:.1}
+                    </style>
+                    <defs>
+                      <clipPath id="buyA">
+                        <path d="M26.18 19.26l-6.08.05v4.57H0V.15h26.27c.1 6.37.03 12.74-.09 19.11z"/>
+                      </clipPath>
+                    </defs>
+                    <path fill="#d7f2db" d="M28.7 23.42h19.16V4.26H28.7z"/>
+                    <g fill="#fff" class="buyI buyK ok-fingers">
+                      <path d="M35.37 7.68c-.46.48 1.28 1.67 1.92 2.44 1.33 5.4 4.19 4.14.98-.88-.4-.3-2.54-1.94-2.9-1.56z"/>
+                      <path d="M36.15 6.94c-.3.3 1.14 2.01 1.82 2.91 2.12 3.65 2.3 1.7.83-.85-.79-.8-2.17-2.55-2.65-2.06z"/>
+                      <path d="M37.5 6.64c-.4.48.94 2.37 1.54 3.44.4 3.42 2.86 3.2 1.22-.45-.88-1-2.36-3.47-2.75-2.99z"/>
+                    </g>
+                    <path d="M37.36 14.73c.86-.48.47-2.6.37-2.84 2.15.78 1.72 3.15-.37 2.84z"/>
+                    <path fill="#fff" d="M43.26 31.54l-2.41-13.43c2.2-5.65-.32-9.41-5.67-6.9-.24.1-.48.06-.46.48.01.41 2.1.2 3 .2 2.16.8 1.7 3.18-.36 2.84-1.06-.62-1.41-2.27-2.37-2.74-.2.02-.13.55-.08 1.05.14 1.75.7 3.63 1.95 4.53-.12.97-1.26 13.97-1.26 13.97h7.66" class="buyI buyK"/>
+                    <path d="M36.85 17.57l-.04.59s.46.72 1.78.5a6.19 6.19 0 01-1.73-1.1" fill="#010111"/>
+                    <path fill="none" d="M8.66 19.3h17.55V.3H8.65z" class="buyI buyK"/>
+                    <g clip-path="url(#buyA)">
+                    <g class="buy-arm">
+                      <circle r="1" cy="4.3" cx="20"/>
+                      <path d="M7.76 1.73l12.2.72-1.37 18.01-12.2-.72z" fill="#d7f2db" class="buyI buyK"/>
+                      <path d="M7.6 17.6l4.53.33m-4.46-1.4l4.54.33m-4.46-1.4l4.54.32" class="buyI buyK"/>
+                      <path fill="none" d="M8.77 8.62a4.5 4.5 0 118.98.64 4.5 4.5 0 01-8.98-.64z" class="buyI buyK"/>
+                      <g class="buyK buyI">
+                        <path d="M13.08 7.74a3.78 3.78 0 00-.56-1.38m1.36 1.47c.26-.6.63-1 .86-1.21m-1.45-.95c.1.57.18 1.28.13 2.1" fill="none"/>
+                        <g fill="#fff">
+                          <path d="M12.51 7.66l.3.86c-1.03 1.29-.6 2.34-.38 3.9l1 .11c.76-1.75 1.05-2.49.4-3.95l.45-.7z"/>
+                          <path d="M14.16 9.45l-1.8-.21"/>
+                          <path d="M14.16 9.45l-1.8-.21m-.03 2.46l1.36.16"/>
+                          <path d="M12.33 11.7l1.36.16"/>
+                        </g>
+                      </g>
+                      <path d="M12.77 6.39a.24.24 0 01-.28.2.24.24 0 11.06-.48.24.24 0 01.22.27m.77-.68a.24.24 0 01-.48-.05.24.24 0 01.26-.22.24.24 0 01.22.27m1.44.94a.24.24 0 11-.22-.27.24.24 0 01.22.27"/>
+                      <path d="M21.3 4.07L19.58 1c-.15.06.73 3.43.73 3.43l-.64.86a9.16 9.16 0 01-.22-1.14c-.08-.7-.27-.23-.36.01-.1.24-.55 2.18-.48 2.76.5 3.83 8.5 18.94 8.5 18.94L32.56 24 24.1 11.98a148.88 148.88 0 00-3.29-4.22l.56-2.95c0-.06.16-.27-.08-.74" fill="#d7f2db" class="buyI buyK"/>
+                      <path d="M20.64,8.65 21.09,8.1 20.81,7.76 Z"/>
+                      <path d="m25.81,14.3 0.37,4.96 3.306439,5.843158 L 32.56,24 Z"/>
+                      <g fill="none" class="buyK" stroke="#010011">
+                        <path d="M13.36 15.87l4.43.24-.16 2.22-4.43-.25z" fill="#fff"/>
+                        <path d="M13.93 16.6l-.05.73.45.04c.24.01.21-.35 0-.38l-.42-.04.42.03c.15.02.26-.31.02-.34zm1.21.1l-.03.52c0 .28.65.33.66.04l.04-.52m.59 0l.32.48-.04.32.04-.32.36-.44"/>
+                      </g>
+                    </g>
+                    </g>
+                  </svg>
+              </p>
+              <figcaption class="sr-only"></figcaption>
+            </figure>
+            <div class="col-lg">
+            <h1 class="h3">We find the extra revenue hidden in your current site.</h1>
             <p class="lead">How Long Do You Have?</p>
             <p class="flush">
               <a href="#10seconds" class="btn btn-secondary btn-arrow">10 Seconds</a>
               <a href="#5min" class="btn btn-secondary btn-arrow">5 <abbr title="Minutes">Min</abbr></a>
-              <a href="#30min" class="btn btn-secondary btn-arrow">30 <abbr>Min</abbr></a>
+              <a href="#30min" class="btn btn-primary btn-arrow">30 <abbr>Min</abbr></a>
             </p>
           </div>
         </div>
@@ -162,7 +243,7 @@
 
     <section aria-label="10 seconds" id="10seconds" class="container gutter-xxlarge">
       <div class="row">
-        <div class="col">
+        <div class="col text-center">
           <h3 class="h2">10 seconds</h3>
           <p>You’re driving from point A to point B (your goal).</p>
           <p>Along the way, you encounter dead ends, forks in the road, and signs you can’t understand. The wheels are turning, but petrol is getting more and more expensive and point B is still far away.</p>
@@ -170,155 +251,122 @@
           <p>We’re a SatNav.</p>
           <p><a href="#5min" class="btn btn-secondary btn-arrow">Got 5 <abbr>Min</abbr>?</a></p>
         </div>
-        <div class="col-md-5">
-          <figure class="row justify-content-center">
-            <p class="col-3">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-label="A pair of eyes looks down" height="144" width="172" viewBox="0 0 172 144">
-                <style>
-                  @-webkit-keyframes peek {
-                    0%,100% { transform: translate(0); }
-                    50%     { transform: translate(20px); }
-                  }
-                  @keyframes peek {
-                    0%,100% { transform: translate(0); }
-                    50%     { transform: translate(20px); }
-                  }
-                  .pupil {
-                    -webkit-animation: 2s ease 0s infinite alternate peek;
-                            animation: 2s ease 0s infinite alternate peek;
-                    animation-play-state: paused;
-                  }
-                  .scrolling .pupil {
-                    animation-play-state: running;
-                  }
-                  .E{fill:none}
-                  .F{stroke:#010111}
-                  .G{fill:#fff}
-                  .H{fill:#d7f2db}
-                </style>
-                <defs>
-                  <clipPath id="A">
-                    <path d="m 192.2,84.3 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 18.9,0 34.4,-19 34.4,-19" />
-                  </clipPath>
-                  <clipPath id="H">
-                    <path d="M 443.7,185.5 3,185.4 V 700 H 322.2 V 595.9 l 121.4,0.1 z" />
-                  </clipPath>
-                  <path d="M 239.2,618.3 0.4,601 25.3,257.3 264,274.6 Z" />
-                  <path d="m 219.5,577.4 -85.4,-6.2 3,-41.4 85.4,6.2 z" />
-                  <path d="m 139,373 -18.5,-2.2 5.7,16.4 c 0,0 -7.1,11 -9.7,16.3 a 44.4,44.4 0 0 0 -2.8,21.4 l 5.3,37.7 19.1,2.3 14,-35.5 c 2.6,-6.6 3,-16.5 1.6,-20.5 -1.4,-4 -7.8,-20.4 -7.8,-20.4 l 8.7,-13.6 z" />
-                </defs>
-                <path stroke-width="0.8" d="M 14.742784,143.2 H 157.5 V 0.4 H 14.7 Z" class="H F"/>
-                <path d="m 69.342784,83.3 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 18.9,0 34.4,-19 34.4,-19 z" class="G F"/>
-                <path class="F G" d="m 170.84278,82 c 0,0 -15.4,-19 -34.4,-19 -19,0 -34.3,19 -34.3,19 0,0 15.4,19 34.3,19 19,0 34.4,-19 34.4,-19 z" />
-                <path d="m 72.8,98.3 c 0,0 -2,30.3 -7.8,44.9 M 169.6,54.8 c 0,0 -15.4,-12 -34.4,-12 -19,0 -34.3,12 -34.3,12 m -31.6,0 c 0,0 -15.4,-12 -34.4,-12 -19,0 -34.3,12 -34.3,12" class="F E"/>
-                <g transform="translate(-123,-1)" clip-path="url(#A)">
-                  <circle class="pupil" cx="148.2" cy="91.7" r="18.7" />
-                </g>
-                <g clip-path="url(#A)" transform="translate(-21.4,-2.3)">
-                  <circle class="pupil" r="18.7" cy="91.7" cx="148.2" />
-                </g>
-              </svg>
-            </p>
-            <figcaption class="sr-only">A browser is turned into a buyer</figcaption>
-          </figure>
+        <figure class="col-md-5">
           <blockquote class="quote-endorsement">
-            <p>Companies who use data to drive their marketing decisions see an average 26% increase in <abbr title="Return on Investment">ROI</abbr></p>
-            <footer>
-              <p class="semi-small">McKinsey and Company</p>
-            </footer>
+            <p class="h3 flush">30%</p>
+            <p>Average increase in revenue per user</p>
           </blockquote>
+          <hr>
+          <blockquote class="quote-endorsement">
+            <p class="h3 flush">28%</p>
+            <p>Average increase in lifetime value</p>
+          </blockquote>
+          <hr>
+          <blockquote class="quote-endorsement">
+            <p class="h3 flush">25%</p>
+            <p>Average increase in retention</p>
+          </blockquote>
+          <figcaption><a href="https://tribe-template.webflow.io/landing/landing-7" target="_blank">Source</a></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-label="It felt a bit like I'd come into an inheritance..." class="container gutter-xlarge">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+          <figure class="quote-endorsement">
+            <blockquote>
+              <p>It felt a bit like I'd come into an inheritance...</p>
+            </blockquote>
+            <figcaption><strong>Nick Jones</strong>, chief executive and co-founder at Blockstar Developments</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="container text-center gutter-xlarge" id="5min" aria-label="5 minutes. Data-Driven Revenue Growth">
-      <header class="row justify-content-center gutter-large">
-        <div class="col-lg-8 col-md-10">
+    <section class="container gutter-xlarge" aria-label="5 minutes: Data-Driven Revenue Growth" id="5min">
+      <div class="row align-items-center gutter-large">
+        <figure class="offset-lg-1 col-lg order-lg-last">
+          <p><img src="/fine-tune-2020-dev/img/content/sonic-youth.jpg" alt=""></p>
+          <figcaption class="sr-only">Sonic Youth</figcaption>
+        </figure>
+        <div class="col-lg">
           <h2 class="cat h6">5 minutes</h2>
-          <h3 class="h2">Data-Driven Revenue Growth</h3>
+          <h3 class="h3">Data-Driven Revenue Growth</h3>
           <p>We take a forensic look at all aspects of your site and customer data to find clear measurable opportunities to increase your revenue. Whether you’re thinking about getting a new site, or you’re just not getting the results you want, we might be able to help. We’re able to find the hidden opportunities in your data to provide you with a measurable plan of action to increase your revenue. If we can’t, we’ll tell you in the first 30 minutes.</p>
           <p>For less than the cost of a junior marketer</p>
         </div>
-      </header>
-      <div class="row gutter-base">
-
-        <section class="col-lg-3 col-md-6 gutter-medium" aria-label="Data Accuracy and Analysis">
-          <p>
-            <span class="brd-all round icon-large icon-sq">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-label="Decision" stroke="currentColor" fill="none" height="24" width="24" viewBox="0 0 24 24">
-                <path d="m 7,7 v 2 h 6 V 7 Z m 14,5 v -2 m -3,2 v -2 m -3,2 v -2 m -8,1 v 8 l 3,-6 h 3 v -2 z m 6,1 H 23 V 8 H 13 M 7,8 H 4 L 3,6 V 8 H 1 v 5 L 4,18 v -6 h 3" />
-              </svg>
-            </span>
-          </p>
-          <h4>Data Accuracy and Analysis</h4>
-          <p>We ensure first and foremost your Google Analytics and GA4 is accurate, and all relevant data is captured. Additionally,(if needed) we centralise all of your data sources into a data warehouse where we can begin to interrogate your data.</p>
-        </section>
-
-        <section class="col-lg-3 col-md-6 gutter-medium" aria-label="Insights and Tactics">
-          <p>
-            <span class="brd-all round icon-large icon-sq">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" aria-label="Prediction">
-                <path d="M 23,12 A 11,11 0 0 1 12,23 11,11 0 0 1 1,12 11,11 0 0 1 12,1 11,11 0 0 1 23,12 Z m -11,1 c 0,0.5 -0.5,1 -1,1 -0.5,0 -1,-0.5 -1,-1 0,-0.5 0.5,-1 1,-1 0.5,0 1,0.5 1,1 z m -4,0 c 3,-6 8,0 8,0 0,0 -5,5 -8,0 z m -5,5 9,-17 9,17 z"/>
-              </svg>
-            </span>
-          </p>
-          <h4>Insights and Tactics</h4>
-          <p>Informed by rich customer data and behavioural insights, we predict the additional revenue you should be able to achieve, and work with you to review and inform your tactics.</p>
-        </section>
-
-        <section class="col-lg-3 col-md-6 gutter-medium" aria-label="KPI Planning and Dashboards">
-          <p>
-            <span class="brd-all round icon-large icon-sq">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" aria-label="Dashboard">
-                <path d="m 19,15 v -1 m -2,1 v -3 m -2,3 v -3 m -2,3 v -2 m -2,2 v -3 m -1,3 H 21 M 3,13 H 9 M 3,15 H 7 M 8,8.5 A 2.5,2.5 0 0 1 5.5,11 2.5,2.5 0 0 1 3,8.5 2.5,2.5 0 0 1 5.5,6 2.5,2.5 0 0 1 8,8.5 m 2,1.5 2,-2 2,1 3,-1 1,1 1,-1 2,1 M 10,6 v 5 H 21 V 6 Z M 9,17 c 0,2 0,3 -3,3 h 12 c -3,0 -3,-1 -3,-3 M 1,4 H 23 V 17 H 1 Z"/>
-              </svg>
-            </span>
-          </p>
-          <h4>KPI Planning and Dashboards</h4>
-          <p>Based on your business goals we help to define your KPIs and build dashboards to provide visibility to your teams, agency or even freelancers to reach new targets and maximise results.</p>
-        </section>
-
-        <section class="col-lg-3 col-md-6 gutter-medium" aria-label="Support and Training">
-          <p>
-            <span class="brd-all round icon-large icon-sq">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1" aria-label="Client focus">
-                <path d="M 20,14 C 17,13 17,10 19,9 20,7 16,6 15,9 M 22,6 C 19,2 12,3 12,9 c 0,2 5,10 7,10 1,0 2,-1 2,-3 M 3,13 H 8 M 3,11 H 7 M 3,9 H 8 M 3,7 H 7 M 3,5 H 8 M 1,3 h 9 V 17 H 7 L 2,21 4,17 H 1 Z" />
-              </svg>
-            </span>
-          </p>
-          <h4>Support and Training</h4>
-          <p>With ongoing monitoring of results, we help you connect your plan of action to execution, providing tactical recommendations and tools to help you reach your targets.</p>
-        </section>
-
       </div>
-      <p class="flush"><a href="/fine-tune-2020-dev/process/" class="btn btn-primary btn-arrow">Learn About Our Process</a></p>
-
     </section>
 
-    <aside class="bt-muted-blue pad-t-xlarge d-print-none" aria-label="30 Minutes. Free 30 Min Strategy Session" id="30min">
+    <div class="bt-pink pad-vert-xlarge gutter-xlarge">
       <div class="container">
-        <div class="row row-stave">
-          <div class="col bt-phone-e">
-            <div class="row">
-              <div class="offset-lg-1 col-lg-8 offset-md-1 col-md-7 gutter-xlarge">
-                <h2 class="cat h6">30 Min</h2>
-                <h3 class="h2">Free 30 Min Strategy Session</h3>
-                <p>Want to know what you’ve got left in the tank?</p>
-                <ul class="gutter-large">
-                  <li>Identify revenue opportunities.</li>
-                  <li>Learn the potential revenue you can still generate.</li>
-                  <li>List of recommendations you can start today.</li>
-                </ul>
-                <p>
-                  <a href="/fine-tune-2020-dev/get-a-free-assessment/" class="btn btn-primary btn-arrow">Book Me In</a>
-                  <a href="/fine-tune-2020-dev/get-a-free-assessment/" class="btn btn-secondary btn-arrow">Learn More</a>
-                </p>
-              </div>
-            </div>
+
+        <section class="row align-items-center gutter-medium brd-bottom" aria-label="Data Accuracy and Analysis">
+          <p class="col-md-1 cat h6">01.</p>
+          <h2 class="col-md-5 h3">Data Accuracy and Analysis</h2>
+          <div class="col-md-6 gutter-medium">
+            <p>We ensure first and foremost your Google Analytics and GA4 is accurate, and all relevant data is captured. Additionally,(if needed) we centralise all of your data sources into a data warehouse where we can begin to interrogate your data.</p>
+          </div>
+        </section>
+
+        <section class="row align-items-center gutter-medium brd-bottom" aria-label="Insights and Tactics">
+          <p class="col-md-1 cat h6">02.</p>
+          <h2 class="col-md-5 h3">Insights and Tactics</h2>
+          <div class="col-md-6 gutter-medium">
+            <p>Informed by rich customer data and behavioural insights, we predict the additional revenue you should be able to achieve, and work with you to review and inform your tactics.</p>
+          </div>
+        </section>
+
+        <section class="row align-items-center gutter-medium brd-bottom" aria-label="KPI Planning and Dashboards">
+          <p class="col-md-1 cat h6">03.</p>
+          <h2 class="col-md-5 h3">KPI Planning and Dashboards</h2>
+          <div class="col-md-6 gutter-medium">
+            <p>Based on your business goals we help to define your KPIs and build dashboards to provide visibility to your teams, agency or even freelancers to reach new targets and maximise results.</p>
+          </div>
+        </section>
+
+        <section class="row align-items-center gutter-medium brd-bottom" aria-label="Support and Training">
+          <p class="col-md-1 cat h6">04.</p>
+          <h2 class="col-md-5 h3">Support and Training</h2>
+          <div class="col-md-6 gutter-medium">
+            <p>With ongoing monitoring of results, we help you connect your plan of action to execution, providing tactical recommendations and tools to help you reach your targets.</p>
+          </div>
+        </section>
+
+        <p class="flush"><a href="/fine-tune-2020-dev/process/" class="btn btn-primary btn-arrow">Learn About Our Process</a></p>
+      </div>
+
+
+    </div>
+
+    <section class="container gutter-xlarge" aria-label="Free 30 Min Strategy Session">
+      <div class="row">
+        <div class="col-lg">
+          <h2 class="h3">Free 30 Min Strategy Session</h2>
+          <p>Want to know what you’ve got left in the tank? It’s impossible to increase your revenue without knowing where to look. In this free strategy session, we’ll have a look at your data and explain the revenue opportunities we’ve uncovered that can help you grow.</p>
+          <p>
+            <a href="/fine-tune-2020-dev/get-a-free-assessment/" class="btn btn-secondary btn-arrow">Learn More</a>
+          </p>
+
+          <div class="row row-stave brd-top">
+            <p class="col flush pad-vert-base">Customer Metrics</p>
+            <p class="col flush pad-vert-base">Behaviour Metrics</p>
+          </div>
+          <div class="row row-stave brd-top brd-bottom">
+            <p class="col flush pad-vert-base">Product Metrics</p>
+            <p class="col flush pad-vert-base">Traffic Metrics</p>
           </div>
         </div>
+        <div class="offset-lg-1 col-lg">
+          <p>Enter your details below and we’ll email to schedule a time that works for you.</p>
+          <p><iframe src="/fine-tune-2020-dev/get-a-free-assessment/form" class="scroll-no" scrolling="no" height="550"></iframe></p>
+          <p>
+            <a href="/fine-tune-2020-dev/get-a-free-assessment/" class="btn btn-secondary btn-arrow">Learn More</a>
+          </p>
+        </div>
       </div>
-    </aside>
+    </section>
 
   </main>
 
